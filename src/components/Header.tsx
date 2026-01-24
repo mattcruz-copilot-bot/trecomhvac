@@ -19,11 +19,11 @@ export function Header() {
   const isActive = (href: string) => location.pathname === href;
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border">
+    <header className="sticky top-0 z-50 glass-panel border-b border-white/10">
       <nav className="container-wide flex items-center justify-between py-5">
         <Link to="/" className="flex items-center group">
           <div className="flex items-baseline gap-1.5">
-            <span className="text-[22px] font-bold text-slate tracking-[-0.02em] group-hover:text-electric transition-colors duration-300">
+            <span className="text-[24px] font-bold text-slate tracking-[-0.02em] transition-all duration-300 group-hover:text-electric">
               TrecomHvac
             </span>
             <span className="text-[14px] font-light text-charcoal-muted tracking-[0.03em]">
@@ -38,16 +38,9 @@ export function Header() {
             <Link
               key={item.name}
               to={item.href}
-              className={`text-sm font-medium transition-colors relative ${
-                isActive(item.href)
-                  ? "text-charcoal"
-                  : "text-charcoal-muted hover:text-charcoal"
-              }`}
+              className={`nav-link ${isActive(item.href) ? "active" : ""}`}
             >
               {item.name}
-              {isActive(item.href) && (
-                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-electric" />
-              )}
             </Link>
           ))}
         </div>
@@ -65,17 +58,17 @@ export function Header() {
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-border bg-white">
-          <div className="container-wide py-4 space-y-1">
+        <div className="lg:hidden border-t border-border/50 glass-panel animate-fade-in">
+          <div className="container-wide py-6 space-y-2">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`block py-3 text-sm font-medium transition-colors ${
+                className={`block py-3 px-4 rounded-lg text-sm font-medium transition-all duration-300 ${
                   isActive(item.href)
-                    ? "text-electric"
-                    : "text-charcoal-muted hover:text-charcoal"
+                    ? "bg-electric/10 text-electric"
+                    : "text-charcoal-muted hover:text-charcoal hover:bg-surface"
                 }`}
               >
                 {item.name}

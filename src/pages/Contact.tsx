@@ -43,7 +43,6 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // In production, this would submit to a backend
     toast({
       title: "Message sent",
       description: "Thank you for your enquiry. We will be in touch shortly.",
@@ -68,16 +67,16 @@ export default function Contact() {
   return (
     <Layout>
       {/* Hero */}
-      <section className="section-padding border-b border-border">
+      <section className="section-padding bg-background">
         <div className="container-wide">
-          <div className="max-w-3xl">
-            <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4">
+          <div className="max-w-4xl">
+            <p className="text-sm font-semibold text-electric uppercase tracking-wider mb-4">
               Contact Us
             </p>
-            <h1 className="mb-6">
+            <h1 className="mb-8">
               Get in Touch
             </h1>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-xl text-charcoal-muted leading-relaxed">
               Whether you need a quotation, technical advice, or want to discuss 
               a potential project, we'd be pleased to hear from you.
             </p>
@@ -85,28 +84,35 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Contact Form & Info */}
-      <section className="section-padding">
+      {/* Gradient separator */}
+      <div className="gradient-line-strong" />
+
+      {/* Contact Form & Info - Surface section */}
+      <section className="section-padding section-surface">
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
             {/* Contact Information */}
             <div>
-              <h2 className="text-2xl font-semibold mb-8">Contact Information</h2>
-              <div className="space-y-6">
-                {contactInfo.map((item) => (
-                  <div key={item.label} className="flex items-start gap-4">
-                    <item.icon className="h-5 w-5 text-navy mt-0.5 flex-shrink-0" />
-                    <div>
-                      <p className="font-medium text-charcoal">{item.label}</p>
-                      <p className="text-muted-foreground">{item.value}</p>
+              <div className="glass-panel rounded-2xl p-8">
+                <h2 className="text-2xl font-bold mb-8">Contact Information</h2>
+                <div className="space-y-6">
+                  {contactInfo.map((item) => (
+                    <div key={item.label} className="flex items-start gap-4">
+                      <div className="w-10 h-10 rounded-xl bg-electric/10 flex items-center justify-center flex-shrink-0">
+                        <item.icon className="h-5 w-5 text-electric" />
+                      </div>
+                      <div>
+                        <p className="font-semibold text-charcoal">{item.label}</p>
+                        <p className="text-charcoal-muted">{item.value}</p>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
 
-              <div className="mt-12 p-6 bg-steel border border-border">
-                <h3 className="font-semibold mb-3">Emergency Callout</h3>
-                <p className="text-sm text-muted-foreground">
+              <div className="mt-8 glass-panel-dark rounded-2xl p-8">
+                <h3 className="font-bold text-white mb-3">Emergency Callout</h3>
+                <p className="text-sm text-white/60 leading-relaxed">
                   For existing maintenance contract clients requiring emergency 
                   callout, please use your dedicated contact number.
                 </p>
@@ -115,87 +121,89 @@ export default function Contact() {
 
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <h2 className="text-2xl font-semibold mb-8">Send an Enquiry</h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="glass-panel rounded-2xl p-8 md:p-10">
+                <h2 className="text-2xl font-bold mb-8">Send an Enquiry</h2>
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <Label htmlFor="name" className="text-charcoal font-medium">Name *</Label>
+                      <Input
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
+                        className="bg-white/50 border-border/50 focus:border-electric h-12"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="email" className="text-charcoal font-medium">Email *</Label>
+                      <Input
+                        id="email"
+                        name="email"
+                        type="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                        className="bg-white/50 border-border/50 focus:border-electric h-12"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <Label htmlFor="company" className="text-charcoal font-medium">Company</Label>
+                      <Input
+                        id="company"
+                        name="company"
+                        value={formData.company}
+                        onChange={handleChange}
+                        className="bg-white/50 border-border/50 focus:border-electric h-12"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="phone" className="text-charcoal font-medium">Phone</Label>
+                      <Input
+                        id="phone"
+                        name="phone"
+                        type="tel"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        className="bg-white/50 border-border/50 focus:border-electric h-12"
+                      />
+                    </div>
+                  </div>
+
                   <div className="space-y-2">
-                    <Label htmlFor="name">Name *</Label>
+                    <Label htmlFor="subject" className="text-charcoal font-medium">Subject *</Label>
                     <Input
-                      id="name"
-                      name="name"
-                      value={formData.name}
+                      id="subject"
+                      name="subject"
+                      value={formData.subject}
                       onChange={handleChange}
                       required
-                      className="bg-background"
+                      className="bg-white/50 border-border/50 focus:border-electric h-12"
                     />
                   </div>
+
                   <div className="space-y-2">
-                    <Label htmlFor="email">Email *</Label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      value={formData.email}
+                    <Label htmlFor="message" className="text-charcoal font-medium">Message *</Label>
+                    <Textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
                       onChange={handleChange}
                       required
-                      className="bg-background"
+                      rows={6}
+                      className="bg-white/50 border-border/50 focus:border-electric resize-none"
                     />
                   </div>
-                </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <Label htmlFor="company">Company</Label>
-                    <Input
-                      id="company"
-                      name="company"
-                      value={formData.company}
-                      onChange={handleChange}
-                      className="bg-background"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="phone">Phone</Label>
-                    <Input
-                      id="phone"
-                      name="phone"
-                      type="tel"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      className="bg-background"
-                    />
-                  </div>
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="subject">Subject *</Label>
-                  <Input
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    required
-                    className="bg-background"
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="message">Message *</Label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={6}
-                    className="bg-background resize-none"
-                  />
-                </div>
-
-                <Button type="submit" variant="hero" size="lg">
-                  Send Message
-                </Button>
-              </form>
+                  <Button type="submit" size="lg">
+                    Send Message
+                  </Button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
