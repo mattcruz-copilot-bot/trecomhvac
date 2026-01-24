@@ -65,26 +65,26 @@ export default function Policies() {
       </section>
 
       {/* Health & Safety */}
-      <section className="py-16 md:py-20 bg-background">
+      <section className="py-20 md:py-28 bg-background">
         <div className="container-wide">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-navy to-teal flex items-center justify-center flex-shrink-0">
-                  <Shield className="w-6 h-6 text-white" />
+              <div className="flex items-start gap-4 mb-8">
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-navy to-teal flex items-center justify-center flex-shrink-0 shadow-lg">
+                  <Shield className="w-7 h-7 text-white" />
                 </div>
                 <div>
-                  <h2 className="text-2xl mb-1">Health & Safety</h2>
-                  <p className="text-charcoal-muted text-sm">Fundamental to how we operate</p>
+                  <h2 className="text-3xl mb-1">Health & Safety</h2>
+                  <p className="text-charcoal-muted">Fundamental to how we operate</p>
                 </div>
               </div>
-              <div className="glass-panel rounded-xl p-6">
-                <p className="text-charcoal-muted mb-4 leading-relaxed text-sm">
+              <div className="glass-panel rounded-2xl p-8">
+                <p className="text-charcoal-muted mb-4 leading-relaxed">
                   Health and safety is fundamental to how TrecomHvac & Mechanical operates.
                   We are committed to maintaining safe working environments for our team, 
                   our clients and all other site personnel.
                 </p>
-                <p className="text-charcoal-muted text-sm">
+                <p className="text-charcoal-muted">
                   All works are planned and managed in line with UK Health & Safety legislation 
                   and industry best practice.
                 </p>
@@ -92,19 +92,19 @@ export default function Policies() {
             </div>
             
             <div>
-              <p className="eyebrow mb-5">We implement:</p>
-              <ul className="space-y-2 mb-6">
+              <p className="eyebrow mb-6 text-base">We implement:</p>
+              <ul className="space-y-3 mb-8">
                 {healthSafety.map((item) => (
-                  <li key={item} className="flex items-center gap-3 p-3 rounded-lg bg-white/80 backdrop-blur-sm border border-white/60 hover:bg-white hover:shadow-md transition-all group">
-                    <div className="w-7 h-7 rounded-md bg-gradient-to-br from-navy/10 to-teal/10 border border-navy/15 flex items-center justify-center flex-shrink-0 group-hover:from-navy group-hover:to-teal transition-all">
-                      <ChevronRight className="w-3.5 h-3.5 text-navy group-hover:text-white transition-colors" />
+                  <li key={item} className="flex items-center gap-4 p-4 rounded-xl bg-white backdrop-blur-sm border border-border/50 hover:shadow-lg hover:border-teal/20 transition-all group">
+                    <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-navy/10 to-teal/10 border border-navy/15 flex items-center justify-center flex-shrink-0 group-hover:from-navy group-hover:to-teal transition-all">
+                      <ChevronRight className="w-4 h-4 text-navy group-hover:text-white transition-colors" />
                     </div>
-                    <span className="text-charcoal font-medium text-sm">{item}</span>
+                    <span className="text-charcoal font-medium">{item}</span>
                   </li>
                 ))}
               </ul>
-              <div className="glass-panel-dark rounded-xl p-5">
-                <p className="text-white font-semibold text-sm">
+              <div className="glass-panel-dark p-6">
+                <p className="text-white font-semibold">
                   Safety is treated as part of professional delivery, not a box-ticking exercise.
                 </p>
               </div>
@@ -114,39 +114,39 @@ export default function Policies() {
       </section>
 
       {/* Competence & Training */}
-      <section className="py-16 md:py-20 section-surface">
+      <section className="py-20 md:py-28 section-surface">
         <div className="container-wide">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1">
-              <p className="eyebrow mb-5">This includes:</p>
-              <ul className="space-y-2 mb-6">
+              <p className="eyebrow mb-6 text-base">This includes:</p>
+              <ul className="space-y-3 mb-8">
                 {competence.map((item) => (
-                  <li key={item} className="flex items-center gap-3 p-3 rounded-lg bg-white/80 backdrop-blur-sm border border-white/60 hover:bg-white hover:shadow-md transition-all group">
-                    <div className="w-7 h-7 rounded-md bg-gradient-to-br from-navy/10 to-teal/10 border border-navy/15 flex items-center justify-center flex-shrink-0 group-hover:from-navy group-hover:to-teal transition-all">
-                      <ChevronRight className="w-3.5 h-3.5 text-navy group-hover:text-white transition-colors" />
+                  <li key={item} className="flex items-center gap-4 p-4 rounded-xl bg-white backdrop-blur-sm border border-border/50 hover:shadow-lg hover:border-teal/20 transition-all group">
+                    <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-navy/10 to-teal/10 border border-navy/15 flex items-center justify-center flex-shrink-0 group-hover:from-navy group-hover:to-teal transition-all">
+                      <ChevronRight className="w-4 h-4 text-navy group-hover:text-white transition-colors" />
                     </div>
-                    <span className="text-charcoal font-medium text-sm">{item}</span>
+                    <span className="text-charcoal font-medium">{item}</span>
                   </li>
                 ))}
               </ul>
-              <p className="text-charcoal-muted leading-relaxed text-sm">
+              <p className="text-charcoal-muted leading-relaxed">
                 As the business grows, we will continue to formalise training structures 
                 and external accreditations.
               </p>
             </div>
             
             <div className="order-1 lg:order-2">
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-navy to-teal flex items-center justify-center flex-shrink-0">
-                  <Award className="w-6 h-6 text-white" />
+              <div className="flex items-start gap-4 mb-8">
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-navy to-teal flex items-center justify-center flex-shrink-0 shadow-lg">
+                  <Award className="w-7 h-7 text-white" />
                 </div>
                 <div>
-                  <h2 className="text-2xl mb-1">Competence & Training</h2>
-                  <p className="text-charcoal-muted text-sm">Qualified teams for every task</p>
+                  <h2 className="text-3xl mb-1">Competence & Training</h2>
+                  <p className="text-charcoal-muted">Qualified teams for every task</p>
                 </div>
               </div>
-              <div className="glass-panel rounded-xl p-6">
-                <p className="text-charcoal-muted leading-relaxed text-sm">
+              <div className="glass-panel rounded-2xl p-8">
+                <p className="text-charcoal-muted leading-relaxed">
                   We ensure that operatives working on our projects are competent for the 
                   tasks they undertake. This is non-negotiable.
                 </p>
@@ -157,25 +157,25 @@ export default function Policies() {
       </section>
 
       {/* Environmental Responsibility */}
-      <section className="py-16 md:py-20 bg-background">
+      <section className="py-20 md:py-28 bg-background">
         <div className="container-wide">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-teal to-teal-light flex items-center justify-center flex-shrink-0">
-                  <Leaf className="w-6 h-6 text-white" />
+              <div className="flex items-start gap-4 mb-8">
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-teal to-teal-light flex items-center justify-center flex-shrink-0 shadow-lg">
+                  <Leaf className="w-7 h-7 text-white" />
                 </div>
                 <div>
-                  <h2 className="text-2xl mb-1">Environmental Responsibility</h2>
-                  <p className="text-charcoal-muted text-sm">Reducing our environmental impact</p>
+                  <h2 className="text-3xl mb-1">Environmental Responsibility</h2>
+                  <p className="text-charcoal-muted">Reducing our environmental impact</p>
                 </div>
               </div>
-              <div className="glass-panel rounded-xl p-6">
-                <p className="text-charcoal-muted mb-4 leading-relaxed text-sm">
+              <div className="glass-panel rounded-2xl p-8">
+                <p className="text-charcoal-muted mb-4 leading-relaxed">
                   We recognise the construction industry's responsibility to reduce 
                   environmental impact. This is an area we take seriously.
                 </p>
-                <p className="text-charcoal-muted leading-relaxed text-sm">
+                <p className="text-charcoal-muted leading-relaxed">
                   We also have experience working with energy-efficient mechanical systems 
                   and modern building services technologies.
                 </p>
@@ -183,14 +183,14 @@ export default function Policies() {
             </div>
             
             <div>
-              <p className="eyebrow mb-5">We aim to:</p>
-              <ul className="space-y-2">
+              <p className="eyebrow mb-6 text-base">We aim to:</p>
+              <ul className="space-y-3">
                 {environmental.map((item) => (
-                  <li key={item} className="flex items-center gap-3 p-3 rounded-lg bg-white/70 backdrop-blur-sm border border-white/60 hover:bg-white hover:shadow-md transition-all group">
-                    <div className="w-7 h-7 rounded-md bg-gradient-to-br from-teal/15 to-navy/10 border border-teal/20 flex items-center justify-center flex-shrink-0 group-hover:from-teal group-hover:to-teal-light transition-all">
-                      <ChevronRight className="w-3.5 h-3.5 text-teal group-hover:text-white transition-colors" />
+                  <li key={item} className="flex items-center gap-4 p-4 rounded-xl bg-white backdrop-blur-sm border border-border/50 hover:shadow-lg hover:border-teal/20 transition-all group">
+                    <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-teal/15 to-navy/10 border border-teal/20 flex items-center justify-center flex-shrink-0 group-hover:from-teal group-hover:to-teal-light transition-all">
+                      <ChevronRight className="w-4 h-4 text-teal group-hover:text-white transition-colors" />
                     </div>
-                    <span className="text-charcoal font-medium text-sm">{item}</span>
+                    <span className="text-charcoal font-medium">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -200,41 +200,41 @@ export default function Policies() {
       </section>
 
       {/* Continuous Improvement - With background */}
-      <section className="relative py-16 md:py-20 overflow-hidden">
+      <section className="relative py-20 md:py-28 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src={hvacDuctwork} 
             alt="" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-charcoal/96 via-slate/94 to-navy/92" />
+          <div className="absolute inset-0 bg-gradient-to-b from-charcoal/90 via-slate/85 to-charcoal/90" />
         </div>
         
         <div className="container-wide relative z-10">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-10">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-teal to-navy flex items-center justify-center mx-auto mb-5">
-                <TrendingUp className="w-6 h-6 text-white" />
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-teal to-navy flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <TrendingUp className="w-7 h-7 text-white" />
               </div>
-              <h2 className="text-white mb-3">Continuous Improvement</h2>
-              <p className="text-white/60">
+              <h2 className="text-white mb-4 drop-shadow-md">Continuous Improvement</h2>
+              <p className="text-white/80 text-lg">
                 TrecomHvac & Mechanical is committed to continuous improvement across:
               </p>
             </div>
             
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-10">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-12">
               {improvement.map((item) => (
-                <div key={item.title} className="glass-card-dark p-4 text-center group">
-                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-teal/25 to-navy/20 border border-teal/20 flex items-center justify-center mx-auto mb-2 group-hover:from-teal/40 group-hover:to-navy/30 transition-all">
-                    <item.icon className="w-4 h-4 text-teal group-hover:scale-110 transition-transform" />
+                <div key={item.title} className="glass-card-dark p-5 text-center group">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-teal/25 to-navy/20 border border-teal/25 flex items-center justify-center mx-auto mb-3 group-hover:from-teal/40 group-hover:to-navy/35 transition-all">
+                    <item.icon className="w-5 h-5 text-teal group-hover:scale-110 transition-transform" />
                   </div>
-                  <span className="text-white font-semibold text-sm">{item.title}</span>
+                  <span className="text-white font-semibold">{item.title}</span>
                 </div>
               ))}
             </div>
             
-            <div className="glass-panel-dark rounded-xl p-6 text-center">
-              <p className="text-lg font-bold text-white">
+            <div className="glass-panel-dark p-8 text-center max-w-2xl mx-auto">
+              <p className="text-lg font-semibold text-white leading-relaxed">
                 We are building a business designed to meet the expectations of serious 
                 commercial clients.
               </p>

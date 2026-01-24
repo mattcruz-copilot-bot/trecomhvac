@@ -167,32 +167,32 @@ export default function Index() {
       </section>
 
       {/* Why Trecom - Premium cards with image */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-20 md:py-28 bg-background">
         <div className="container-wide">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Content side */}
             <div>
-              <p className="eyebrow mb-3">Why TrecomHvac</p>
-              <h2 className="mb-8">Why Choose Us</h2>
+              <p className="eyebrow mb-4">Why TrecomHvac</p>
+              <h2 className="mb-10">Why Choose Us</h2>
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {reasons.map((reason) => (
-                  <div key={reason.title} className="p-4 rounded-xl bg-white/70 backdrop-blur-sm border border-white/60 hover:bg-white hover:shadow-md transition-all duration-300 group">
-                    <div className="flex items-start gap-3">
-                      <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-navy/10 to-teal/10 border border-navy/15 flex items-center justify-center flex-shrink-0 group-hover:from-navy group-hover:to-teal transition-all duration-300">
-                        <reason.icon className="w-4 h-4 text-navy group-hover:text-white transition-colors" />
+                  <div key={reason.title} className="p-5 rounded-xl bg-white border border-border/50 hover:shadow-lg hover:border-teal/20 transition-all duration-300 group">
+                    <div className="flex items-start gap-4">
+                      <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-navy/10 to-teal/10 border border-navy/15 flex items-center justify-center flex-shrink-0 group-hover:from-navy group-hover:to-teal transition-all duration-300">
+                        <reason.icon className="w-5 h-5 text-navy group-hover:text-white transition-colors" />
                       </div>
                       <div>
-                        <h4 className="text-sm font-bold text-charcoal mb-0.5">{reason.title}</h4>
-                        <p className="text-xs text-charcoal-muted leading-relaxed">{reason.desc}</p>
+                        <h4 className="font-bold text-charcoal mb-1">{reason.title}</h4>
+                        <p className="text-sm text-charcoal-muted leading-relaxed">{reason.desc}</p>
                       </div>
                     </div>
                   </div>
                 ))}
               </div>
               
-              <div className="mt-8 glass-panel-dark rounded-xl p-6">
-                <p className="text-white text-base font-semibold leading-relaxed">
+              <div className="mt-10 glass-panel-dark p-6">
+                <p className="text-white font-semibold leading-relaxed">
                   Commercial clients value predictability. That is what we prioritise.
                 </p>
               </div>
@@ -245,25 +245,25 @@ export default function Index() {
       </section>
 
       {/* Process Section - Our Approach */}
-      <section className="py-16 md:py-24 section-warm">
+      <section className="py-20 md:py-28 section-warm">
         <div className="container-wide">
-          <div className="text-center mb-12">
-            <p className="eyebrow mb-3">Our Approach</p>
+          <div className="text-center mb-14">
+            <p className="eyebrow mb-4">Our Approach</p>
             <h2>How We Work</h2>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {process.map((item, index) => (
               <div key={item.step} className="relative">
                 {/* Connector line */}
                 {index < process.length - 1 && (
-                  <div className="hidden md:block absolute top-14 left-[60%] w-full h-0.5 bg-gradient-to-r from-navy/20 to-teal/20" />
+                  <div className="hidden md:block absolute top-16 left-[60%] w-full h-0.5 bg-gradient-to-r from-navy/20 to-teal/20" />
                 )}
                 
-                <div className="card-elevated p-6 text-center relative z-10 h-full">
-                  <div className="stat-number text-4xl mb-3">{item.step}</div>
-                  <h3 className="text-xl mb-2">{item.title}</h3>
-                  <p className="text-charcoal-muted text-sm">{item.desc}</p>
+                <div className="card-elevated p-8 text-center relative z-10 h-full">
+                  <div className="stat-number text-5xl mb-4">{item.step}</div>
+                  <h3 className="text-2xl mb-3">{item.title}</h3>
+                  <p className="text-charcoal-muted">{item.desc}</p>
                 </div>
               </div>
             ))}

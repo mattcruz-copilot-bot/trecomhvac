@@ -177,27 +177,29 @@
 
   /* Enhanced Glassmorphism panels */
   .glass-panel {
-    @apply bg-white/80 backdrop-blur-xl;
-    border: 1px solid rgba(255, 255, 255, 0.6);
+    @apply bg-white/85 backdrop-blur-xl;
+    border: 1px solid rgba(255, 255, 255, 0.7);
     box-shadow: 
       0 0 0 1px rgba(0, 0, 0, 0.02),
       0 4px 24px rgba(0, 0, 0, 0.04),
       0 12px 48px rgba(0, 0, 0, 0.03),
-      inset 0 1px 0 rgba(255, 255, 255, 0.9);
+      inset 0 1px 0 rgba(255, 255, 255, 0.95);
   }
 
+  /* Premium quote panel - gradient with better contrast */
   .glass-panel-dark {
     background: linear-gradient(145deg, 
-      hsl(220 32% 18%) 0%, 
-      hsl(220 28% 14%) 50%,
-      hsl(225 25% 11%) 100%
+      hsl(220 45% 24%) 0%, 
+      hsl(215 40% 18%) 50%,
+      hsl(210 35% 14%) 100%
     );
-    @apply backdrop-blur-xl;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    @apply backdrop-blur-xl rounded-xl;
+    border: 1px solid hsl(185 60% 45% / 0.25);
     box-shadow: 
-      0 4px 32px rgba(0, 0, 0, 0.3),
-      0 12px 48px rgba(0, 0, 0, 0.15),
-      inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      0 4px 32px rgba(0, 0, 0, 0.25),
+      0 12px 48px rgba(0, 0, 0, 0.12),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1),
+      0 0 0 1px hsl(220 50% 30% / 0.3);
   }
 
   /* Premium card with depth and subtle gradient border */
@@ -429,12 +431,12 @@
     @apply text-navy;
   }
 
-  /* Hero overlay gradients */
+  /* Hero overlay gradients - improved text clarity */
   .hero-overlay {
     background: linear-gradient(135deg, 
-      hsl(220 30% 10% / 0.92) 0%, 
-      hsl(220 25% 14% / 0.85) 50%, 
-      hsl(220 20% 18% / 0.75) 100%
+      hsl(220 30% 8% / 0.88) 0%, 
+      hsl(220 28% 12% / 0.80) 50%, 
+      hsl(220 25% 16% / 0.72) 100%
     );
   }
 
