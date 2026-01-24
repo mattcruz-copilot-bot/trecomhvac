@@ -1,26 +1,32 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle2, Wind, Wrench, Building2, Droplets, Gauge, Settings, ChevronDown } from "lucide-react";
+import { ArrowRight, Wind, Wrench, Building2, Droplets, Gauge, Settings, ChevronDown, Shield, Clock, MessageSquare, Award, Target, Zap } from "lucide-react";
 import heroBuilding from "@/assets/hero-building.jpg";
 import plantRoom from "@/assets/plant-room.jpg";
 
 const services = [
-  { icon: Wind, title: "HVAC & Ventilation Systems" },
-  { icon: Wrench, title: "Mechanical Pipework Installations" },
-  { icon: Building2, title: "Plant Rooms & Infrastructure" },
-  { icon: Droplets, title: "Gas, Water & Drainage Systems" },
-  { icon: Gauge, title: "Commissioning & Performance" },
-  { icon: Settings, title: "Planned & Reactive Maintenance" },
+  { icon: Wind, title: "HVAC & Ventilation", desc: "Complete climate control solutions" },
+  { icon: Wrench, title: "Mechanical Pipework", desc: "Professional installations" },
+  { icon: Building2, title: "Plant Rooms", desc: "Infrastructure development" },
+  { icon: Droplets, title: "Water & Drainage", desc: "Gas and water systems" },
+  { icon: Gauge, title: "Commissioning", desc: "Performance testing" },
+  { icon: Settings, title: "Maintenance", desc: "Planned & reactive support" },
 ];
 
 const reasons = [
-  "Strong technical and site experience",
-  "Honest pricing and realistic programming",
-  "Clear communication",
-  "Professional site conduct",
-  "Focus on quality and safety",
-  "Reliable delivery",
+  { icon: Award, title: "Senior Experience", desc: "Background in major London projects and complex site environments" },
+  { icon: MessageSquare, title: "Clear Communication", desc: "Direct, honest dialogue throughout every project phase" },
+  { icon: Clock, title: "Reliable Programming", desc: "Realistic scheduling with proper planning from day one" },
+  { icon: Shield, title: "Safety Focus", desc: "Professional site conduct with comprehensive RAMS" },
+  { icon: Target, title: "Quality Delivery", desc: "Work we're prepared to stand behind, every time" },
+  { icon: Zap, title: "Proactive Approach", desc: "Problems identified early and dealt with directly" },
+];
+
+const process = [
+  { step: "01", title: "Plan", desc: "Thorough assessment, clear scope, realistic programming" },
+  { step: "02", title: "Deliver", desc: "Professional execution with constant communication" },
+  { step: "03", title: "Support", desc: "Ongoing technical backup and maintenance" },
 ];
 
 export default function Index() {
@@ -30,7 +36,7 @@ export default function Index() {
 
   return (
     <Layout>
-      {/* Hero Section - Full viewport with scroll indicator */}
+      {/* Hero Section - Full viewport with premium overlay */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
@@ -39,32 +45,28 @@ export default function Index() {
             alt="Modern London commercial building at dusk" 
             className="w-full h-full object-cover scale-105"
           />
-          {/* Premium dark overlay with gradient */}
-          <div className="absolute inset-0 bg-gradient-to-br from-charcoal/90 via-charcoal/80 to-slate/70" />
-          <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-transparent to-charcoal/40" />
-          {/* Subtle vignette effect */}
-          <div className="absolute inset-0" style={{ 
-            background: 'radial-gradient(ellipse at center, transparent 0%, rgba(15, 23, 42, 0.4) 100%)' 
-          }} />
+          {/* Premium layered overlay */}
+          <div className="absolute inset-0 hero-overlay" />
+          <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-charcoal/50" />
         </div>
 
         {/* Content */}
         <div className="relative z-10 container-wide text-center px-6">
           <div className="max-w-5xl mx-auto">
             {/* Eyebrow text */}
-            <p className="text-electric font-semibold tracking-[0.2em] uppercase text-sm mb-8 animate-fade-up opacity-0" 
+            <p className="eyebrow mb-6 animate-fade-up opacity-0" 
                style={{ animationDelay: '0.1s', animationFillMode: 'forwards' }}>
-              Commercial HVAC Specialists
+              <span className="text-teal">Commercial HVAC Specialists</span>
             </p>
             
             {/* Main Headline */}
-            <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-[1.05] mb-8 animate-fade-up opacity-0 text-balance"
+            <h1 className="text-white mb-8 animate-fade-up opacity-0 text-balance"
                 style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
               Commercial HVAC & Mechanical Services Across London
             </h1>
             
             {/* Subheadline */}
-            <p className="text-lg md:text-xl lg:text-2xl text-white/70 mb-14 max-w-3xl mx-auto leading-relaxed animate-fade-up opacity-0"
+            <p className="text-lg md:text-xl lg:text-2xl text-white/70 mb-12 max-w-3xl mx-auto leading-relaxed animate-fade-up opacity-0"
                style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}>
               TrecomHvac & Mechanical delivers professional HVAC, plumbing and mechanical 
               services for commercial clients — combining real site experience with 
@@ -72,7 +74,7 @@ export default function Index() {
             </p>
             
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-5 justify-center animate-fade-up opacity-0"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up opacity-0"
                  style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
               <Button variant="hero" size="xl" asChild className="group">
                 <Link to="/contact">
@@ -83,7 +85,6 @@ export default function Index() {
               <Button variant="hero-outline" size="xl" asChild className="group">
                 <Link to="/contact">
                   Contact Us
-                  <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1 opacity-0 group-hover:opacity-100" />
                 </Link>
               </Button>
             </div>
@@ -106,111 +107,63 @@ export default function Index() {
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-[5]" />
       </section>
 
-      {/* Introduction Section - Glass panel effect */}
+      {/* Credibility Intro Section */}
       <section className="section-padding bg-background">
         <div className="container-wide">
           <div className="max-w-4xl mx-auto">
-            <div className="glass-panel rounded-2xl p-10 md:p-14">
-              <p className="text-lg md:text-xl text-charcoal-muted mb-6 leading-relaxed">
-                TrecomHvac & Mechanical is a London-based mechanical services company 
-                providing HVAC, plumbing and gas solutions to commercial, residential 
-                and mixed-use developments.
-              </p>
-              <p className="text-lg md:text-xl text-charcoal-muted mb-8 leading-relaxed">
-                The business is built on real experience delivering work on large, 
-                complex sites. That background shapes how we operate today: organised, 
-                accountable, safety-focused and commercially aware.
-              </p>
-              <div className="pt-6 border-t border-border/50">
-                <p className="text-xl md:text-2xl font-semibold text-charcoal">
-                  We don't overpromise. We plan properly, communicate clearly and deliver what we agree.
-                </p>
+            <div className="glass-panel rounded-3xl p-10 md:p-14">
+              <div className="flex flex-col md:flex-row gap-8 items-start">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-navy to-teal flex items-center justify-center flex-shrink-0">
+                  <Building2 className="w-8 h-8 text-white" />
+                </div>
+                <div>
+                  <p className="text-lg md:text-xl text-charcoal-muted mb-6 leading-relaxed">
+                    TrecomHvac & Mechanical is a London-based mechanical services company 
+                    providing HVAC, plumbing and gas solutions to commercial, residential 
+                    and mixed-use developments.
+                  </p>
+                  <p className="text-lg md:text-xl text-charcoal-muted mb-8 leading-relaxed">
+                    The business is built on real experience delivering work on large, 
+                    complex sites. That background shapes how we operate today: organised, 
+                    accountable, safety-focused and commercially aware.
+                  </p>
+                  <div className="pt-6 border-t border-border">
+                    <p className="text-xl md:text-2xl font-bold text-charcoal">
+                      We don't overpromise. We plan properly, communicate clearly and deliver what we agree.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Gradient separator */}
-      <div className="gradient-line-strong" />
-
-      {/* Services Grid - Light surface section */}
+      {/* Services Grid - Visual cards */}
       <section className="section-padding section-surface">
         <div className="container-wide">
-          <div className="text-center mb-16">
-            <p className="text-sm font-semibold text-electric uppercase tracking-wider mb-4">
-              What We Do
-            </p>
+          <div className="text-center mb-14">
+            <p className="eyebrow mb-4">What We Do</p>
             <h2 className="text-balance">Our Services</h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {services.map((service, index) => (
               <div 
                 key={service.title} 
-                className="card-glass p-8 flex items-start gap-5"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="card-glass p-8 group cursor-pointer"
               >
-                <div className="icon-box">
-                  <service.icon className="h-6 w-6" />
+                <div className="icon-box mb-5 group-hover:scale-105 transition-transform">
+                  <service.icon className="h-6 w-6 icon text-navy group-hover:text-white transition-colors" />
                 </div>
-                <span className="font-semibold text-charcoal pt-3.5 text-lg">{service.title}</span>
+                <h4 className="text-charcoal mb-2 group-hover:text-navy transition-colors">{service.title}</h4>
+                <p className="text-charcoal-muted text-sm">{service.desc}</p>
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us with Image - White section */}
-      <section className="section-padding bg-background">
-        <div className="container-wide">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-            <div>
-              <p className="text-sm font-semibold text-electric uppercase tracking-wider mb-4">
-                Why TrecomHvac & Mechanical
-              </p>
-              <h2 className="mb-12">Why Choose Us</h2>
-              <ul className="space-y-5">
-                {reasons.map((reason) => (
-                  <li key={reason} className="feature-item">
-                    <div className="w-8 h-8 rounded-lg bg-electric/10 flex items-center justify-center flex-shrink-0">
-                      <CheckCircle2 className="w-5 h-5 text-electric" />
-                    </div>
-                    <span className="text-charcoal-muted text-lg">{reason}</span>
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-12 glass-panel-dark rounded-xl p-8">
-                <p className="text-white text-lg font-medium leading-relaxed">
-                  Commercial clients value predictability. That is what we prioritise.
-                </p>
-              </div>
-            </div>
-
-            <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-br from-electric/20 to-teal/20 rounded-2xl blur-2xl" />
-              <img 
-                src={plantRoom} 
-                alt="Professional mechanical plant room installation" 
-                className="relative w-full h-auto rounded-2xl shadow-elevated-lg"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* More Than Installation Callout - Surface section */}
-      <section className="section-padding section-surface">
-        <div className="container-wide">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="mb-8">More than installation.</h2>
-            <p className="text-lg md:text-xl text-charcoal-muted mb-12 leading-relaxed max-w-3xl mx-auto">
-              We also support clients with technical problem-solving, project reviews 
-              and practical on-site advice. This comes from years of managing complex 
-              mechanical works, not just installing them.
-            </p>
+          <div className="text-center mt-10">
             <Button variant="outline" size="lg" asChild>
-              <Link to="/technical-advisory">
-                Learn About Our Approach
+              <Link to="/services">
+                View All Services
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
@@ -218,21 +171,124 @@ export default function Index() {
         </div>
       </section>
 
-      {/* CTA Section - Dark section */}
+      {/* Why Trecom - Premium cards with image */}
+      <section className="section-padding bg-background">
+        <div className="container-wide">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Content side */}
+            <div>
+              <p className="eyebrow mb-4">Why TrecomHvac</p>
+              <h2 className="mb-10">Why Choose Us</h2>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {reasons.map((reason) => (
+                  <div key={reason.title} className="p-5 rounded-2xl bg-surface hover:bg-surface-warm transition-colors group">
+                    <div className="flex items-start gap-4">
+                      <div className="icon-box-sm flex-shrink-0">
+                        <reason.icon className="w-5 h-5 text-navy" />
+                      </div>
+                      <div>
+                        <h4 className="text-base font-bold text-charcoal mb-1">{reason.title}</h4>
+                        <p className="text-sm text-charcoal-muted leading-relaxed">{reason.desc}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              
+              <div className="mt-10 glass-panel-dark rounded-2xl p-8">
+                <p className="text-white text-lg font-semibold leading-relaxed">
+                  Commercial clients value predictability. That is what we prioritise.
+                </p>
+              </div>
+            </div>
+
+            {/* Image side */}
+            <div className="relative">
+              <div className="absolute -inset-6 bg-gradient-to-br from-navy/15 to-teal/15 rounded-3xl blur-2xl" />
+              <img 
+                src={plantRoom} 
+                alt="Professional mechanical plant room installation" 
+                className="relative w-full h-auto rounded-3xl shadow-elevated-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Technical Advisory Teaser - Dark section */}
+      <section className="section-dark section-padding relative overflow-hidden">
+        {/* Subtle pattern */}
+        <div className="absolute inset-0 opacity-[0.03]">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
+            backgroundSize: '32px 32px'
+          }} />
+        </div>
+        
+        <div className="container-wide relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-teal font-bold tracking-[0.15em] uppercase text-sm mb-6">
+              Technical Advisory
+            </p>
+            <h2 className="text-white mb-8">More than installation.</h2>
+            <p className="text-lg md:text-xl text-white/70 mb-10 leading-relaxed max-w-3xl mx-auto">
+              We also support clients with technical problem-solving, project reviews 
+              and practical on-site advice. This comes from years of managing complex 
+              mechanical works, not just installing them.
+            </p>
+            <Button variant="hero-outline" size="lg" asChild className="group">
+              <Link to="/technical-advisory">
+                Learn About Our Approach
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section - Our Approach */}
+      <section className="section-padding section-warm">
+        <div className="container-wide">
+          <div className="text-center mb-14">
+            <p className="eyebrow mb-4">Our Approach</p>
+            <h2>How We Work</h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {process.map((item, index) => (
+              <div key={item.step} className="relative">
+                {/* Connector line */}
+                {index < process.length - 1 && (
+                  <div className="hidden md:block absolute top-16 left-[60%] w-full h-0.5 bg-gradient-to-r from-navy/20 to-teal/20" />
+                )}
+                
+                <div className="card-elevated p-8 text-center relative z-10 h-full">
+                  <div className="stat-number mb-4">{item.step}</div>
+                  <h3 className="text-2xl mb-3">{item.title}</h3>
+                  <p className="text-charcoal-muted">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact CTA Section */}
       <section className="section-dark section-padding">
         <div className="container-wide text-center">
-          <p className="text-electric font-medium tracking-wider uppercase mb-6">
+          <p className="text-teal font-bold tracking-[0.15em] uppercase text-sm mb-6">
             Let's Work Together
           </p>
-          <h2 className="mb-8 text-balance">Ready to Discuss Your Project?</h2>
-          <p className="text-white/60 mb-12 max-w-2xl mx-auto text-lg leading-relaxed">
+          <h2 className="text-white mb-8 text-balance">Ready to Discuss Your Project?</h2>
+          <p className="text-white/60 mb-10 max-w-2xl mx-auto text-lg leading-relaxed">
             Whether you need a quotation, technical advice, or want to discuss a 
             potential project, we're here to help.
           </p>
-          <Button variant="hero" size="xl" asChild>
+          <Button variant="hero" size="xl" asChild className="group">
             <Link to="/contact">
               Contact Us
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Link>
           </Button>
         </div>

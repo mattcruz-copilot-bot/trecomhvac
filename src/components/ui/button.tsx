@@ -9,43 +9,47 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        // Primary gradient button - main CTA
-        default: "bg-gradient-to-r from-electric to-electric-muted text-white shadow-lg shadow-electric/20 hover:shadow-xl hover:shadow-electric/30 hover:-translate-y-1 hover:brightness-110",
+        // Primary gradient button - premium navy-teal gradient
+        default: "bg-gradient-to-r from-navy to-navy-light text-white shadow-lg shadow-navy/20 hover:shadow-xl hover:shadow-navy/30 hover:-translate-y-0.5 active:translate-y-0",
         
-        // Solid charcoal - secondary CTA
-        primary: "bg-charcoal text-white shadow-lg shadow-charcoal/20 hover:shadow-xl hover:shadow-charcoal/30 hover:-translate-y-1 hover:bg-slate",
+        // Primary with teal accent
+        primary: "bg-gradient-to-r from-navy via-navy-light to-teal text-white shadow-lg shadow-navy/25 hover:shadow-xl hover:shadow-navy/35 hover:-translate-y-0.5 active:translate-y-0",
         
-        // Outline with gradient border effect
-        outline: "border-2 border-charcoal text-charcoal bg-transparent hover:bg-charcoal hover:text-white hover:-translate-y-1 hover:shadow-lg",
+        // Teal accent button
+        teal: "bg-gradient-to-r from-teal to-teal-light text-white shadow-lg shadow-teal/25 hover:shadow-xl hover:shadow-teal/35 hover:-translate-y-0.5 active:translate-y-0",
+        
+        // Outline with refined styling
+        outline: "border-2 border-navy/25 text-navy bg-transparent hover:bg-navy hover:text-white hover:border-navy hover:-translate-y-0.5 hover:shadow-lg transition-all",
         
         // Secondary - subtle background
         secondary: "bg-surface text-charcoal hover:bg-border hover:-translate-y-0.5 shadow-sm",
         
         // Ghost - minimal
-        ghost: "text-charcoal hover:bg-surface/80",
+        ghost: "text-charcoal-muted hover:text-charcoal hover:bg-surface/80",
         
         // Link style
-        link: "text-electric underline-offset-4 hover:underline p-0 h-auto font-medium",
+        link: "text-navy underline-offset-4 hover:underline p-0 h-auto font-medium",
         
         // Destructive
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90 shadow-lg",
 
         // Glass effect button
-        glass: "bg-white/70 backdrop-blur-xl border border-white/30 text-charcoal shadow-glass hover:bg-white/90 hover:-translate-y-1",
+        glass: "bg-white/80 backdrop-blur-xl border border-white/40 text-charcoal shadow-glass hover:bg-white hover:shadow-elevated hover:-translate-y-0.5",
 
-        // Hero buttons for dark backgrounds
-        hero: "bg-gradient-to-r from-electric to-electric-muted text-white shadow-lg shadow-electric/30 hover:shadow-xl hover:shadow-electric/40 hover:-translate-y-1 hover:brightness-110 font-semibold",
+        // Hero buttons for dark backgrounds - bright and attention-grabbing
+        hero: "bg-gradient-to-r from-white to-white/95 text-navy shadow-xl shadow-black/20 hover:shadow-2xl hover:shadow-black/25 hover:-translate-y-1 active:translate-y-0 font-bold",
         
-        "hero-outline": "border-2 border-white/80 text-white bg-white/5 backdrop-blur-sm hover:bg-white hover:text-charcoal hover:-translate-y-1 hover:shadow-lg font-semibold",
+        "hero-outline": "border-2 border-white/50 text-white bg-white/5 backdrop-blur-sm hover:bg-white/15 hover:border-white/70 hover:-translate-y-0.5 shadow-lg shadow-black/10 font-semibold",
         
-        navy: "bg-gradient-to-r from-charcoal to-slate text-white shadow-lg hover:shadow-xl hover:-translate-y-1 font-semibold",
+        // Dark navy button for light backgrounds
+        navy: "bg-gradient-to-r from-slate to-navy text-white shadow-lg shadow-navy/20 hover:shadow-xl hover:shadow-navy/30 hover:-translate-y-0.5 font-semibold",
       },
       size: {
-        default: "h-12 px-6 py-2.5",
-        sm: "h-10 rounded-lg px-4 text-sm",
-        lg: "h-14 rounded-xl px-8 text-base",
-        xl: "h-16 rounded-xl px-10 text-base font-semibold",
-        icon: "h-11 w-11",
+        default: "h-11 px-6 py-2.5",
+        sm: "h-9 rounded-lg px-4 text-xs",
+        lg: "h-12 rounded-xl px-8 text-base",
+        xl: "h-14 rounded-2xl px-10 text-base tracking-wide font-bold",
+        icon: "h-10 w-10",
       },
     },
     defaultVariants: {

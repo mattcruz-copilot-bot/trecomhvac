@@ -19,14 +19,14 @@ export function Header() {
   const isActive = (href: string) => location.pathname === href;
 
   return (
-    <header className="sticky top-0 z-50 glass-panel border-b border-white/10">
+    <header className="sticky top-0 z-50 glass-panel border-b border-border/30">
       <nav className="container-wide flex items-center justify-between py-5">
         <Link to="/" className="flex items-center group">
           <div className="flex items-baseline gap-1.5">
-            <span className="text-[24px] font-bold text-slate tracking-[-0.02em] transition-all duration-300 group-hover:text-electric">
+            <span className="text-[24px] font-extrabold text-navy tracking-[-0.02em] transition-all duration-300 group-hover:text-teal font-heading">
               TrecomHvac
             </span>
-            <span className="text-[14px] font-light text-charcoal-muted tracking-[0.03em]">
+            <span className="text-[14px] font-normal text-charcoal-muted tracking-[0.02em]">
               & Mechanical
             </span>
           </div>
@@ -58,16 +58,16 @@ export function Header() {
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-border/50 glass-panel animate-fade-in">
+        <div className="lg:hidden border-t border-border/30 glass-panel animate-fade-in">
           <div className="container-wide py-6 space-y-2">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`block py-3 px-4 rounded-lg text-sm font-medium transition-all duration-300 ${
+                className={`block py-3 px-4 rounded-xl text-sm font-medium transition-all duration-300 ${
                   isActive(item.href)
-                    ? "bg-electric/10 text-electric"
+                    ? "bg-navy/10 text-navy"
                     : "text-charcoal-muted hover:text-charcoal hover:bg-surface"
                 }`}
               >
