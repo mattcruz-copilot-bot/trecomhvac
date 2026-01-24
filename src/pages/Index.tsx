@@ -1,25 +1,42 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2, Wind, Wrench, Building2, Droplets, Gauge, Settings } from "lucide-react";
 
 const services = [
-  "HVAC and ventilation systems",
-  "Mechanical pipework installations",
-  "Plant rooms and infrastructure",
-  "Gas, water and drainage systems",
-  "Commissioning and system performance",
-  "Planned and reactive maintenance",
-  "Technical project support",
+  {
+    icon: Wind,
+    title: "HVAC & Ventilation Systems",
+  },
+  {
+    icon: Wrench,
+    title: "Mechanical Pipework Installations",
+  },
+  {
+    icon: Building2,
+    title: "Plant Rooms & Infrastructure",
+  },
+  {
+    icon: Droplets,
+    title: "Gas, Water & Drainage Systems",
+  },
+  {
+    icon: Gauge,
+    title: "Commissioning & Performance",
+  },
+  {
+    icon: Settings,
+    title: "Planned & Reactive Maintenance",
+  },
 ];
 
 const reasons = [
-  "Strong technical and site experience behind the business",
-  "Practical understanding of how projects run on site",
+  "Strong technical and site experience",
   "Honest pricing and realistic programming",
-  "Clear communication with clients and project teams",
-  "Focus on quality, safety and consistency",
-  "Reliable delivery without drama",
+  "Clear communication",
+  "Professional site conduct",
+  "Focus on quality and safety",
+  "Reliable delivery",
 ];
 
 export default function Index() {
@@ -34,7 +51,7 @@ export default function Index() {
             </h1>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl">
               TrecomHvac & Mechanical delivers professional HVAC, plumbing and mechanical 
-              services for commercial clients — combining senior site experience with 
+              services for commercial clients — combining real site experience with 
               reliable, well-managed delivery.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -45,14 +62,14 @@ export default function Index() {
                 </Link>
               </Button>
               <Button variant="hero-outline" size="lg" asChild>
-                <Link to="/contact">Speak to Us</Link>
+                <Link to="/contact">Contact Us</Link>
               </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Intro Section */}
+      {/* Introduction Section */}
       <section className="section-padding">
         <div className="container-wide">
           <div className="max-w-3xl">
@@ -73,41 +90,50 @@ export default function Index() {
         </div>
       </section>
 
-      {/* What We Do */}
+      {/* Services Grid */}
       <section className="section-padding bg-steel">
+        <div className="container-wide">
+          <div className="mb-12">
+            <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-3">
+              What We Do
+            </p>
+            <h2>Our Services</h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((service) => (
+              <div
+                key={service.title}
+                className="bg-background p-6 border border-border flex items-start gap-4"
+              >
+                <service.icon className="h-6 w-6 text-navy flex-shrink-0 mt-0.5" />
+                <span className="font-medium text-charcoal">{service.title}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="section-padding">
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
               <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-3">
-                What We Do
-              </p>
-              <h2 className="mb-6">We deliver:</h2>
-              <ul className="space-y-4">
-                {services.map((service) => (
-                  <li key={service} className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-navy flex-shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">{service}</span>
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-8 text-muted-foreground font-medium">
-                From individual works packages through to coordinated mechanical delivery.
-              </p>
-            </div>
-
-            <div className="bg-background p-8 lg:p-10 border border-border">
-              <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-3">
                 Why TrecomHvac & Mechanical
               </p>
+              <h2 className="mb-8">Why Choose Us</h2>
               <ul className="space-y-4">
                 {reasons.map((reason) => (
                   <li key={reason} className="flex items-start gap-3">
-                    <div className="h-1.5 w-1.5 bg-navy rounded-full mt-2.5 flex-shrink-0" />
+                    <CheckCircle2 className="h-5 w-5 text-navy flex-shrink-0 mt-0.5" />
                     <span className="text-muted-foreground">{reason}</span>
                   </li>
                 ))}
               </ul>
-              <p className="mt-8 text-charcoal font-medium">
+            </div>
+
+            <div className="bg-steel border border-border p-8 lg:p-10">
+              <p className="text-charcoal font-medium text-lg">
                 Commercial clients value predictability. That is what we prioritise.
               </p>
             </div>
@@ -115,8 +141,8 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Consultancy Teaser */}
-      <section className="section-padding">
+      {/* More Than Installation Callout */}
+      <section className="section-padding bg-steel">
         <div className="container-wide">
           <div className="max-w-3xl">
             <h2 className="mb-6">More than installation.</h2>
@@ -127,7 +153,7 @@ export default function Index() {
             </p>
             <Button variant="hero-outline" asChild>
               <Link to="/technical-advisory">
-                Learn More About Our Approach
+                Learn About Our Approach
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
