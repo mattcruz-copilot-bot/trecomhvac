@@ -47,64 +47,65 @@ export default function Services() {
   return (
     <Layout>
       {/* Hero */}
-      <section className="section-padding border-b border-border">
+      <section className="section-padding">
         <div className="container-wide">
           <div className="max-w-3xl">
-            <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4">
+            <p className="text-sm font-medium text-electric uppercase tracking-wider mb-4">
               Our Services
             </p>
-            <h1 className="mb-6">
-              Our Services
-            </h1>
-            <p className="text-lg text-muted-foreground mb-8">
+            <h1 className="mb-8">Our Services</h1>
+            <p className="text-xl text-charcoal-muted mb-8 leading-relaxed">
               TrecomHvac & Mechanical delivers mechanical, HVAC, plumbing and gas services 
               across commercial, residential, education, healthcare and mixed-use sectors.
             </p>
-            <p className="text-muted-foreground mb-4">We can operate as:</p>
-            <div className="flex flex-wrap gap-3">
+            <p className="text-charcoal-muted mb-5">We can operate as:</p>
+            <div className="flex flex-wrap gap-3 mb-6">
               {operateAs.map((item) => (
-                <span key={item} className="px-4 py-2 bg-steel border border-border text-sm font-medium">
+                <span key={item} className="pill">
                   {item}
                 </span>
               ))}
             </div>
-            <p className="text-muted-foreground mt-6">
+            <p className="text-charcoal-muted">
               Depending on what the project requires.
             </p>
           </div>
         </div>
       </section>
 
+      {/* Gradient separator */}
+      <div className="gradient-line" />
+
       {/* Core Mechanical Services */}
       <section className="section-padding">
         <div className="container-wide">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
             <div>
-              <h2 className="mb-8">Core Mechanical Services</h2>
+              <h2 className="mb-10">Core Mechanical Services</h2>
               <ul className="space-y-4">
                 {coreServices.map((service) => (
-                  <li key={service} className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-navy flex-shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">{service}</span>
+                  <li key={service} className="feature-item">
+                    <CheckCircle2 className="feature-icon" />
+                    <span className="text-charcoal-muted">{service}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
             <div>
-              <h2 className="mb-8">Project Delivery & Technical Support</h2>
-              <p className="text-muted-foreground mb-6">
+              <h2 className="mb-10">Project Delivery & Technical Support</h2>
+              <p className="text-charcoal-muted mb-8">
                 As part of our works, we can provide:
               </p>
               <ul className="space-y-4">
                 {projectSupport.map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <div className="h-1.5 w-1.5 bg-navy rounded-full mt-2.5 flex-shrink-0" />
-                    <span className="text-muted-foreground">{item}</span>
+                  <li key={item} className="flex items-start gap-4 py-2">
+                    <div className="w-1.5 h-1.5 bg-electric rounded-full mt-2.5 flex-shrink-0" />
+                    <span className="text-charcoal-muted">{item}</span>
                   </li>
                 ))}
               </ul>
-              <p className="text-charcoal font-medium mt-8">
+              <p className="text-charcoal font-semibold mt-10">
                 Our focus is not just installation, but system performance and buildability.
               </p>
             </div>
@@ -113,20 +114,20 @@ export default function Services() {
       </section>
 
       {/* How We Operate */}
-      <section className="section-padding bg-steel">
+      <section className="section-padding section-surface">
         <div className="container-wide">
-          <div className="max-w-3xl">
+          <div className="max-w-4xl">
             <h2 className="mb-6">How We Operate on Site</h2>
-            <p className="text-muted-foreground mb-8">We work with:</p>
+            <p className="text-charcoal-muted mb-10">We work with:</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {howWeOperate.map((item) => (
-                <div key={item} className="flex items-start gap-3 p-4 bg-background border border-border">
-                  <CheckCircle2 className="h-5 w-5 text-navy flex-shrink-0 mt-0.5" />
-                  <span className="text-muted-foreground">{item}</span>
+                <div key={item} className="card-elevated p-5 flex items-center gap-4">
+                  <CheckCircle2 className="h-5 w-5 text-electric flex-shrink-0" />
+                  <span className="text-charcoal">{item}</span>
                 </div>
               ))}
             </div>
-            <p className="text-charcoal font-medium mt-8">
+            <p className="text-charcoal font-semibold mt-10">
               We aim to be easy to work with and dependable under pressure.
             </p>
           </div>
@@ -134,13 +135,18 @@ export default function Services() {
       </section>
 
       {/* CTA */}
-      <section className="bg-charcoal text-primary-foreground section-padding">
+      <section className="section-dark section-padding">
         <div className="container-wide text-center">
-          <h2 className="text-primary-foreground mb-4">Need a Quote?</h2>
-          <p className="text-primary-foreground/70 mb-8 max-w-2xl mx-auto">
+          <h2 className="mb-6">Need a Quote?</h2>
+          <p className="text-white/70 mb-10 max-w-2xl mx-auto text-lg">
             Contact us to discuss your project requirements and receive a competitive quotation.
           </p>
-          <Button variant="hero-outline" size="lg" asChild className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-charcoal">
+          <Button 
+            variant="outline" 
+            size="xl" 
+            asChild 
+            className="border-white text-white hover:bg-white hover:text-charcoal"
+          >
             <Link to="/contact">
               Request a Quote
               <ArrowRight className="ml-2 h-4 w-4" />

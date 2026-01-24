@@ -9,32 +9,37 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-lg",
+        // Primary - solid charcoal
+        default: "bg-charcoal text-white hover:bg-slate hover:shadow-elevated hover:-translate-y-0.5",
+        
+        // Electric accent
+        primary: "bg-electric text-white hover:bg-electric-muted hover:shadow-elevated hover:-translate-y-0.5",
+        
+        // Outline - refined border
+        outline: "border-2 border-charcoal text-charcoal hover:bg-charcoal hover:text-white hover:-translate-y-0.5",
+        
+        // Secondary - subtle
+        secondary: "bg-surface text-charcoal hover:bg-border hover:-translate-y-0.5",
+        
+        // Ghost - minimal
+        ghost: "text-charcoal hover:bg-surface",
+        
+        // Link style
+        link: "text-electric underline-offset-4 hover:underline p-0 h-auto",
+        
+        // Destructive
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent/10 hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
-        // Premium gradient button
-        premium: "bg-gradient-to-r from-electric to-electric-light text-white hover:shadow-[0_8px_30px_-4px_rgba(37,99,235,0.4)] hover:-translate-y-0.5",
-        // Dark solid button
-        dark: "bg-charcoal text-white hover:bg-charcoal-light hover:shadow-lg hover:-translate-y-0.5",
-        // Outline with electric accent
-        "premium-outline": "border-2 border-electric text-electric hover:bg-electric hover:text-white hover:-translate-y-0.5",
-        // Glass button
-        glass: "backdrop-blur-xl bg-white/10 border border-white/20 text-white hover:bg-white/20 hover:shadow-glass",
-        // Teal accent
-        teal: "bg-teal text-white hover:bg-teal-light hover:shadow-lg hover:-translate-y-0.5",
-        // Legacy variants for compatibility
-        hero: "bg-charcoal text-primary-foreground hover:bg-charcoal-light font-medium hover:shadow-lg hover:-translate-y-0.5",
-        "hero-outline": "border-2 border-charcoal text-charcoal hover:bg-charcoal hover:text-primary-foreground font-medium hover:-translate-y-0.5",
-        navy: "bg-electric text-primary-foreground hover:bg-electric-light font-medium hover:shadow-lg",
+
+        // Legacy compatibility
+        hero: "bg-charcoal text-white hover:bg-slate hover:shadow-elevated hover:-translate-y-0.5 font-medium",
+        "hero-outline": "border-2 border-charcoal text-charcoal hover:bg-charcoal hover:text-white hover:-translate-y-0.5 font-medium",
+        navy: "bg-electric text-white hover:bg-electric-muted hover:shadow-elevated font-medium",
       },
       size: {
-        default: "h-10 px-4 py-2",
-        sm: "h-9 rounded-md px-3",
+        default: "h-11 px-5 py-2",
+        sm: "h-9 rounded-md px-4 text-sm",
         lg: "h-12 rounded-md px-8 text-base",
-        xl: "h-14 rounded-md px-10 text-base",
+        xl: "h-14 rounded-md px-10 text-base font-medium",
         icon: "h-10 w-10",
       },
     },
