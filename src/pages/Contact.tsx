@@ -6,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Mail, Phone, MapPin, Clock, Send, MessageSquare } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import heroBuilding from "@/assets/hero-building.jpg";
+import londonSkyline from "@/assets/london-skyline.jpg";
 
 const contactInfo = [
   {
@@ -68,11 +68,11 @@ export default function Contact() {
   return (
     <Layout>
       {/* Hero with background */}
-      <section className="relative py-28 md:py-36 overflow-hidden">
+      <section className="relative py-24 md:py-28 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src={heroBuilding} 
-            alt="Commercial building" 
+            src={londonSkyline} 
+            alt="London skyline" 
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 hero-overlay" />
@@ -80,10 +80,10 @@ export default function Contact() {
         
         <div className="container-wide relative z-10">
           <div className="max-w-3xl">
-            <p className="text-teal font-bold tracking-[0.15em] uppercase text-sm mb-6">
+            <p className="text-teal font-bold tracking-[0.15em] uppercase text-sm mb-5">
               Contact Us
             </p>
-            <h1 className="text-white mb-6">
+            <h1 className="text-white mb-5">
               Get in Touch
             </h1>
             <p className="text-xl text-white/70 leading-relaxed">
@@ -95,31 +95,31 @@ export default function Contact() {
       </section>
 
       {/* Contact Form & Info */}
-      <section className="section-padding bg-background">
+      <section className="py-16 md:py-20 bg-background">
         <div className="container-wide">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
             {/* Contact Information - Left side */}
-            <div className="lg:col-span-2 space-y-6">
-              <div className="glass-panel rounded-2xl p-8">
-                <div className="flex items-start gap-4 mb-8">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-navy to-teal flex items-center justify-center flex-shrink-0">
-                    <MessageSquare className="w-6 h-6 text-white" />
+            <div className="lg:col-span-2 space-y-5">
+              <div className="glass-panel rounded-xl p-6">
+                <div className="flex items-start gap-3 mb-6">
+                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-navy to-teal flex items-center justify-center flex-shrink-0">
+                    <MessageSquare className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-charcoal">Contact Information</h3>
-                    <p className="text-charcoal-muted text-sm">Reach out anytime</p>
+                    <h3 className="text-lg font-bold text-charcoal">Contact Information</h3>
+                    <p className="text-charcoal-muted text-xs">Reach out anytime</p>
                   </div>
                 </div>
                 
-                <div className="space-y-4">
+                <div className="space-y-3">
                   {contactInfo.map((item) => (
-                    <div key={item.label} className="flex items-start gap-4 p-4 rounded-xl bg-white/70 backdrop-blur-sm border border-white/60 hover:bg-white hover:shadow-md transition-all group">
-                      <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-navy/10 to-teal/10 border border-navy/15 flex items-center justify-center flex-shrink-0 group-hover:from-navy group-hover:to-teal transition-all">
-                        <item.icon className="h-5 w-5 text-navy group-hover:text-white transition-colors" />
+                    <div key={item.label} className="flex items-start gap-3 p-3 rounded-lg bg-white/70 backdrop-blur-sm border border-white/60 hover:bg-white hover:shadow-md transition-all group">
+                      <div className="w-8 h-8 rounded-md bg-gradient-to-br from-navy/10 to-teal/10 border border-navy/15 flex items-center justify-center flex-shrink-0 group-hover:from-navy group-hover:to-teal transition-all">
+                        <item.icon className="h-4 w-4 text-navy group-hover:text-white transition-colors" />
                       </div>
                       <div>
-                        <p className="font-semibold text-charcoal text-sm">{item.label}</p>
-                        <p className="text-charcoal-muted">{item.value}</p>
+                        <p className="font-semibold text-charcoal text-xs">{item.label}</p>
+                        <p className="text-charcoal-muted text-sm">{item.value}</p>
                       </div>
                     </div>
                   ))}
@@ -127,17 +127,16 @@ export default function Contact() {
               </div>
 
               {/* Emergency callout - Glass styled with gradient */}
-              <div className="rounded-2xl p-6 overflow-hidden relative bg-gradient-to-br from-teal/90 via-teal to-navy/90 shadow-lg">
-                <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-                <div className="absolute bottom-0 left-0 w-32 h-32 bg-navy/30 rounded-full blur-2xl translate-y-1/2 -translate-x-1/2" />
+              <div className="rounded-xl p-5 overflow-hidden relative bg-gradient-to-br from-teal/90 via-teal to-navy/90 shadow-lg">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2" />
                 <div className="relative z-10">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-9 h-9 rounded-lg bg-white/20 backdrop-blur-sm flex items-center justify-center">
-                      <Phone className="w-4 h-4 text-white" />
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="w-7 h-7 rounded-md bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                      <Phone className="w-3.5 h-3.5 text-white" />
                     </div>
-                    <h4 className="font-bold text-white">Emergency Callout</h4>
+                    <h4 className="font-bold text-white text-sm">Emergency Callout</h4>
                   </div>
-                  <p className="text-sm text-white/85 leading-relaxed">
+                  <p className="text-xs text-white/85 leading-relaxed">
                     For existing maintenance contract clients requiring emergency 
                     callout, please use your dedicated contact number.
                   </p>
@@ -147,33 +146,33 @@ export default function Contact() {
 
             {/* Contact Form - Right side */}
             <div className="lg:col-span-3">
-              <div className="glass-panel rounded-2xl p-8 md:p-10">
-                <div className="flex items-start gap-4 mb-8">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-teal to-teal-light flex items-center justify-center flex-shrink-0">
-                    <Send className="w-6 h-6 text-white" />
+              <div className="glass-panel rounded-xl p-6 md:p-8">
+                <div className="flex items-start gap-3 mb-6">
+                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-teal to-teal-light flex items-center justify-center flex-shrink-0">
+                    <Send className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-charcoal">Send an Enquiry</h3>
-                    <p className="text-charcoal-muted text-sm">We'll respond within 24 hours</p>
+                    <h3 className="text-lg font-bold text-charcoal">Send an Enquiry</h3>
+                    <p className="text-charcoal-muted text-xs">We'll respond within 24 hours</p>
                   </div>
                 </div>
                 
-                <form onSubmit={handleSubmit} className="space-y-5">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                    <div className="space-y-2">
-                      <Label htmlFor="name" className="text-charcoal font-semibold text-sm">Name *</Label>
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="space-y-1.5">
+                      <Label htmlFor="name" className="text-charcoal font-semibold text-xs">Name *</Label>
                       <Input
                         id="name"
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="bg-surface border-border/50 focus:border-navy focus:ring-navy/20 h-12 rounded-xl"
+                        className="bg-surface border-border/50 focus:border-navy focus:ring-navy/20 h-10 rounded-lg text-sm"
                         placeholder="Your name"
                       />
                     </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="email" className="text-charcoal font-semibold text-sm">Email *</Label>
+                    <div className="space-y-1.5">
+                      <Label htmlFor="email" className="text-charcoal font-semibold text-xs">Email *</Label>
                       <Input
                         id="email"
                         name="email"
@@ -181,61 +180,61 @@ export default function Contact() {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="bg-surface border-border/50 focus:border-navy focus:ring-navy/20 h-12 rounded-xl"
+                        className="bg-surface border-border/50 focus:border-navy focus:ring-navy/20 h-10 rounded-lg text-sm"
                         placeholder="your@email.com"
                       />
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                    <div className="space-y-2">
-                      <Label htmlFor="company" className="text-charcoal font-semibold text-sm">Company</Label>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="space-y-1.5">
+                      <Label htmlFor="company" className="text-charcoal font-semibold text-xs">Company</Label>
                       <Input
                         id="company"
                         name="company"
                         value={formData.company}
                         onChange={handleChange}
-                        className="bg-surface border-border/50 focus:border-navy focus:ring-navy/20 h-12 rounded-xl"
+                        className="bg-surface border-border/50 focus:border-navy focus:ring-navy/20 h-10 rounded-lg text-sm"
                         placeholder="Company name"
                       />
                     </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="phone" className="text-charcoal font-semibold text-sm">Phone</Label>
+                    <div className="space-y-1.5">
+                      <Label htmlFor="phone" className="text-charcoal font-semibold text-xs">Phone</Label>
                       <Input
                         id="phone"
                         name="phone"
                         type="tel"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="bg-surface border-border/50 focus:border-navy focus:ring-navy/20 h-12 rounded-xl"
+                        className="bg-surface border-border/50 focus:border-navy focus:ring-navy/20 h-10 rounded-lg text-sm"
                         placeholder="+44 (0) 20 XXXX XXXX"
                       />
                     </div>
                   </div>
 
-                  <div className="space-y-2">
-                    <Label htmlFor="subject" className="text-charcoal font-semibold text-sm">Subject *</Label>
+                  <div className="space-y-1.5">
+                    <Label htmlFor="subject" className="text-charcoal font-semibold text-xs">Subject *</Label>
                     <Input
                       id="subject"
                       name="subject"
                       value={formData.subject}
                       onChange={handleChange}
                       required
-                      className="bg-surface border-border/50 focus:border-navy focus:ring-navy/20 h-12 rounded-xl"
+                      className="bg-surface border-border/50 focus:border-navy focus:ring-navy/20 h-10 rounded-lg text-sm"
                       placeholder="How can we help?"
                     />
                   </div>
 
-                  <div className="space-y-2">
-                    <Label htmlFor="message" className="text-charcoal font-semibold text-sm">Message *</Label>
+                  <div className="space-y-1.5">
+                    <Label htmlFor="message" className="text-charcoal font-semibold text-xs">Message *</Label>
                     <Textarea
                       id="message"
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
                       required
-                      rows={5}
-                      className="bg-surface border-border/50 focus:border-navy focus:ring-navy/20 resize-none rounded-xl"
+                      rows={4}
+                      className="bg-surface border-border/50 focus:border-navy focus:ring-navy/20 resize-none rounded-lg text-sm"
                       placeholder="Tell us about your project..."
                     />
                   </div>

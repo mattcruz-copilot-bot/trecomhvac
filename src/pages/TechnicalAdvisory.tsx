@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/button";
 import { CTASection } from "@/components/CTASection";
 import { 
   ArrowRight, 
-  AlertTriangle, 
+  AlertCircle, 
   Clock, 
-  FileWarning, 
+  FileText, 
   Users, 
   Target, 
   Wrench,
@@ -19,15 +19,16 @@ import {
   ChevronRight
 } from "lucide-react";
 import engineersConsulting from "@/assets/engineers-consulting.jpg";
-import heroBuilding from "@/assets/hero-building.jpg";
+import londonSkyline from "@/assets/london-skyline.jpg";
+import pipeworkDetail from "@/assets/pipework-detail.jpg";
 
 const problemAreas = [
   { icon: Clock, text: "Poor sequencing" },
-  { icon: FileWarning, text: "Design that doesn't reflect site reality" },
+  { icon: FileText, text: "Design that doesn't reflect site reality" },
   { icon: Users, text: "Coordination gaps between trades" },
   { icon: Target, text: "Unrealistic programmes" },
   { icon: Wrench, text: "Inadequate commissioning" },
-  { icon: AlertTriangle, text: "Lack of ownership when issues arise" },
+  { icon: AlertCircle, text: "Lack of ownership when issues arise" },
 ];
 
 const supportServices = [
@@ -53,24 +54,24 @@ export default function TechnicalAdvisory() {
   return (
     <Layout>
       {/* Hero Section with Background Image */}
-      <section className="relative min-h-[75vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[70vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src={heroBuilding} 
-            alt="London commercial building" 
+            src={londonSkyline} 
+            alt="London commercial skyline" 
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 hero-overlay" />
           <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-transparent" />
         </div>
         
-        <div className="relative z-10 container-wide section-padding">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="relative z-10 container-wide py-20 md:py-28">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-teal font-bold tracking-[0.15em] uppercase text-sm mb-6">
+              <p className="text-teal font-bold tracking-[0.15em] uppercase text-sm mb-5">
                 Technical Advisory
               </p>
-              <h1 className="text-white mb-8">
+              <h1 className="text-white mb-6">
                 Technical Advisory & Project Support
               </h1>
               <p className="text-xl text-white/70 leading-relaxed max-w-xl mb-8">
@@ -85,29 +86,29 @@ export default function TechnicalAdvisory() {
               </Button>
             </div>
             <div className="relative hidden lg:block">
-              <div className="absolute -inset-4 bg-gradient-to-br from-teal/15 to-transparent rounded-3xl blur-2xl" />
+              <div className="absolute -inset-3 bg-gradient-to-br from-teal/10 to-transparent rounded-2xl blur-xl" />
               <img 
                 src={engineersConsulting} 
                 alt="Engineers reviewing technical drawings on-site" 
-                className="relative w-full h-auto rounded-3xl shadow-2xl border border-white/10"
+                className="relative w-full h-auto rounded-2xl shadow-2xl border border-white/10"
               />
             </div>
           </div>
         </div>
         
         {/* Bottom fade */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-[5]" />
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent z-[5]" />
       </section>
 
-      {/* Experience Introduction */}
-      <section className="section-padding bg-background">
+      {/* Experience Introduction - Compact */}
+      <section className="py-12 md:py-16 bg-background">
         <div className="container-wide">
-          <div className="max-w-4xl mx-auto">
-            <div className="glass-panel rounded-3xl p-10 md:p-14 text-center">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-navy to-teal flex items-center justify-center mx-auto mb-8">
-                <Target className="w-8 h-8 text-white" />
+          <div className="max-w-3xl mx-auto">
+            <div className="glass-panel rounded-2xl p-8 text-center">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-navy to-teal flex items-center justify-center mx-auto mb-5">
+                <Target className="w-6 h-6 text-white" />
               </div>
-              <p className="text-lg md:text-xl text-charcoal-muted leading-relaxed">
+              <p className="text-lg text-charcoal-muted leading-relaxed">
                 This service is built on real senior site experience managing large teams, 
                 complex programmes and high-risk mechanical packages. We don't just install — 
                 we understand how projects succeed and fail.
@@ -117,47 +118,48 @@ export default function TechnicalAdvisory() {
         </div>
       </section>
 
-      {/* Where Projects Fail - Visual Feature Section */}
-      <section className="section-dark section-padding relative overflow-hidden">
-        {/* Subtle pattern */}
-        <div className="absolute inset-0 opacity-[0.03]">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
-            backgroundSize: '32px 32px'
-          }} />
+      {/* Where Projects Fail - With background image */}
+      <section className="relative py-16 md:py-20 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={pipeworkDetail} 
+            alt="" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-charcoal/96 via-slate/94 to-navy/92" />
         </div>
         
         <div className="container-wide relative z-10">
-          <div className="text-center mb-14">
-            <p className="text-teal font-bold tracking-[0.15em] uppercase text-sm mb-6">
+          <div className="text-center mb-10">
+            <p className="text-teal font-bold tracking-[0.15em] uppercase text-sm mb-4">
               The Reality
             </p>
-            <h2 className="text-white mb-6">We understand where projects typically fail</h2>
-            <p className="text-white/60 max-w-2xl mx-auto text-lg">
+            <h2 className="text-white mb-4">We understand where projects typically fail</h2>
+            <p className="text-white/60 max-w-2xl mx-auto">
               Many mechanical issues aren't caused by poor installation — they're caused by 
               problems that happen before work even begins.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
-            {problemAreas.map((problem, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 max-w-5xl mx-auto">
+            {problemAreas.map((problem) => (
               <div 
                 key={problem.text} 
-                className="glass-card-dark p-6 group"
+                className="glass-card-dark p-5 group"
               >
-                <div className="flex items-start gap-4">
-                  <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-teal/20 to-navy/20 border border-teal/25 flex items-center justify-center flex-shrink-0 group-hover:from-teal/35 group-hover:to-navy/30 transition-all duration-300">
-                    <problem.icon className="w-5 h-5 text-teal" />
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-teal/20 to-navy/20 border border-teal/25 flex items-center justify-center flex-shrink-0 group-hover:from-teal/35 group-hover:to-navy/30 transition-all duration-300">
+                    <problem.icon className="w-4 h-4 text-teal" />
                   </div>
-                  <span className="text-white/85 font-medium pt-2.5 group-hover:text-white transition-colors">{problem.text}</span>
+                  <span className="text-white/85 font-medium group-hover:text-white transition-colors">{problem.text}</span>
                 </div>
               </div>
             ))}
           </div>
           
-          <div className="mt-14 text-center">
-            <div className="inline-block glass-panel-dark rounded-2xl px-10 py-6">
-              <p className="text-xl md:text-2xl font-bold text-white">
+          <div className="mt-10 text-center">
+            <div className="inline-block glass-panel-dark rounded-xl px-8 py-5">
+              <p className="text-lg md:text-xl font-bold text-white">
                 Our role is to identify these issues early and help resolve them practically.
               </p>
             </div>
@@ -166,24 +168,24 @@ export default function TechnicalAdvisory() {
       </section>
 
       {/* How We Support - Card grid */}
-      <section className="section-padding section-surface">
+      <section className="py-16 md:py-20 section-surface">
         <div className="container-wide">
-          <div className="text-center mb-14">
-            <p className="eyebrow mb-4">Our Services</p>
+          <div className="text-center mb-10">
+            <p className="eyebrow mb-3">Our Services</p>
             <h2>How We Support Clients</h2>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
             {supportServices.map((service) => (
               <div 
                 key={service.title} 
-                className="card-glass p-6 group cursor-pointer"
+                className="card-glass p-5 group cursor-pointer"
               >
-                <div className="icon-box-sm mb-4 group-hover:scale-105 transition-transform">
-                  <service.icon className="w-5 h-5 text-navy" />
+                <div className="icon-box-sm mb-3 group-hover:scale-105 transition-transform">
+                  <service.icon className="w-4 h-4 text-navy" />
                 </div>
-                <h4 className="text-base font-bold text-charcoal mb-1">{service.title}</h4>
-                <p className="text-sm text-charcoal-muted">{service.desc}</p>
+                <h4 className="text-sm font-bold text-charcoal mb-0.5">{service.title}</h4>
+                <p className="text-xs text-charcoal-muted">{service.desc}</p>
               </div>
             ))}
           </div>
@@ -191,37 +193,37 @@ export default function TechnicalAdvisory() {
       </section>
 
       {/* Valuable For Section */}
-      <section className="relative section-padding overflow-hidden bg-background">
+      <section className="py-16 md:py-20 bg-background">
         <div className="container-wide">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Image side */}
             <div className="relative order-2 lg:order-1">
-              <div className="absolute -inset-6 bg-gradient-to-br from-navy/15 to-teal/15 rounded-3xl blur-2xl" />
+              <div className="absolute -inset-4 bg-gradient-to-br from-navy/10 to-teal/10 rounded-2xl blur-xl" />
               <img 
                 src={engineersConsulting} 
                 alt="Engineering consultation" 
-                className="relative w-full h-auto rounded-3xl shadow-elevated-lg"
+                className="relative w-full h-auto rounded-2xl shadow-elevated-lg"
               />
             </div>
             
             {/* Content side */}
             <div className="order-1 lg:order-2">
-              <p className="eyebrow mb-4">Who Benefits</p>
-              <h2 className="mb-8">This is particularly valuable for:</h2>
-              <ul className="space-y-3 mb-10">
+              <p className="eyebrow mb-3">Who Benefits</p>
+              <h2 className="mb-6">This is particularly valuable for:</h2>
+              <ul className="space-y-2 mb-8">
                 {valuableFor.map((client) => (
-                  <li key={client} className="flex items-center gap-4 group">
-                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-navy/10 to-teal/10 border border-navy/10 flex items-center justify-center group-hover:from-navy group-hover:to-teal transition-all">
-                      <ChevronRight className="w-4 h-4 text-navy group-hover:text-white transition-colors" />
+                  <li key={client} className="flex items-center gap-3 group">
+                    <div className="w-7 h-7 rounded-md bg-gradient-to-br from-navy/10 to-teal/10 border border-navy/10 flex items-center justify-center group-hover:from-navy group-hover:to-teal transition-all">
+                      <ChevronRight className="w-3.5 h-3.5 text-navy group-hover:text-white transition-colors" />
                     </div>
-                    <span className="text-charcoal font-semibold text-lg group-hover:text-navy transition-colors">{client}</span>
+                    <span className="text-charcoal font-semibold group-hover:text-navy transition-colors">{client}</span>
                   </li>
                 ))}
               </ul>
 
-              <div className="glass-panel rounded-2xl p-8">
-                <h4 className="text-xl font-bold text-charcoal mb-4">Senior-Level Insight</h4>
-                <p className="text-charcoal-muted leading-relaxed">
+              <div className="glass-panel rounded-xl p-6">
+                <h4 className="text-lg font-bold text-charcoal mb-3">Senior-Level Insight</h4>
+                <p className="text-charcoal-muted text-sm leading-relaxed">
                   Clients who use this service gain access to senior-level mechanical insight 
                   without employing a full-time technical manager. We provide the expertise 
                   you need, when you need it.
@@ -232,43 +234,14 @@ export default function TechnicalAdvisory() {
         </div>
       </section>
 
-      {/* Why This Matters - Final CTA with background image */}
-      <section className="relative py-20 md:py-28 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img 
-            src={heroBuilding} 
-            alt="" 
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-charcoal/95 via-slate/92 to-navy/88" />
-          {/* Decorative glow elements */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-teal/8 rounded-full blur-[120px]" />
-        </div>
-        
-        <div className="container-wide relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <p className="text-teal font-bold tracking-[0.15em] uppercase text-sm mb-4">
-              Prevention Over Cure
-            </p>
-            <h2 className="text-white mb-8">Why This Matters</h2>
-            <div className="glass-card-dark rounded-2xl p-8 md:p-10 mb-8">
-              <p className="text-lg text-white/70 mb-6 leading-relaxed">
-                Many mechanical issues are not caused by poor installation — they are caused 
-                by poor coordination, poor sequencing, or decisions made too late.
-              </p>
-              <p className="text-2xl md:text-3xl font-bold text-white">
-                This service exists to prevent that.
-              </p>
-            </div>
-            <Button variant="hero" size="lg" asChild className="group">
-              <Link to="/contact">
-                Discuss Your Project
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
+      {/* CTA Section */}
+      <CTASection
+        eyebrow="Prevention Over Cure"
+        title="This service exists to prevent costly mistakes."
+        description="Many mechanical issues are not caused by poor installation — they are caused by poor coordination, poor sequencing, or decisions made too late."
+        buttonText="Discuss Your Project"
+        buttonLink="/contact"
+      />
     </Layout>
   );
 }

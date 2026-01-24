@@ -2,9 +2,10 @@ import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { CTASection } from "@/components/CTASection";
-import { ArrowRight, Wind, Wrench, Building2, Droplets, Gauge, Settings, ChevronDown, Shield, Clock, MessageSquare, Award, Target, Zap } from "lucide-react";
+import { ArrowRight, Wind, Wrench, Building2, Droplets, Gauge, Settings, Shield, Clock, MessageSquare, Award, Target, Zap } from "lucide-react";
 import heroBuilding from "@/assets/hero-building.jpg";
 import plantRoom from "@/assets/plant-room.jpg";
+import hvacDuctwork from "@/assets/hvac-ductwork.jpg";
 
 const services = [
   { icon: Wind, title: "HVAC & Ventilation", desc: "Complete climate control solutions" },
@@ -31,14 +32,10 @@ const process = [
 ];
 
 export default function Index() {
-  const scrollToContent = () => {
-    window.scrollTo({ top: window.innerHeight * 0.9, behavior: 'smooth' });
-  };
-
   return (
     <Layout>
       {/* Hero Section - Full viewport with premium overlay */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
@@ -92,44 +89,32 @@ export default function Index() {
           </div>
         </div>
 
-        {/* Scroll Indicator */}
-        <button 
-          onClick={scrollToContent}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-white/50 hover:text-white transition-colors duration-300 group cursor-pointer animate-fade-up opacity-0"
-          style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}
-        >
-          <span className="text-xs tracking-[0.15em] uppercase font-medium">Scroll</span>
-          <div className="w-6 h-10 rounded-full border-2 border-current flex items-start justify-center p-2">
-            <div className="w-1 h-2 bg-current rounded-full animate-bounce" />
-          </div>
-        </button>
-
         {/* Bottom gradient fade */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-[5]" />
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent z-[5]" />
       </section>
 
-      {/* Credibility Intro Section */}
-      <section className="section-padding bg-background">
+      {/* Credibility Intro Section - Tighter spacing */}
+      <section className="py-16 md:py-20 bg-background">
         <div className="container-wide">
           <div className="max-w-4xl mx-auto">
-            <div className="glass-panel rounded-3xl p-10 md:p-14">
-              <div className="flex flex-col md:flex-row gap-8 items-start">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-navy to-teal flex items-center justify-center flex-shrink-0">
-                  <Building2 className="w-8 h-8 text-white" />
+            <div className="glass-panel rounded-2xl p-8 md:p-10">
+              <div className="flex flex-col md:flex-row gap-6 items-start">
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-navy to-teal flex items-center justify-center flex-shrink-0">
+                  <Building2 className="w-7 h-7 text-white" />
                 </div>
                 <div>
-                  <p className="text-lg md:text-xl text-charcoal-muted mb-6 leading-relaxed">
+                  <p className="text-lg text-charcoal-muted mb-4 leading-relaxed">
                     TrecomHvac & Mechanical is a London-based mechanical services company 
                     providing HVAC, plumbing and gas solutions to commercial, residential 
                     and mixed-use developments.
                   </p>
-                  <p className="text-lg md:text-xl text-charcoal-muted mb-8 leading-relaxed">
+                  <p className="text-lg text-charcoal-muted mb-6 leading-relaxed">
                     The business is built on real experience delivering work on large, 
                     complex sites. That background shapes how we operate today: organised, 
                     accountable, safety-focused and commercially aware.
                   </p>
-                  <div className="pt-6 border-t border-border">
-                    <p className="text-xl md:text-2xl font-bold text-charcoal">
+                  <div className="pt-5 border-t border-border">
+                    <p className="text-xl font-bold text-charcoal">
                       We don't overpromise. We plan properly, communicate clearly and deliver what we agree.
                     </p>
                   </div>
@@ -140,29 +125,38 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Services Grid - Visual cards */}
-      <section className="section-padding section-surface">
-        <div className="container-wide">
-          <div className="text-center mb-14">
-            <p className="eyebrow mb-4">What We Do</p>
-            <h2 className="text-balance">Our Services</h2>
+      {/* Services Grid - Visual cards with image background */}
+      <section className="relative py-16 md:py-24 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={hvacDuctwork} 
+            alt="HVAC ductwork" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-charcoal/95 via-slate/92 to-navy/90" />
+        </div>
+        
+        <div className="container-wide relative z-10">
+          <div className="text-center mb-12">
+            <p className="text-teal font-bold tracking-[0.15em] uppercase text-sm mb-3">What We Do</p>
+            <h2 className="text-white text-balance">Our Services</h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {services.map((service, index) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {services.map((service) => (
               <div 
                 key={service.title} 
-                className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-white/60 shadow-sm hover:bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group cursor-pointer"
+                className="glass-card-dark p-6 group cursor-pointer"
               >
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-navy/10 to-teal/10 border border-navy/15 flex items-center justify-center mb-5 group-hover:from-navy group-hover:to-teal transition-all duration-300">
-                  <service.icon className="h-6 w-6 text-navy group-hover:text-white transition-colors" />
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-teal/20 to-navy/20 border border-teal/25 flex items-center justify-center mb-4 group-hover:from-teal/35 group-hover:to-navy/30 transition-all duration-300">
+                  <service.icon className="h-5 w-5 text-teal group-hover:text-white transition-colors" />
                 </div>
-                <h4 className="text-charcoal mb-2 group-hover:text-navy transition-colors">{service.title}</h4>
-                <p className="text-charcoal-muted text-sm">{service.desc}</p>
+                <h4 className="text-white mb-2 group-hover:text-teal transition-colors">{service.title}</h4>
+                <p className="text-white/60 text-sm">{service.desc}</p>
               </div>
             ))}
           </div>
           <div className="text-center mt-10">
-            <Button variant="outline" size="lg" asChild>
+            <Button variant="hero-outline" size="lg" asChild>
               <Link to="/services">
                 View All Services
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -173,32 +167,32 @@ export default function Index() {
       </section>
 
       {/* Why Trecom - Premium cards with image */}
-      <section className="section-padding bg-background">
+      <section className="py-16 md:py-24 bg-background">
         <div className="container-wide">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Content side */}
             <div>
-              <p className="eyebrow mb-4">Why TrecomHvac</p>
-              <h2 className="mb-10">Why Choose Us</h2>
+              <p className="eyebrow mb-3">Why TrecomHvac</p>
+              <h2 className="mb-8">Why Choose Us</h2>
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {reasons.map((reason, index) => (
-                  <div key={reason.title} className="p-5 rounded-2xl bg-white/70 backdrop-blur-sm border border-white/60 hover:bg-white hover:shadow-md transition-all duration-300 group">
-                    <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-navy/10 to-teal/10 border border-navy/15 flex items-center justify-center flex-shrink-0 group-hover:from-navy group-hover:to-teal transition-all duration-300">
-                        <reason.icon className="w-5 h-5 text-navy group-hover:text-white transition-colors" />
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {reasons.map((reason) => (
+                  <div key={reason.title} className="p-4 rounded-xl bg-white/70 backdrop-blur-sm border border-white/60 hover:bg-white hover:shadow-md transition-all duration-300 group">
+                    <div className="flex items-start gap-3">
+                      <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-navy/10 to-teal/10 border border-navy/15 flex items-center justify-center flex-shrink-0 group-hover:from-navy group-hover:to-teal transition-all duration-300">
+                        <reason.icon className="w-4 h-4 text-navy group-hover:text-white transition-colors" />
                       </div>
                       <div>
-                        <h4 className="text-base font-bold text-charcoal mb-1">{reason.title}</h4>
-                        <p className="text-sm text-charcoal-muted leading-relaxed">{reason.desc}</p>
+                        <h4 className="text-sm font-bold text-charcoal mb-0.5">{reason.title}</h4>
+                        <p className="text-xs text-charcoal-muted leading-relaxed">{reason.desc}</p>
                       </div>
                     </div>
                   </div>
                 ))}
               </div>
               
-              <div className="mt-10 glass-panel-dark rounded-2xl p-8">
-                <p className="text-white text-lg font-semibold leading-relaxed">
+              <div className="mt-8 glass-panel-dark rounded-xl p-6">
+                <p className="text-white text-base font-semibold leading-relaxed">
                   Commercial clients value predictability. That is what we prioritise.
                 </p>
               </div>
@@ -206,39 +200,41 @@ export default function Index() {
 
             {/* Image side */}
             <div className="relative">
-              <div className="absolute -inset-6 bg-gradient-to-br from-navy/15 to-teal/15 rounded-3xl blur-2xl" />
+              <div className="absolute -inset-4 bg-gradient-to-br from-navy/10 to-teal/10 rounded-2xl blur-2xl" />
               <img 
                 src={plantRoom} 
                 alt="Professional mechanical plant room installation" 
-                className="relative w-full h-auto rounded-3xl shadow-elevated-lg"
+                className="relative w-full h-auto rounded-2xl shadow-elevated-lg"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Technical Advisory Teaser - Dark section */}
-      <section className="section-dark section-padding relative overflow-hidden">
-        {/* Subtle pattern */}
-        <div className="absolute inset-0 opacity-[0.03]">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
-            backgroundSize: '32px 32px'
-          }} />
+      {/* Technical Advisory Teaser - Dark section with background image */}
+      <section className="relative py-16 md:py-20 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={heroBuilding} 
+            alt="" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-charcoal/95 via-slate/92 to-navy/90" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-teal/8 rounded-full blur-[100px]" />
         </div>
         
         <div className="container-wide relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-teal font-bold tracking-[0.15em] uppercase text-sm mb-6">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-teal font-bold tracking-[0.15em] uppercase text-sm mb-4">
               Technical Advisory
             </p>
-            <h2 className="text-white mb-8">More than installation.</h2>
-            <p className="text-lg md:text-xl text-white/70 mb-10 leading-relaxed max-w-3xl mx-auto">
+            <h2 className="text-white mb-6">More than installation.</h2>
+            <p className="text-lg text-white/70 mb-8 leading-relaxed max-w-2xl mx-auto">
               We also support clients with technical problem-solving, project reviews 
               and practical on-site advice. This comes from years of managing complex 
               mechanical works, not just installing them.
             </p>
-            <Button variant="hero-outline" size="lg" asChild className="group">
+            <Button variant="hero" size="lg" asChild className="group">
               <Link to="/technical-advisory">
                 Learn About Our Approach
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -249,25 +245,25 @@ export default function Index() {
       </section>
 
       {/* Process Section - Our Approach */}
-      <section className="section-padding section-warm">
+      <section className="py-16 md:py-24 section-warm">
         <div className="container-wide">
-          <div className="text-center mb-14">
-            <p className="eyebrow mb-4">Our Approach</p>
+          <div className="text-center mb-12">
+            <p className="eyebrow mb-3">Our Approach</p>
             <h2>How We Work</h2>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-4xl mx-auto">
             {process.map((item, index) => (
               <div key={item.step} className="relative">
                 {/* Connector line */}
                 {index < process.length - 1 && (
-                  <div className="hidden md:block absolute top-16 left-[60%] w-full h-0.5 bg-gradient-to-r from-navy/20 to-teal/20" />
+                  <div className="hidden md:block absolute top-14 left-[60%] w-full h-0.5 bg-gradient-to-r from-navy/20 to-teal/20" />
                 )}
                 
-                <div className="card-elevated p-8 text-center relative z-10 h-full">
-                  <div className="stat-number mb-4">{item.step}</div>
-                  <h3 className="text-2xl mb-3">{item.title}</h3>
-                  <p className="text-charcoal-muted">{item.desc}</p>
+                <div className="card-elevated p-6 text-center relative z-10 h-full">
+                  <div className="stat-number text-4xl mb-3">{item.step}</div>
+                  <h3 className="text-xl mb-2">{item.title}</h3>
+                  <p className="text-charcoal-muted text-sm">{item.desc}</p>
                 </div>
               </div>
             ))}
