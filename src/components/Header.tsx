@@ -58,22 +58,37 @@ export function Header() {
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-border/30 glass-panel animate-fade-in">
-          <div className="container-wide py-6 space-y-2">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                to={item.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className={`block py-3 px-4 rounded-xl text-sm font-medium transition-all duration-300 ${
-                  isActive(item.href)
-                    ? "bg-navy/10 text-navy"
-                    : "text-charcoal-muted hover:text-charcoal hover:bg-surface"
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
+        <div className="lg:hidden border-t border-navy/10 animate-fade-in">
+          {/* Premium gradient background */}
+          <div className="bg-gradient-to-b from-white via-surface to-surface-warm">
+            <div className="container-wide py-4 space-y-1">
+              {navigation.map((item, index) => (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`flex items-center gap-3 py-3.5 px-4 rounded-xl text-sm font-medium transition-all duration-300 ${
+                    isActive(item.href)
+                      ? "bg-gradient-to-r from-navy/10 to-teal/10 text-navy border border-navy/15"
+                      : "text-charcoal-muted hover:text-charcoal hover:bg-white hover:shadow-md border border-transparent"
+                  }`}
+                  style={{ animationDelay: `${index * 0.05}s` }}
+                >
+                  <div className={`w-8 h-8 rounded-lg flex items-center justify-center transition-all ${
+                    isActive(item.href)
+                      ? "bg-gradient-to-br from-navy to-teal"
+                      : "bg-gradient-to-br from-navy/10 to-teal/10 group-hover:from-navy group-hover:to-teal"
+                  }`}>
+                    <span className={`text-xs font-bold ${isActive(item.href) ? "text-white" : "text-navy"}`}>
+                      {item.name.charAt(0)}
+                    </span>
+                  </div>
+                  <span>{item.name}</span>
+                </Link>
+              ))}
+            </div>
+            {/* Bottom accent */}
+            <div className="h-1 bg-gradient-to-r from-navy via-teal to-navy opacity-20" />
           </div>
         </div>
       )}
