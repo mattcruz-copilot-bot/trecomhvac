@@ -22,29 +22,29 @@ export function Footer() {
       <div className="absolute top-0 right-0 w-80 h-80 bg-teal/5 rounded-full blur-[100px]" />
       <div className="absolute bottom-0 left-1/4 w-60 h-60 bg-navy/10 rounded-full blur-[80px]" />
       
-      <div className="container-wide py-14 md:py-16 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
+      <div className="container-wide py-10 sm:py-12 md:py-14 lg:py-16 relative z-10">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-16">
           {/* Brand */}
-          <div className="lg:col-span-1">
-            <div className="flex items-baseline gap-1.5 mb-6">
-              <span className="text-[24px] font-extrabold text-white tracking-[-0.02em] font-heading">
+          <div className="col-span-2 sm:col-span-2 lg:col-span-1">
+            <div className="flex items-baseline gap-1.5 mb-4 sm:mb-6">
+              <span className="text-xl sm:text-[24px] font-extrabold text-white tracking-[-0.02em] font-heading">
                 TrecomHvac
               </span>
-              <span className="text-[14px] font-normal text-white/50 tracking-[0.02em]">
+              <span className="text-xs sm:text-[14px] font-normal text-white/50 tracking-[0.02em]">
                 & Mechanical
               </span>
             </div>
-            <p className="text-sm text-white/50 leading-relaxed">
+            <p className="text-sm text-white/50 leading-relaxed max-w-xs">
               Professional mechanical contracting services for commercial and industrial clients across London and the South East.
             </p>
           </div>
 
           {/* Company Links */}
           <div>
-            <h4 className="text-xs font-bold text-white/80 mb-6 uppercase tracking-widest">
+            <h4 className="text-xs font-bold text-white/80 mb-4 sm:mb-6 uppercase tracking-widest">
               Company
             </h4>
-            <ul className="space-y-4">
+            <ul className="space-y-3 sm:space-y-4">
               {navigation.company.map((item) => (
                 <li key={item.name}>
                   <Link
@@ -60,10 +60,10 @@ export function Footer() {
 
           {/* Legal Links */}
           <div>
-            <h4 className="text-xs font-bold text-white/80 mb-6 uppercase tracking-widest">
+            <h4 className="text-xs font-bold text-white/80 mb-4 sm:mb-6 uppercase tracking-widest">
               Legal
             </h4>
-            <ul className="space-y-4">
+            <ul className="space-y-3 sm:space-y-4">
               {navigation.legal.map((item) => (
                 <li key={item.name}>
                   <Link
@@ -78,37 +78,37 @@ export function Footer() {
           </div>
 
           {/* Contact Info */}
-          <div>
-            <h4 className="text-xs font-bold text-white/80 mb-6 uppercase tracking-widest">
+          <div className="col-span-2 sm:col-span-1">
+            <h4 className="text-xs font-bold text-white/80 mb-4 sm:mb-6 uppercase tracking-widest">
               Contact
             </h4>
-            <ul className="space-y-5">
-              <li className="flex items-start gap-4 text-sm text-white/50">
-                <div className="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
-                  <MapPin className="h-4 w-4 text-teal" />
+            <ul className="space-y-4 sm:space-y-5">
+              <li className="flex items-start gap-3 sm:gap-4 text-sm text-white/50">
+                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
+                  <MapPin className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-teal" />
                 </div>
-                <span className="pt-1">London, United Kingdom</span>
+                <span className="pt-0.5 sm:pt-1">London, United Kingdom</span>
               </li>
-              <li className="flex items-center gap-4 text-sm text-white/50">
-                <div className="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
-                  <Phone className="h-4 w-4 text-teal" />
+              <li className="flex items-center gap-3 sm:gap-4 text-sm text-white/50">
+                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
+                  <Phone className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-teal" />
                 </div>
                 <span>+44 (0) 20 XXXX XXXX</span>
               </li>
-              <li className="flex items-center gap-4 text-sm text-white/50">
-                <div className="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
-                  <Mail className="h-4 w-4 text-teal" />
+              <li className="flex items-center gap-3 sm:gap-4 text-sm text-white/50">
+                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
+                  <Mail className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-teal" />
                 </div>
-                <span>info@trecomhvac.co.uk</span>
+                <span className="break-all sm:break-normal">info@trecomhvac.co.uk</span>
               </li>
             </ul>
           </div>
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 pt-6 border-t border-white/10">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-sm text-white/40">
+        <div className="mt-8 sm:mt-10 md:mt-12 pt-5 sm:pt-6 border-t border-white/10">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
+            <p className="text-xs sm:text-sm text-white/40 text-center sm:text-left">
               © {new Date().getFullYear()} TrecomHvac & Mechanical. All rights reserved.
             </p>
             <div className="flex items-center gap-6">
