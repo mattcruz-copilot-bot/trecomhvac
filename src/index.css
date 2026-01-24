@@ -187,12 +187,17 @@
   }
 
   .glass-panel-dark {
-    background: linear-gradient(135deg, hsl(220 30% 16%), hsl(220 25% 12%));
+    background: linear-gradient(145deg, 
+      hsl(220 32% 18%) 0%, 
+      hsl(220 28% 14%) 50%,
+      hsl(225 25% 11%) 100%
+    );
     @apply backdrop-blur-xl;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 
-      0 4px 32px rgba(0, 0, 0, 0.25),
-      inset 0 1px 0 rgba(255, 255, 255, 0.06);
+      0 4px 32px rgba(0, 0, 0, 0.3),
+      0 12px 48px rgba(0, 0, 0, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08);
   }
 
   /* Premium card with depth and subtle gradient border */
@@ -233,9 +238,13 @@
     transform: translateY(-2px);
   }
 
-  /* Dark section - refined gradient */
+  /* Dark section - premium gradient with depth */
   .section-dark {
-    background: linear-gradient(180deg, hsl(220 30% 12%) 0%, hsl(220 25% 8%) 100%);
+    background: linear-gradient(165deg, 
+      hsl(220 35% 14%) 0%, 
+      hsl(220 30% 10%) 50%,
+      hsl(225 28% 8%) 100%
+    );
   }
 
   .section-dark h1,
@@ -251,14 +260,43 @@
     @apply text-white/60;
   }
 
-  /* Light surface section - warmer tones */
+  /* Light surface section - subtle gradient */
   .section-surface {
-    background: linear-gradient(180deg, hsl(225 20% 95%) 0%, hsl(220 18% 92%) 100%);
+    background: linear-gradient(180deg, 
+      hsl(220 20% 96%) 0%, 
+      hsl(225 18% 93%) 100%
+    );
   }
 
   /* Subtle warm section */
   .section-warm {
-    background: linear-gradient(180deg, hsl(220 15% 97%) 0%, hsl(225 18% 94%) 100%);
+    background: linear-gradient(180deg, 
+      hsl(220 15% 98%) 0%, 
+      hsl(225 18% 95%) 100%
+    );
+  }
+
+  /* Glass card for dark backgrounds - translucent with gradient border */
+  .glass-card-dark {
+    @apply rounded-2xl backdrop-blur-xl;
+    background: linear-gradient(135deg, 
+      rgba(255, 255, 255, 0.06) 0%, 
+      rgba(255, 255, 255, 0.02) 100%
+    );
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 
+      0 4px 24px rgba(0, 0, 0, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .glass-card-dark:hover {
+    background: linear-gradient(135deg, 
+      rgba(255, 255, 255, 0.1) 0%, 
+      rgba(255, 255, 255, 0.04) 100%
+    );
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
   }
 
   /* Gradient dividers - more elegant */

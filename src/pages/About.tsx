@@ -85,9 +85,9 @@ export default function About() {
               <p className="eyebrow mb-6">That experience influences how we work:</p>
               <ul className="space-y-3 mb-10">
                 {howWeWork.map((item) => (
-                  <li key={item} className="flex items-center gap-4 p-4 rounded-xl bg-surface hover:bg-surface-warm transition-colors group">
-                    <div className="check-icon-wrapper">
-                      <ChevronRight className="icon w-4 h-4" />
+                  <li key={item} className="flex items-center gap-4 p-4 rounded-xl bg-white/70 backdrop-blur-sm border border-white/60 hover:bg-white hover:shadow-md transition-all group">
+                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-navy/10 to-teal/10 border border-navy/15 flex items-center justify-center flex-shrink-0 group-hover:from-navy group-hover:to-teal transition-all">
+                      <ChevronRight className="w-4 h-4 text-navy group-hover:text-white transition-colors" />
                     </div>
                     <span className="text-charcoal font-medium text-lg">{item}</span>
                   </li>
@@ -159,9 +159,9 @@ export default function About() {
               
               <ul className="space-y-3">
                 {approach.map((item) => (
-                  <li key={item} className="flex items-center gap-4 p-4 rounded-xl bg-white hover:shadow-card transition-all group">
-                    <div className="check-icon-wrapper">
-                      <ChevronRight className="icon w-4 h-4" />
+                  <li key={item} className="flex items-center gap-4 p-4 rounded-xl bg-white/80 backdrop-blur-sm border border-white/60 hover:bg-white hover:shadow-md transition-all group">
+                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-navy/10 to-teal/10 border border-navy/15 flex items-center justify-center flex-shrink-0 group-hover:from-navy group-hover:to-teal transition-all">
+                      <ChevronRight className="w-4 h-4 text-navy group-hover:text-white transition-colors" />
                     </div>
                     <span className="text-charcoal font-medium">{item}</span>
                   </li>
