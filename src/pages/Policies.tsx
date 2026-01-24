@@ -93,9 +93,9 @@ export default function Policies() {
               <p className="eyebrow mb-6">We implement:</p>
               <ul className="space-y-3 mb-8">
                 {healthSafety.map((item) => (
-                  <li key={item} className="flex items-center gap-4 p-4 rounded-xl bg-surface hover:bg-surface-warm transition-colors group">
-                    <div className="check-icon-wrapper">
-                      <ChevronRight className="icon w-4 h-4" />
+                  <li key={item} className="flex items-center gap-4 p-4 rounded-xl bg-white/80 backdrop-blur-sm border border-white/60 hover:bg-white hover:shadow-md transition-all group">
+                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-navy/10 to-teal/10 border border-navy/15 flex items-center justify-center flex-shrink-0 group-hover:from-navy group-hover:to-teal transition-all">
+                      <ChevronRight className="w-4 h-4 text-navy group-hover:text-white transition-colors" />
                     </div>
                     <span className="text-charcoal font-medium">{item}</span>
                   </li>
@@ -119,9 +119,9 @@ export default function Policies() {
               <p className="eyebrow mb-6">This includes:</p>
               <ul className="space-y-3 mb-8">
                 {competence.map((item) => (
-                  <li key={item} className="flex items-center gap-4 p-4 rounded-xl bg-white hover:shadow-card transition-all group">
-                    <div className="check-icon-wrapper">
-                      <ChevronRight className="icon w-4 h-4" />
+                  <li key={item} className="flex items-center gap-4 p-4 rounded-xl bg-white/80 backdrop-blur-sm border border-white/60 hover:bg-white hover:shadow-md transition-all group">
+                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-navy/10 to-teal/10 border border-navy/15 flex items-center justify-center flex-shrink-0 group-hover:from-navy group-hover:to-teal transition-all">
+                      <ChevronRight className="w-4 h-4 text-navy group-hover:text-white transition-colors" />
                     </div>
                     <span className="text-charcoal font-medium">{item}</span>
                   </li>
@@ -184,9 +184,9 @@ export default function Policies() {
               <p className="eyebrow mb-6">We aim to:</p>
               <ul className="space-y-3">
                 {environmental.map((item) => (
-                  <li key={item} className="flex items-center gap-4 p-4 rounded-xl bg-surface hover:bg-surface-warm transition-colors group">
-                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-teal/10 to-teal-light/10 border border-teal/15 flex items-center justify-center">
-                      <ChevronRight className="w-4 h-4 text-teal" />
+                  <li key={item} className="flex items-center gap-4 p-4 rounded-xl bg-white/70 backdrop-blur-sm border border-white/60 hover:bg-white hover:shadow-md transition-all group">
+                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-teal/15 to-navy/10 border border-teal/20 flex items-center justify-center flex-shrink-0 group-hover:from-teal group-hover:to-teal-light transition-all">
+                      <ChevronRight className="w-4 h-4 text-teal group-hover:text-white transition-colors" />
                     </div>
                     <span className="text-charcoal font-medium">{item}</span>
                   </li>
@@ -213,8 +213,10 @@ export default function Policies() {
             
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-12">
               {improvement.map((item) => (
-                <div key={item.title} className="bg-white/[0.05] backdrop-blur border border-white/[0.08] rounded-2xl p-6 text-center hover:bg-white/[0.08] hover:border-white/[0.15] transition-all group">
-                  <item.icon className="w-6 h-6 text-teal mx-auto mb-3 group-hover:scale-110 transition-transform" />
+                <div key={item.title} className="glass-card-dark p-6 text-center group">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-teal/25 to-navy/20 border border-teal/20 flex items-center justify-center mx-auto mb-3 group-hover:from-teal/40 group-hover:to-navy/30 transition-all">
+                    <item.icon className="w-5 h-5 text-teal group-hover:scale-110 transition-transform" />
+                  </div>
                   <span className="text-white font-semibold">{item.title}</span>
                 </div>
               ))}

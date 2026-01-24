@@ -150,10 +150,10 @@ export default function Index() {
             {services.map((service, index) => (
               <div 
                 key={service.title} 
-                className="card-glass p-8 group cursor-pointer"
+                className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-white/60 shadow-sm hover:bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group cursor-pointer"
               >
-                <div className="icon-box mb-5 group-hover:scale-105 transition-transform">
-                  <service.icon className="h-6 w-6 icon text-navy group-hover:text-white transition-colors" />
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-navy/10 to-teal/10 border border-navy/15 flex items-center justify-center mb-5 group-hover:from-navy group-hover:to-teal transition-all duration-300">
+                  <service.icon className="h-6 w-6 text-navy group-hover:text-white transition-colors" />
                 </div>
                 <h4 className="text-charcoal mb-2 group-hover:text-navy transition-colors">{service.title}</h4>
                 <p className="text-charcoal-muted text-sm">{service.desc}</p>
@@ -181,11 +181,11 @@ export default function Index() {
               <h2 className="mb-10">Why Choose Us</h2>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {reasons.map((reason) => (
-                  <div key={reason.title} className="p-5 rounded-2xl bg-surface hover:bg-surface-warm transition-colors group">
+                {reasons.map((reason, index) => (
+                  <div key={reason.title} className="p-5 rounded-2xl bg-white/70 backdrop-blur-sm border border-white/60 hover:bg-white hover:shadow-md transition-all duration-300 group">
                     <div className="flex items-start gap-4">
-                      <div className="icon-box-sm flex-shrink-0">
-                        <reason.icon className="w-5 h-5 text-navy" />
+                      <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-navy/10 to-teal/10 border border-navy/15 flex items-center justify-center flex-shrink-0 group-hover:from-navy group-hover:to-teal transition-all duration-300">
+                        <reason.icon className="w-5 h-5 text-navy group-hover:text-white transition-colors" />
                       </div>
                       <div>
                         <h4 className="text-base font-bold text-charcoal mb-1">{reason.title}</h4>

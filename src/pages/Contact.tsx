@@ -111,11 +111,11 @@ export default function Contact() {
                   </div>
                 </div>
                 
-                <div className="space-y-5">
+                <div className="space-y-4">
                   {contactInfo.map((item) => (
-                    <div key={item.label} className="flex items-start gap-4 p-4 rounded-xl bg-surface hover:bg-surface-warm transition-colors group">
-                      <div className="icon-box-sm flex-shrink-0">
-                        <item.icon className="h-5 w-5 text-navy" />
+                    <div key={item.label} className="flex items-start gap-4 p-4 rounded-xl bg-white/70 backdrop-blur-sm border border-white/60 hover:bg-white hover:shadow-md transition-all group">
+                      <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-navy/10 to-teal/10 border border-navy/15 flex items-center justify-center flex-shrink-0 group-hover:from-navy group-hover:to-teal transition-all">
+                        <item.icon className="h-5 w-5 text-navy group-hover:text-white transition-colors" />
                       </div>
                       <div>
                         <p className="font-semibold text-charcoal text-sm">{item.label}</p>
@@ -126,15 +126,18 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Emergency callout - Teal styled */}
-              <div className="rounded-2xl p-6 bg-gradient-to-br from-navy to-slate overflow-hidden relative">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-teal/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+              {/* Emergency callout - Glass styled with gradient */}
+              <div className="rounded-2xl p-6 overflow-hidden relative bg-gradient-to-br from-teal/90 via-teal to-navy/90 shadow-lg">
+                <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+                <div className="absolute bottom-0 left-0 w-32 h-32 bg-navy/30 rounded-full blur-2xl translate-y-1/2 -translate-x-1/2" />
                 <div className="relative z-10">
                   <div className="flex items-center gap-3 mb-3">
-                    <Phone className="w-5 h-5 text-teal" />
+                    <div className="w-9 h-9 rounded-lg bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                      <Phone className="w-4 h-4 text-white" />
+                    </div>
                     <h4 className="font-bold text-white">Emergency Callout</h4>
                   </div>
-                  <p className="text-sm text-white/70 leading-relaxed">
+                  <p className="text-sm text-white/85 leading-relaxed">
                     For existing maintenance contract clients requiring emergency 
                     callout, please use your dedicated contact number.
                   </p>

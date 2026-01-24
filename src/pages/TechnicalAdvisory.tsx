@@ -142,13 +142,13 @@ export default function TechnicalAdvisory() {
             {problemAreas.map((problem, index) => (
               <div 
                 key={problem.text} 
-                className="bg-white/[0.04] backdrop-blur-sm border border-white/[0.08] rounded-2xl p-6 hover:bg-white/[0.08] hover:border-white/[0.15] transition-all duration-300 hover:-translate-y-1 group"
+                className="glass-card-dark p-6 group"
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-rose-500/20 to-amber-500/20 border border-rose-500/20 flex items-center justify-center flex-shrink-0 group-hover:from-rose-500/30 group-hover:to-amber-500/30 transition-colors">
-                    <problem.icon className="w-5 h-5 text-rose-400" />
+                  <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-teal/20 to-navy/20 border border-teal/25 flex items-center justify-center flex-shrink-0 group-hover:from-teal/35 group-hover:to-navy/30 transition-all duration-300">
+                    <problem.icon className="w-5 h-5 text-teal" />
                   </div>
-                  <span className="text-white/80 font-medium pt-2.5 group-hover:text-white transition-colors">{problem.text}</span>
+                  <span className="text-white/85 font-medium pt-2.5 group-hover:text-white transition-colors">{problem.text}</span>
                 </div>
               </div>
             ))}

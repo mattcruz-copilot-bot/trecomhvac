@@ -70,8 +70,15 @@ export default function Services() {
             </p>
             <p className="text-white/60 mb-6">We can operate as:</p>
             <div className="flex flex-wrap gap-3">
-              {operateAs.map((item) => (
-                <span key={item} className="pill">
+              {operateAs.map((item, index) => (
+                <span 
+                  key={item} 
+                  className="inline-flex items-center px-5 py-2.5 rounded-full text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:scale-105"
+                  style={{
+                    background: `linear-gradient(135deg, hsl(220 65% ${32 + index * 4}%), hsl(185 72% ${42 + index * 3}%))`,
+                    boxShadow: '0 2px 12px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.15)'
+                  }}
+                >
                   {item}
                 </span>
               ))}
@@ -148,11 +155,11 @@ export default function Services() {
               <h2 className="mb-4">How We Operate on Site</h2>
               <p className="text-charcoal-muted text-lg">We work with:</p>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {howWeOperate.map((item) => (
-                <div key={item.title} className="card-glass p-6 group cursor-pointer">
-                  <div className="icon-box-sm mb-4 group-hover:scale-105 transition-transform">
-                    <item.icon className="h-5 w-5 text-navy" />
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {howWeOperate.map((item, index) => (
+                <div key={item.title} className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-white/60 shadow-sm hover:bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group cursor-pointer">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-navy/10 to-teal/10 border border-navy/15 flex items-center justify-center mb-4 group-hover:from-navy group-hover:to-teal transition-all duration-300">
+                    <item.icon className="h-5 w-5 text-navy group-hover:text-white transition-colors" />
                   </div>
                   <h4 className="text-base font-bold text-charcoal mb-1">{item.title}</h4>
                   <p className="text-sm text-charcoal-muted">{item.desc}</p>
