@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle2, Wind, Wrench, Building2, Droplets, Gauge, Settings } from "lucide-react";
+import { ArrowRight, CheckCircle2, Wind, Wrench, Building2, Droplets, Gauge, Settings, ChevronDown } from "lucide-react";
 import heroBuilding from "@/assets/hero-building.jpg";
 import plantRoom from "@/assets/plant-room.jpg";
 
@@ -24,47 +24,86 @@ const reasons = [
 ];
 
 export default function Index() {
+  const scrollToContent = () => {
+    window.scrollTo({ top: window.innerHeight * 0.9, behavior: 'smooth' });
+  };
+
   return (
     <Layout>
-      {/* Hero Section with Image */}
-      <section className="relative min-h-[90vh] flex items-center">
+      {/* Hero Section - Full viewport with scroll indicator */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
             src={heroBuilding} 
             alt="Modern London commercial building at dusk" 
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-charcoal/95 via-charcoal/85 to-charcoal/50" />
-          <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-transparent to-transparent" />
+          {/* Premium dark overlay with gradient */}
+          <div className="absolute inset-0 bg-gradient-to-br from-charcoal/90 via-charcoal/80 to-slate/70" />
+          <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-transparent to-charcoal/40" />
+          {/* Subtle vignette effect */}
+          <div className="absolute inset-0" style={{ 
+            background: 'radial-gradient(ellipse at center, transparent 0%, rgba(15, 23, 42, 0.4) 100%)' 
+          }} />
         </div>
-        <div className="relative z-10 section-padding w-full">
-          <div className="container-wide">
-            <div className="max-w-3xl">
-              <p className="text-electric font-medium tracking-wider uppercase mb-6 animate-fade-up">
-                Commercial HVAC Specialists
-              </p>
-              <h1 className="mb-8 text-balance text-white animate-fade-up" style={{ animationDelay: '0.1s' }}>
-                Commercial HVAC & Mechanical Services Across London
-              </h1>
-              <p className="text-xl text-white/70 mb-12 max-w-2xl leading-relaxed animate-fade-up" style={{ animationDelay: '0.2s' }}>
-                TrecomHvac & Mechanical delivers professional HVAC, plumbing and mechanical 
-                services for commercial clients — combining real site experience with 
-                reliable, well-managed delivery.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 animate-fade-up" style={{ animationDelay: '0.3s' }}>
-                <Button variant="hero" size="xl" asChild>
-                  <Link to="/contact">
-                    Request a Quote
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
-                <Button variant="hero-outline" size="xl" asChild>
-                  <Link to="/contact">Contact Us</Link>
-                </Button>
-              </div>
+
+        {/* Content */}
+        <div className="relative z-10 container-wide text-center px-6">
+          <div className="max-w-5xl mx-auto">
+            {/* Eyebrow text */}
+            <p className="text-electric font-semibold tracking-[0.2em] uppercase text-sm mb-8 animate-fade-up opacity-0" 
+               style={{ animationDelay: '0.1s', animationFillMode: 'forwards' }}>
+              Commercial HVAC Specialists
+            </p>
+            
+            {/* Main Headline */}
+            <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-[1.05] mb-8 animate-fade-up opacity-0 text-balance"
+                style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
+              Commercial HVAC & Mechanical Services Across London
+            </h1>
+            
+            {/* Subheadline */}
+            <p className="text-lg md:text-xl lg:text-2xl text-white/70 mb-14 max-w-3xl mx-auto leading-relaxed animate-fade-up opacity-0"
+               style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}>
+              TrecomHvac & Mechanical delivers professional HVAC, plumbing and mechanical 
+              services for commercial clients — combining real site experience with 
+              reliable, well-managed delivery.
+            </p>
+            
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-5 justify-center animate-fade-up opacity-0"
+                 style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
+              <Button variant="hero" size="xl" asChild className="group">
+                <Link to="/contact">
+                  Request a Quote
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+                </Link>
+              </Button>
+              <Button variant="hero-outline" size="xl" asChild className="group">
+                <Link to="/contact">
+                  Contact Us
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1 opacity-0 group-hover:opacity-100" />
+                </Link>
+              </Button>
             </div>
           </div>
         </div>
+
+        {/* Scroll Indicator */}
+        <button 
+          onClick={scrollToContent}
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-white/50 hover:text-white transition-colors duration-300 group cursor-pointer animate-fade-up opacity-0"
+          style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}
+        >
+          <span className="text-xs tracking-[0.15em] uppercase font-medium">Scroll</span>
+          <div className="w-6 h-10 rounded-full border-2 border-current flex items-start justify-center p-2">
+            <div className="w-1 h-2 bg-current rounded-full animate-bounce" />
+          </div>
+        </button>
+
+        {/* Bottom gradient fade */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-[5]" />
       </section>
 
       {/* Introduction Section - Glass panel effect */}
