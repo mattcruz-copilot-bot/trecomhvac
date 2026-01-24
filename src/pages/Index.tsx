@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { Button } from "@/components/ui/button";
+import { CTASection } from "@/components/CTASection";
 import { ArrowRight, Wind, Wrench, Building2, Droplets, Gauge, Settings, ChevronDown, Shield, Clock, MessageSquare, Award, Target, Zap } from "lucide-react";
 import heroBuilding from "@/assets/hero-building.jpg";
 import plantRoom from "@/assets/plant-room.jpg";
@@ -275,24 +276,13 @@ export default function Index() {
       </section>
 
       {/* Contact CTA Section */}
-      <section className="section-dark section-padding">
-        <div className="container-wide text-center">
-          <p className="text-teal font-bold tracking-[0.15em] uppercase text-sm mb-6">
-            Let's Work Together
-          </p>
-          <h2 className="text-white mb-8 text-balance">Ready to Discuss Your Project?</h2>
-          <p className="text-white/60 mb-10 max-w-2xl mx-auto text-lg leading-relaxed">
-            Whether you need a quotation, technical advice, or want to discuss a 
-            potential project, we're here to help.
-          </p>
-          <Button variant="hero" size="xl" asChild className="group">
-            <Link to="/contact">
-              Contact Us
-              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </Link>
-          </Button>
-        </div>
-      </section>
+      <CTASection
+        eyebrow="Let's Work Together"
+        title="Ready to Discuss Your Project?"
+        description="Whether you need a quotation, technical advice, or want to discuss a potential project, we're here to help."
+        buttonText="Contact Us"
+        buttonLink="/contact"
+      />
     </Layout>
   );
 }

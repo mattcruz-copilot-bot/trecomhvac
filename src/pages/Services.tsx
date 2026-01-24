@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { Button } from "@/components/ui/button";
+import { CTASection } from "@/components/CTASection";
 import { ArrowRight, Wind, Wrench, Droplets, Gauge, Settings, Building2, FileText, ClipboardCheck, Headphones, ChevronRight } from "lucide-react";
 import plantRoom from "@/assets/plant-room.jpg";
 
@@ -178,23 +179,13 @@ export default function Services() {
       </section>
 
       {/* CTA */}
-      <section className="section-dark section-padding">
-        <div className="container-wide text-center">
-          <p className="text-teal font-bold tracking-[0.15em] uppercase text-sm mb-6">
-            Get Started
-          </p>
-          <h2 className="text-white mb-8">Need a Quote?</h2>
-          <p className="text-white/60 mb-10 max-w-2xl mx-auto text-lg leading-relaxed">
-            Contact us to discuss your project requirements and receive a competitive quotation.
-          </p>
-          <Button variant="hero" size="xl" asChild className="group">
-            <Link to="/contact">
-              Request a Quote
-              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </Link>
-          </Button>
-        </div>
-      </section>
+      <CTASection
+        eyebrow="Get Started"
+        title="Need a Quote?"
+        description="Contact us to discuss your project requirements and receive a competitive quotation."
+        buttonText="Request a Quote"
+        buttonLink="/contact"
+      />
     </Layout>
   );
 }
