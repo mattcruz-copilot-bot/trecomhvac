@@ -129,10 +129,12 @@ export default function Policies() {
                   </li>
                 ))}
               </ul>
-              <p className="text-charcoal-muted leading-relaxed">
-                As the business grows, we will continue to formalise training structures 
-                and external accreditations.
-              </p>
+              <div className="glass-panel-dark p-5 sm:p-6">
+                <p className="text-white font-semibold text-sm sm:text-base">
+                  As the business grows, we will continue to formalise training structures 
+                  and external accreditations.
+                </p>
+              </div>
             </div>
             
             <div className="order-1 lg:order-2">
