@@ -19,7 +19,7 @@ export function Header() {
   const isActive = (href: string) => location.pathname === href;
 
   return (
-    <header className="sticky top-0 z-50 glass-panel border-b border-border/30">
+    <header className="sticky top-0 z-50 bg-white/60 backdrop-blur-xl border-b border-white/40" style={{ boxShadow: '0 4px 30px rgba(0, 0, 0, 0.05)' }}>
       <nav className="container-wide flex items-center justify-between py-5">
         <Link to="/" className="flex items-center group">
           <div className="flex items-baseline gap-1.5">

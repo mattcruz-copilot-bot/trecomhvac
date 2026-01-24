@@ -101,38 +101,38 @@ export default function About() {
       </section>
 
       {/* Our Experience - With background image */}
-      <section className="relative py-16 md:py-20 overflow-hidden">
+      <section className="relative py-20 md:py-28 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src={plantRoom} 
             alt="" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-charcoal/96 via-slate/94 to-navy/92" />
+          <div className="absolute inset-0 bg-gradient-to-b from-charcoal/90 via-slate/85 to-charcoal/90" />
         </div>
         
         <div className="container-wide relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-teal to-navy flex items-center justify-center mx-auto mb-6">
-              <Award className="w-6 h-6 text-white" />
+            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-teal to-navy flex items-center justify-center mx-auto mb-6 shadow-lg">
+              <Award className="w-7 h-7 text-white" />
             </div>
             <p className="text-teal font-bold tracking-[0.15em] uppercase text-sm mb-4">
               Background
             </p>
-            <h2 className="text-white mb-6">Our Experience</h2>
-            <p className="text-white/70 mb-4 leading-relaxed">
+            <h2 className="text-white mb-6 drop-shadow-md">Our Experience</h2>
+            <p className="text-white/90 mb-4 leading-relaxed text-lg">
               Our background includes involvement in large commercial developments, 
               multi-unit residential schemes, refurbishment programmes and complex 
               mechanical packages across London.
             </p>
-            <p className="text-white/70 mb-8 leading-relaxed">
+            <p className="text-white/80 mb-10 leading-relaxed">
               We are currently building a formal project portfolio for TrecomHvac & 
               Mechanical as the business grows. However, our internal standards, 
               working methods and technical approach are already shaped by high-level 
               site experience.
             </p>
-            <div className="glass-panel-dark rounded-xl p-6 inline-block">
-              <p className="text-white font-bold text-lg">
+            <div className="glass-panel-dark p-6 max-w-2xl mx-auto">
+              <p className="text-white font-semibold text-lg leading-relaxed">
                 Clients don't get "startup standards". They get senior-industry standards 
                 applied to every project.
               </p>
@@ -142,47 +142,47 @@ export default function About() {
       </section>
 
       {/* Our Approach */}
-      <section className="py-16 md:py-20 section-surface">
+      <section className="py-20 md:py-28 section-surface">
         <div className="container-wide">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-navy to-navy-light flex items-center justify-center flex-shrink-0">
-                  <MessageSquare className="w-6 h-6 text-white" />
+              <div className="flex items-start gap-4 mb-8">
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-navy to-navy-light flex items-center justify-center flex-shrink-0 shadow-lg">
+                  <MessageSquare className="w-7 h-7 text-white" />
                 </div>
                 <div>
-                  <h2 className="text-2xl mb-1">Our Approach</h2>
-                  <p className="text-charcoal-muted text-sm">Straightforward and professional</p>
+                  <h2 className="text-3xl mb-1">Our Approach</h2>
+                  <p className="text-charcoal-muted">Straightforward and professional</p>
                 </div>
               </div>
               
-              <p className="text-charcoal-muted mb-6">
+              <p className="text-charcoal-muted mb-6 text-lg">
                 We operate in a straightforward way:
               </p>
               
-              <ul className="space-y-2">
+              <ul className="space-y-3">
                 {approach.map((item) => (
-                  <li key={item} className="flex items-center gap-3 p-3 rounded-lg bg-white/80 backdrop-blur-sm border border-white/60 hover:bg-white hover:shadow-md transition-all group">
-                    <div className="w-7 h-7 rounded-md bg-gradient-to-br from-navy/10 to-teal/10 border border-navy/15 flex items-center justify-center flex-shrink-0 group-hover:from-navy group-hover:to-teal transition-all">
-                      <ChevronRight className="w-3.5 h-3.5 text-navy group-hover:text-white transition-colors" />
+                  <li key={item} className="flex items-center gap-4 p-4 rounded-xl bg-white backdrop-blur-sm border border-border/50 hover:shadow-lg hover:border-teal/20 transition-all group">
+                    <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-navy/10 to-teal/10 border border-navy/15 flex items-center justify-center flex-shrink-0 group-hover:from-navy group-hover:to-teal transition-all">
+                      <ChevronRight className="w-4 h-4 text-navy group-hover:text-white transition-colors" />
                     </div>
-                    <span className="text-charcoal font-medium text-sm">{item}</span>
+                    <span className="text-charcoal font-medium">{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="glass-panel rounded-xl p-8">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-teal to-teal-light flex items-center justify-center mb-5">
-                <Shield className="w-5 h-5 text-white" />
+            <div className="glass-panel rounded-2xl p-10">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-teal to-teal-light flex items-center justify-center mb-6 shadow-md">
+                <Shield className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-3">
+              <h3 className="text-2xl font-bold text-charcoal mb-4">
                 Long-term Focus
               </h3>
-              <p className="text-charcoal-muted leading-relaxed mb-4">
+              <p className="text-charcoal-muted leading-relaxed mb-4 text-lg">
                 We are building this company for the long term, not for short-term volume.
               </p>
-              <p className="text-charcoal-muted leading-relaxed text-sm">
+              <p className="text-charcoal-muted leading-relaxed">
                 Every project is an opportunity to demonstrate our standards and build 
                 lasting relationships with clients who value reliability.
               </p>
