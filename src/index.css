@@ -6,6 +6,7 @@
 
 @layer base {
   :root {
+    /* Clean, light foundation */
     --background: 0 0% 100%;
     --foreground: 222 47% 11%;
 
@@ -15,88 +16,86 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222 47% 11%;
 
+    /* Electric blue as refined accent */
     --primary: 217 91% 53%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 214 32% 91%;
+    /* Warm grey tones */
+    --secondary: 220 14% 96%;
     --secondary-foreground: 222 47% 11%;
 
-    --muted: 214 32% 91%;
-    --muted-foreground: 215 25% 40%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 215 16% 47%;
 
+    /* Teal for secondary accent */
     --accent: 175 84% 32%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
+    /* Refined borders */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
     --ring: 217 91% 53%;
 
     --radius: 0.5rem;
 
-    /* Custom tokens - Premium dark palette */
+    /* Premium palette tokens */
     --charcoal: 222 47% 11%;
-    --charcoal-light: 217 33% 17%;
-    --deep-blue: 217 33% 17%;
+    --charcoal-muted: 215 16% 47%;
+    --slate: 217 33% 17%;
     --steel: 215 25% 27%;
-    --steel-light: 215 25% 40%;
+    
+    /* Accent colors */
     --electric: 217 91% 53%;
-    --electric-light: 217 91% 60%;
+    --electric-muted: 217 91% 60%;
     --teal: 175 84% 32%;
-    --teal-light: 175 70% 40%;
-    --soft-grey: 214 32% 91%;
-    --soft-grey-dark: 214 20% 85%;
+    
+    /* Neutral surfaces */
+    --surface: 220 14% 96%;
+    --surface-elevated: 0 0% 100%;
+    --surface-dark: 222 47% 11%;
 
-    /* Glass effect tokens */
-    --glass-bg: 0 0% 100% / 0.7;
-    --glass-border: 0 0% 100% / 0.2;
-    --glass-shadow: 222 47% 11% / 0.1;
-
+    /* Sidebar */
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 222 47% 11%;
     --sidebar-primary: 217 91% 53%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 214 32% 91%;
+    --sidebar-accent: 220 14% 96%;
     --sidebar-accent-foreground: 222 47% 11%;
-    --sidebar-border: 214 32% 91%;
+    --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217 91% 53%;
   }
 
   .dark {
     --background: 222 47% 11%;
-    --foreground: 214 32% 91%;
+    --foreground: 220 14% 96%;
 
     --card: 217 33% 17%;
-    --card-foreground: 214 32% 91%;
+    --card-foreground: 220 14% 96%;
 
     --popover: 217 33% 17%;
-    --popover-foreground: 214 32% 91%;
+    --popover-foreground: 220 14% 96%;
 
-    --primary: 217 91% 53%;
+    --primary: 217 91% 60%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 215 25% 27%;
-    --secondary-foreground: 214 32% 91%;
+    --secondary-foreground: 220 14% 96%;
 
     --muted: 215 25% 27%;
-    --muted-foreground: 215 25% 50%;
+    --muted-foreground: 215 16% 60%;
 
-    --accent: 175 84% 32%;
+    --accent: 175 70% 40%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
 
     --border: 215 25% 27%;
     --input: 215 25% 27%;
-    --ring: 217 91% 53%;
-
-    /* Glass effect tokens - dark mode */
-    --glass-bg: 217 33% 17% / 0.7;
-    --glass-border: 214 32% 91% / 0.1;
-    --glass-shadow: 0 0% 0% / 0.3;
+    --ring: 217 91% 60%;
   }
 }
 
@@ -114,16 +113,13 @@
     font-family: 'Inter', system-ui, sans-serif;
   }
 
+  /* Typography with strong contrast */
   h1, h2, h3, h4, h5, h6 {
     @apply font-semibold tracking-tight text-charcoal;
   }
 
-  .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
-    @apply text-soft-grey;
-  }
-
   h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl leading-tight;
+    @apply text-4xl md:text-5xl lg:text-6xl leading-[1.1];
   }
 
   h2 {
@@ -135,17 +131,22 @@
   }
 
   p {
-    @apply leading-relaxed;
+    @apply leading-relaxed text-charcoal-muted;
   }
 }
 
 @layer components {
+  /* Spacing system */
   .section-padding {
-    @apply py-16 md:py-24 lg:py-32;
+    @apply py-20 md:py-28 lg:py-36;
+  }
+
+  .section-padding-sm {
+    @apply py-12 md:py-16 lg:py-20;
   }
 
   .container-narrow {
-    @apply max-w-5xl mx-auto px-6 md:px-8;
+    @apply max-w-4xl mx-auto px-6 md:px-8;
   }
 
   .container-wide {
@@ -156,64 +157,111 @@
     text-wrap: balance;
   }
 
+  /* Animated underline for links */
   .link-underline {
-    @apply relative inline-block after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-current after:transition-all after:duration-300 hover:after:w-full;
+    @apply relative inline-block;
+  }
+  
+  .link-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-px bg-electric transition-all duration-300;
+  }
+  
+  .link-underline:hover::after {
+    @apply w-full;
   }
 
-  /* Glass panel effect */
-  .glass-panel {
-    @apply backdrop-blur-xl bg-white/70 border border-white/20 shadow-lg;
+  /* Premium card with subtle depth */
+  .card-elevated {
+    @apply bg-white rounded-lg border border-border;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.05), 0 1px 2px -1px rgb(0 0 0 / 0.05);
+    transition: all 0.3s ease;
   }
 
-  .dark .glass-panel {
-    @apply bg-deep-blue/70 border-soft-grey/10;
+  .card-elevated:hover {
+    box-shadow: 0 10px 40px -10px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.05);
+    transform: translateY(-2px);
   }
 
-  /* Gradient separator */
-  .gradient-separator {
-    @apply h-px w-full;
-    background: linear-gradient(90deg, transparent, hsl(var(--electric) / 0.3), transparent);
-  }
-
-  /* Dark section */
+  /* Dark section - used sparingly for impact */
   .section-dark {
-    @apply bg-charcoal text-soft-grey;
+    @apply bg-charcoal;
   }
 
   .section-dark h1,
   .section-dark h2,
   .section-dark h3,
-  .section-dark h4 {
-    @apply text-soft-grey;
+  .section-dark h4,
+  .section-dark p,
+  .section-dark span {
+    @apply text-white;
   }
 
-  .section-dark p {
-    @apply text-soft-grey/80;
+  .section-dark .text-muted {
+    @apply text-white/70;
   }
 
-  /* Premium card with depth */
-  .premium-card {
-    @apply bg-white border border-soft-grey-dark/50 rounded-lg shadow-[0_4px_20px_-4px_rgba(15,23,42,0.1)] transition-all duration-300;
+  /* Subtle surface */
+  .section-surface {
+    @apply bg-surface;
   }
 
-  .premium-card:hover {
-    @apply shadow-[0_8px_30px_-4px_rgba(15,23,42,0.15)] -translate-y-0.5;
+  /* Gradient line separator */
+  .gradient-line {
+    @apply h-px w-full;
+    background: linear-gradient(90deg, transparent, hsl(var(--border)), transparent);
   }
 
-  .dark .premium-card {
-    @apply bg-deep-blue border-steel/50 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.3)];
+  /* Premium badge/pill */
+  .pill {
+    @apply inline-flex items-center px-4 py-2 rounded-full text-sm font-medium;
+    @apply bg-charcoal text-white;
+    @apply transition-all duration-300;
   }
 
-  .dark .premium-card:hover {
-    @apply shadow-[0_8px_30px_-4px_rgba(0,0,0,0.4)];
+  .pill:hover {
+    @apply bg-slate;
   }
 
-  /* Hover lift effect */
-  .hover-lift {
-    @apply transition-all duration-300 ease-out;
+  /* Icon container */
+  .icon-box {
+    @apply w-12 h-12 rounded-lg bg-surface flex items-center justify-center;
+    @apply text-charcoal transition-all duration-300;
   }
 
-  .hover-lift:hover {
-    @apply -translate-y-1 shadow-lg;
+  .card-elevated:hover .icon-box {
+    @apply bg-electric text-white;
+  }
+
+  /* Feature list item */
+  .feature-item {
+    @apply flex items-start gap-4 py-4;
+  }
+
+  .feature-icon {
+    @apply w-6 h-6 text-electric flex-shrink-0 mt-0.5;
+  }
+
+  /* Quote block */
+  .quote-block {
+    @apply pl-6 border-l-2 border-electric italic text-charcoal;
+  }
+}
+
+/* Smooth animations */
+@layer utilities {
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }

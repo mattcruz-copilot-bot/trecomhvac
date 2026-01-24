@@ -19,32 +19,35 @@ export function Header() {
   const isActive = (href: string) => location.pathname === href;
 
   return (
-    <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 border-b border-border">
-      <nav className="container-wide flex items-center justify-between py-4">
-        <Link to="/" className="flex items-center gap-3">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border">
+      <nav className="container-wide flex items-center justify-between py-5">
+        <Link to="/" className="flex items-center gap-3 group">
           <div className="flex flex-col">
-            <span className="text-xl font-semibold text-charcoal tracking-tight">
+            <span className="text-xl font-bold text-charcoal tracking-tight group-hover:text-electric transition-colors">
               TrecomHvac
             </span>
-            <span className="text-xs text-muted-foreground tracking-wide uppercase">
+            <span className="text-[10px] text-charcoal-muted tracking-[0.2em] uppercase font-medium">
               & Mechanical
             </span>
           </div>
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-10">
           {navigation.map((item) => (
             <Link
               key={item.name}
               to={item.href}
-              className={`text-sm font-medium transition-colors link-underline ${
+              className={`text-sm font-medium transition-colors relative ${
                 isActive(item.href)
                   ? "text-charcoal"
-                  : "text-muted-foreground hover:text-charcoal"
+                  : "text-charcoal-muted hover:text-charcoal"
               }`}
             >
               {item.name}
+              {isActive(item.href) && (
+                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-electric" />
+              )}
             </Link>
           ))}
         </div>
@@ -62,7 +65,7 @@ export function Header() {
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-border">
+        <div className="lg:hidden border-t border-border bg-white">
           <div className="container-wide py-4 space-y-1">
             {navigation.map((item) => (
               <Link
@@ -71,8 +74,8 @@ export function Header() {
                 onClick={() => setMobileMenuOpen(false)}
                 className={`block py-3 text-sm font-medium transition-colors ${
                   isActive(item.href)
-                    ? "text-charcoal"
-                    : "text-muted-foreground hover:text-charcoal"
+                    ? "text-electric"
+                    : "text-charcoal-muted hover:text-charcoal"
                 }`}
               >
                 {item.name}
