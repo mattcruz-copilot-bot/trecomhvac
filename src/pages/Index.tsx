@@ -1,36 +1,25 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Building2, Wrench, Shield, Users, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 const services = [
-  {
-    icon: Building2,
-    title: "Commercial HVAC",
-    description: "Complete heating, ventilation, and air conditioning solutions for commercial buildings.",
-  },
-  {
-    icon: Wrench,
-    title: "Mechanical Installation",
-    description: "Professional installation of mechanical systems, pipework, and plant equipment.",
-  },
-  {
-    icon: Shield,
-    title: "Maintenance & Servicing",
-    description: "Planned preventive maintenance and reactive servicing to keep your systems running.",
-  },
-  {
-    icon: Users,
-    title: "Technical Consultancy",
-    description: "Expert advice on system design, energy efficiency, and regulatory compliance.",
-  },
+  "HVAC and ventilation systems",
+  "Mechanical pipework installations",
+  "Plant rooms and infrastructure",
+  "Gas, water and drainage systems",
+  "Commissioning and system performance",
+  "Planned and reactive maintenance",
+  "Technical project support",
 ];
 
-const credentials = [
-  "Gas Safe Registered",
-  "F-Gas Certified",
-  "CSCS Accredited",
-  "Fully Insured",
+const reasons = [
+  "Strong technical and site experience behind the business",
+  "Practical understanding of how projects run on site",
+  "Honest pricing and realistic programming",
+  "Clear communication with clients and project teams",
+  "Focus on quality, safety and consistency",
+  "Reliable delivery without drama",
 ];
 
 export default function Index() {
@@ -40,116 +29,108 @@ export default function Index() {
       <section className="section-padding border-b border-border">
         <div className="container-wide">
           <div className="max-w-3xl">
-            <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4">
-              London-Based Mechanical Contractor
-            </p>
             <h1 className="mb-6 text-balance">
-              Professional Mechanical & HVAC Solutions for Commercial Clients
+              Commercial HVAC & Mechanical Services Across London
             </h1>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl">
-              We deliver reliable mechanical contracting services to main contractors, 
-              managing agents, and developers across London and the South East. 
-              Technical excellence, delivered on time.
+              TrecomHvac & Mechanical delivers professional HVAC, plumbing and mechanical 
+              services for commercial clients — combining senior site experience with 
+              reliable, well-managed delivery.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button variant="hero" size="lg" asChild>
-                <Link to="/services">
-                  Our Services
+                <Link to="/contact">
+                  Request a Quote
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
               <Button variant="hero-outline" size="lg" asChild>
-                <Link to="/contact">Get in Touch</Link>
+                <Link to="/contact">Speak to Us</Link>
               </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services Overview */}
-      <section className="section-padding bg-steel">
+      {/* Intro Section */}
+      <section className="section-padding">
         <div className="container-wide">
-          <div className="max-w-2xl mb-12">
-            <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-3">
-              What We Do
+          <div className="max-w-3xl">
+            <p className="text-lg text-muted-foreground mb-6">
+              TrecomHvac & Mechanical is a London-based mechanical services company 
+              providing HVAC, plumbing and gas solutions to commercial, residential 
+              and mixed-use developments.
             </p>
-            <h2 className="mb-4">Comprehensive Mechanical Services</h2>
-            <p className="text-muted-foreground">
-              From initial design consultation through to installation and ongoing maintenance, 
-              we provide end-to-end mechanical contracting solutions.
+            <p className="text-lg text-muted-foreground mb-6">
+              The business is built on real experience delivering work on large, 
+              complex sites. That background shapes how we operate today: organised, 
+              accountable, safety-focused and commercially aware.
             </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service) => (
-              <div
-                key={service.title}
-                className="bg-background p-6 border border-border"
-              >
-                <service.icon className="h-8 w-8 text-navy mb-4" />
-                <h3 className="text-lg font-semibold mb-2">{service.title}</h3>
-                <p className="text-sm text-muted-foreground">{service.description}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-12 text-center">
-            <Button variant="hero-outline" asChild>
-              <Link to="/services">
-                View All Services
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
+            <p className="text-lg font-medium text-charcoal">
+              We don't overpromise. We plan properly, communicate clearly and deliver what we agree.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="section-padding">
+      {/* What We Do */}
+      <section className="section-padding bg-steel">
         <div className="container-wide">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
               <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-3">
-                Why TrecomHvac
+                What We Do
               </p>
-              <h2 className="mb-6">Built on Technical Excellence</h2>
-              <p className="text-muted-foreground mb-6">
-                With years of experience in commercial mechanical contracting, we understand 
-                the demands of complex projects and tight deadlines. Our team combines 
-                technical expertise with reliable project delivery.
-              </p>
-              <p className="text-muted-foreground mb-8">
-                We work closely with main contractors, managing agents, and property developers 
-                to ensure every project is completed to the highest standards, on time and 
-                within budget.
-              </p>
-
-              <div className="grid grid-cols-2 gap-4">
-                {credentials.map((credential) => (
-                  <div key={credential} className="flex items-center gap-2">
-                    <CheckCircle2 className="h-4 w-4 text-navy flex-shrink-0" />
-                    <span className="text-sm font-medium">{credential}</span>
-                  </div>
+              <h2 className="mb-6">We deliver:</h2>
+              <ul className="space-y-4">
+                {services.map((service) => (
+                  <li key={service} className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-navy flex-shrink-0 mt-0.5" />
+                    <span className="text-muted-foreground">{service}</span>
+                  </li>
                 ))}
-              </div>
+              </ul>
+              <p className="mt-8 text-muted-foreground font-medium">
+                From individual works packages through to coordinated mechanical delivery.
+              </p>
             </div>
 
-            <div className="bg-steel border border-border p-8 lg:p-12">
-              <div className="space-y-6">
-                <div>
-                  <p className="text-4xl font-semibold text-charcoal mb-1">20+</p>
-                  <p className="text-sm text-muted-foreground">Years Combined Experience</p>
-                </div>
-                <div className="border-t border-border pt-6">
-                  <p className="text-4xl font-semibold text-charcoal mb-1">100%</p>
-                  <p className="text-sm text-muted-foreground">Projects Completed On Time</p>
-                </div>
-                <div className="border-t border-border pt-6">
-                  <p className="text-4xl font-semibold text-charcoal mb-1">London</p>
-                  <p className="text-sm text-muted-foreground">& South East Coverage</p>
-                </div>
-              </div>
+            <div className="bg-background p-8 lg:p-10 border border-border">
+              <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-3">
+                Why TrecomHvac & Mechanical
+              </p>
+              <ul className="space-y-4">
+                {reasons.map((reason) => (
+                  <li key={reason} className="flex items-start gap-3">
+                    <div className="h-1.5 w-1.5 bg-navy rounded-full mt-2.5 flex-shrink-0" />
+                    <span className="text-muted-foreground">{reason}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-8 text-charcoal font-medium">
+                Commercial clients value predictability. That is what we prioritise.
+              </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Consultancy Teaser */}
+      <section className="section-padding">
+        <div className="container-wide">
+          <div className="max-w-3xl">
+            <h2 className="mb-6">More than installation.</h2>
+            <p className="text-lg text-muted-foreground mb-8">
+              We also support clients with technical problem-solving, project reviews 
+              and practical on-site advice. This comes from years of managing complex 
+              mechanical works, not just installing them.
+            </p>
+            <Button variant="hero-outline" asChild>
+              <Link to="/technical-advisory">
+                Learn More About Our Approach
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
@@ -159,8 +140,8 @@ export default function Index() {
         <div className="container-wide text-center">
           <h2 className="text-primary-foreground mb-4">Ready to Discuss Your Project?</h2>
           <p className="text-primary-foreground/70 mb-8 max-w-2xl mx-auto">
-            Whether you need a quote, technical advice, or want to discuss a 
-            potential partnership, we're here to help.
+            Whether you need a quotation, technical advice, or want to discuss a 
+            potential project, we're here to help.
           </p>
           <Button variant="hero-outline" size="lg" asChild className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-charcoal">
             <Link to="/contact">
