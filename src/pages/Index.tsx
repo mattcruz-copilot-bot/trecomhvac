@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, Wind, Wrench, Building2, Droplets, Gauge, Settings } from "lucide-react";
+import heroBuilding from "@/assets/hero-building.jpg";
+import plantRoom from "@/assets/plant-room.jpg";
 
 const services = [
   { icon: Wind, title: "HVAC & Ventilation Systems" },
@@ -24,35 +26,47 @@ const reasons = [
 export default function Index() {
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="section-padding">
-        <div className="container-wide">
-          <div className="max-w-4xl">
-            <h1 className="mb-8 text-balance">
-              Commercial HVAC & Mechanical Services Across London
-            </h1>
-            <p className="text-xl text-charcoal-muted mb-10 max-w-2xl leading-relaxed">
-              TrecomHvac & Mechanical delivers professional HVAC, plumbing and mechanical 
-              services for commercial clients — combining real site experience with 
-              reliable, well-managed delivery.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="xl" asChild>
-                <Link to="/contact">
-                  Request a Quote
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-              <Button variant="outline" size="xl" asChild>
-                <Link to="/contact">Contact Us</Link>
-              </Button>
+      {/* Hero Section with Image */}
+      <section className="relative">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={heroBuilding} 
+            alt="Modern London commercial building at dusk" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-charcoal/95 via-charcoal/80 to-charcoal/40" />
+        </div>
+        <div className="relative z-10 section-padding">
+          <div className="container-wide">
+            <div className="max-w-3xl">
+              <h1 className="mb-8 text-balance text-white">
+                Commercial HVAC & Mechanical Services Across London
+              </h1>
+              <p className="text-xl text-white/80 mb-10 max-w-2xl leading-relaxed">
+                TrecomHvac & Mechanical delivers professional HVAC, plumbing and mechanical 
+                services for commercial clients — combining real site experience with 
+                reliable, well-managed delivery.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button variant="primary" size="xl" asChild>
+                  <Link to="/contact">
+                    Request a Quote
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+                <Button 
+                  variant="outline" 
+                  size="xl" 
+                  asChild 
+                  className="border-white text-white hover:bg-white hover:text-charcoal"
+                >
+                  <Link to="/contact">Contact Us</Link>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
       </section>
-
-      {/* Gradient separator */}
-      <div className="gradient-line" />
 
       {/* Introduction Section */}
       <section className="section-padding">
@@ -74,6 +88,9 @@ export default function Index() {
           </div>
         </div>
       </section>
+
+      {/* Gradient separator */}
+      <div className="gradient-line" />
 
       {/* Services Grid */}
       <section className="section-padding section-surface">
@@ -97,10 +114,10 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Why Choose Us */}
+      {/* Why Choose Us with Image */}
       <section className="section-padding">
         <div className="container-wide">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <p className="text-sm font-medium text-electric uppercase tracking-wider mb-3">
                 Why TrecomHvac & Mechanical
@@ -114,14 +131,20 @@ export default function Index() {
                   </li>
                 ))}
               </ul>
-            </div>
-
-            <div className="lg:mt-16">
-              <div className="section-dark p-10 lg:p-12 rounded-lg">
-                <p className="text-white text-xl font-medium leading-relaxed">
+              <div className="mt-10 p-8 bg-charcoal rounded-lg">
+                <p className="text-white text-lg font-medium leading-relaxed">
                   Commercial clients value predictability. That is what we prioritise.
                 </p>
               </div>
+            </div>
+
+            <div className="relative">
+              <img 
+                src={plantRoom} 
+                alt="Professional mechanical plant room installation" 
+                className="w-full h-auto rounded-lg shadow-elevated"
+              />
+              <div className="absolute inset-0 rounded-lg ring-1 ring-inset ring-black/10" />
             </div>
           </div>
         </div>
