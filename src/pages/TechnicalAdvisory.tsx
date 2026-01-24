@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { Button } from "@/components/ui/button";
+import { CTASection } from "@/components/CTASection";
 import { 
   ArrowRight, 
   AlertTriangle, 
@@ -84,7 +85,7 @@ export default function TechnicalAdvisory() {
               </Button>
             </div>
             <div className="relative hidden lg:block">
-              <div className="absolute -inset-6 bg-gradient-to-br from-teal/25 to-navy/20 rounded-3xl blur-3xl" />
+              <div className="absolute -inset-4 bg-gradient-to-br from-teal/15 to-transparent rounded-3xl blur-2xl" />
               <img 
                 src={engineersConsulting} 
                 alt="Engineers reviewing technical drawings on-site" 
@@ -231,27 +232,38 @@ export default function TechnicalAdvisory() {
         </div>
       </section>
 
-      {/* Why This Matters - Final CTA */}
-      <section className="section-dark section-padding">
-        <div className="container-wide">
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-teal font-bold tracking-[0.15em] uppercase text-sm mb-6">
+      {/* Why This Matters - Final CTA with background image */}
+      <section className="relative py-20 md:py-28 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={heroBuilding} 
+            alt="" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-charcoal/95 via-slate/92 to-navy/88" />
+          {/* Decorative glow elements */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-teal/8 rounded-full blur-[120px]" />
+        </div>
+        
+        <div className="container-wide relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-teal font-bold tracking-[0.15em] uppercase text-sm mb-4">
               Prevention Over Cure
             </p>
-            <h2 className="text-white mb-10">Why This Matters</h2>
-            <div className="glass-panel-dark rounded-3xl p-10 md:p-14 mb-10">
-              <p className="text-xl text-white/70 mb-8 leading-relaxed">
+            <h2 className="text-white mb-8">Why This Matters</h2>
+            <div className="glass-card-dark rounded-2xl p-8 md:p-10 mb-8">
+              <p className="text-lg text-white/70 mb-6 leading-relaxed">
                 Many mechanical issues are not caused by poor installation — they are caused 
                 by poor coordination, poor sequencing, or decisions made too late.
               </p>
-              <p className="text-3xl md:text-4xl font-bold text-white">
+              <p className="text-2xl md:text-3xl font-bold text-white">
                 This service exists to prevent that.
               </p>
             </div>
-            <Button variant="hero" size="xl" asChild className="group">
+            <Button variant="hero" size="lg" asChild className="group">
               <Link to="/contact">
                 Discuss Your Project
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
             </Button>
           </div>

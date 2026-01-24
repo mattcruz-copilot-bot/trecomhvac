@@ -15,8 +15,14 @@ const navigation = {
 
 export function Footer() {
   return (
-    <footer className="section-dark">
-      <div className="container-wide section-padding-sm">
+    <footer className="relative overflow-hidden">
+      {/* Background gradient - not just solid dark */}
+      <div className="absolute inset-0 bg-gradient-to-br from-charcoal via-slate to-charcoal" />
+      {/* Subtle decorative elements */}
+      <div className="absolute top-0 right-0 w-80 h-80 bg-teal/5 rounded-full blur-[100px]" />
+      <div className="absolute bottom-0 left-1/4 w-60 h-60 bg-navy/10 rounded-full blur-[80px]" />
+      
+      <div className="container-wide py-14 md:py-16 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
           {/* Brand */}
           <div className="lg:col-span-1">
@@ -100,7 +106,7 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-16 pt-8 border-t border-white/10">
+        <div className="mt-12 pt-6 border-t border-white/10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-white/40">
               © {new Date().getFullYear()} TrecomHvac & Mechanical. All rights reserved.
