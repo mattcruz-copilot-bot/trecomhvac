@@ -21,12 +21,12 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border">
       <nav className="container-wide flex items-center justify-between py-5">
-        <Link to="/" className="flex items-center gap-3 group">
-          <div className="flex flex-col">
-            <span className="text-xl font-bold text-charcoal tracking-tight group-hover:text-electric transition-colors">
+        <Link to="/" className="flex items-center group">
+          <div className="flex items-baseline gap-1.5">
+            <span className="text-[22px] font-bold text-slate tracking-[-0.02em] group-hover:text-electric transition-colors duration-300">
               TrecomHvac
             </span>
-            <span className="text-[10px] text-charcoal-muted tracking-[0.2em] uppercase font-medium">
+            <span className="text-[14px] font-light text-charcoal-muted tracking-[0.03em]">
               & Mechanical
             </span>
           </div>

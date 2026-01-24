@@ -20,11 +20,11 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="flex flex-col mb-6">
-              <span className="text-xl font-bold text-white tracking-tight">
+            <div className="flex items-baseline gap-1.5 mb-6">
+              <span className="text-[22px] font-bold text-white tracking-[-0.02em]">
                 TrecomHvac
               </span>
-              <span className="text-[10px] text-white/50 tracking-[0.2em] uppercase font-medium">
+              <span className="text-[14px] font-light text-white/50 tracking-[0.03em]">
                 & Mechanical
               </span>
             </div>
