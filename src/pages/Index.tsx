@@ -133,13 +133,13 @@ export default function Index() {
             alt="HVAC ductwork" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-charcoal/95 via-slate/92 to-navy/90" />
+          <div className="absolute inset-0 bg-gradient-to-br from-charcoal/75 via-slate/65 to-navy/60" />
         </div>
         
         <div className="container-wide relative z-10">
           <div className="text-center mb-8 sm:mb-12">
             <p className="text-teal font-bold tracking-[0.15em] uppercase text-xs sm:text-sm mb-2 sm:mb-3">What We Do</p>
-            <h2 className="text-white text-balance">Our Services</h2>
+            <h2 className="text-white text-balance drop-shadow-[0_2px_4px_rgba(0,0,0,0.7)]">Our Services</h2>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
             {services.map((service) => (
@@ -214,8 +214,7 @@ export default function Index() {
             alt="" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-charcoal/95 via-slate/92 to-navy/90" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[500px] h-[200px] sm:h-[300px] bg-teal/8 rounded-full blur-[80px] sm:blur-[100px]" />
+          <div className="absolute inset-0 bg-gradient-to-br from-charcoal/75 via-slate/65 to-navy/60" />
         </div>
         
         <div className="container-wide relative z-10">
@@ -223,8 +222,8 @@ export default function Index() {
             <p className="text-teal font-bold tracking-[0.15em] uppercase text-xs sm:text-sm mb-3 sm:mb-4">
               Technical Advisory
             </p>
-            <h2 className="text-white mb-4 sm:mb-6">More than installation.</h2>
-            <p className="text-base sm:text-lg text-white/70 mb-6 sm:mb-8 leading-relaxed max-w-2xl mx-auto">
+            <h2 className="text-white mb-4 sm:mb-6 drop-shadow-[0_2px_4px_rgba(0,0,0,0.7)]">More than installation.</h2>
+            <p className="text-base sm:text-lg text-white/90 mb-6 sm:mb-8 leading-relaxed max-w-2xl mx-auto drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
               We also support clients with technical problem-solving, project reviews 
               and practical on-site advice. This comes from years of managing complex 
               mechanical works, not just installing them.

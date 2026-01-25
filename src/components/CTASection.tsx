@@ -27,7 +27,7 @@ export function CTASection({
           alt="" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-charcoal/80 via-slate/70 to-navy/75" />
+        <div className="absolute inset-0 bg-gradient-to-br from-charcoal/70 via-slate/55 to-navy/50" />
       </div>
       
       <div className="container-wide relative z-10 text-center">

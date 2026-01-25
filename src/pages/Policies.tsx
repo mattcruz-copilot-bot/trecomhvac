@@ -214,7 +214,7 @@ export default function Policies() {
             alt="" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-charcoal/80 via-slate/70 to-charcoal/80" />
+          <div className="absolute inset-0 bg-gradient-to-b from-charcoal/70 via-slate/55 to-charcoal/70" />
         </div>
         
         <div className="container-wide relative z-10">
@@ -223,8 +223,8 @@ export default function Policies() {
               <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-teal to-navy flex items-center justify-center mx-auto mb-6 shadow-lg">
                 <TrendingUp className="w-7 h-7 text-white" />
               </div>
-              <h2 className="text-white mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">Continuous Improvement</h2>
-              <p className="text-white/90 text-lg drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]">
+              <h2 className="text-white mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.7)]">Continuous Improvement</h2>
+              <p className="text-white text-lg drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
                 TrecomHvac & Mechanical is committed to continuous improvement across:
               </p>
             </div>
