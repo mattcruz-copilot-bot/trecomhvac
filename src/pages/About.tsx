@@ -106,9 +106,9 @@ export default function About() {
           <img 
             src={plantRoom} 
             alt="" 
-            className="w-full h-full object-cover brightness-[0.5]"
+            className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-charcoal/70 via-slate/60 to-charcoal/70" />
+          <div className="absolute inset-0 bg-gradient-to-b from-charcoal/80 via-slate/70 to-charcoal/80" />
         </div>
         
         <div className="container-wide relative z-10">
@@ -119,13 +119,13 @@ export default function About() {
             <p className="text-teal font-bold tracking-[0.15em] uppercase text-sm mb-4">
               Background
             </p>
-            <h2 className="text-white mb-6 drop-shadow-md">Our Experience</h2>
-            <p className="text-white/90 mb-4 leading-relaxed text-lg">
+            <h2 className="text-white mb-6 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">Our Experience</h2>
+            <p className="text-white/90 mb-4 leading-relaxed text-lg drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]">
               Our background includes involvement in large commercial developments, 
               multi-unit residential schemes, refurbishment programmes and complex 
               mechanical packages across London.
             </p>
-            <p className="text-white/80 mb-10 leading-relaxed">
+            <p className="text-white/90 mb-10 leading-relaxed drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]">
               We are currently building a formal project portfolio for TrecomHvac & 
               Mechanical as the business grows. However, our internal standards, 
               working methods and technical approach are already shaped by high-level 
