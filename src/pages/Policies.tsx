@@ -93,7 +93,7 @@ export default function Policies() {
             
             <div>
               <p className="eyebrow mb-6 text-base">We implement:</p>
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-3 mb-6">
                 {healthSafety.map((item) => (
                   <li key={item} className="flex items-center gap-4 p-4 rounded-xl bg-white backdrop-blur-sm border border-border/50 hover:shadow-lg hover:border-teal/20 transition-all group">
                     <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-navy/10 to-teal/10 border border-navy/15 flex items-center justify-center flex-shrink-0 group-hover:from-navy group-hover:to-teal transition-all">
@@ -103,8 +103,8 @@ export default function Policies() {
                   </li>
                 ))}
               </ul>
-              <div className="glass-panel-dark p-6">
-                <p className="text-white font-semibold">
+              <div className="glass-panel-dark p-5">
+                <p className="text-white font-semibold text-sm sm:text-base">
                   Safety is treated as part of professional delivery, not a box-ticking exercise.
                 </p>
               </div>
@@ -186,7 +186,7 @@ export default function Policies() {
             
             <div>
               <p className="eyebrow mb-6 text-base">We aim to:</p>
-              <ul className="space-y-3">
+              <ul className="space-y-3 mb-6">
                 {environmental.map((item) => (
                   <li key={item} className="flex items-center gap-4 p-4 rounded-xl bg-white backdrop-blur-sm border border-border/50 hover:shadow-lg hover:border-teal/20 transition-all group">
                     <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-teal/15 to-navy/10 border border-teal/20 flex items-center justify-center flex-shrink-0 group-hover:from-teal group-hover:to-teal-light transition-all">
@@ -196,6 +196,11 @@ export default function Policies() {
                   </li>
                 ))}
               </ul>
+              <div className="glass-panel-dark p-5">
+                <p className="text-white font-semibold text-sm sm:text-base">
+                  Sustainability is embedded in our operational approach.
+                </p>
+              </div>
             </div>
           </div>
         </div>

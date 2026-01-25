@@ -60,7 +60,7 @@ export default function Index() {
             {/* Main Headline */}
             <h1 className="text-white mb-5 sm:mb-8 animate-fade-up opacity-0 text-balance px-2"
                 style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
-              Commercial HVAC & Mechanical Services Across London
+              Commercial HVAC & Mechanical Services Across London & Nationwide
             </h1>
             
             {/* Subheadline */}
@@ -191,11 +191,6 @@ export default function Index() {
                 ))}
               </div>
               
-              <div className="mt-6 sm:mt-10 glass-panel-dark p-5 sm:p-6">
-                <p className="text-white font-semibold leading-relaxed text-sm sm:text-base">
-                  Commercial clients value predictability. That is what we prioritise.
-                </p>
-              </div>
             </div>
 
             {/* Image side - hidden on mobile */}

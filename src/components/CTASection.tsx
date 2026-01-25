@@ -25,22 +25,20 @@ export function CTASection({
         <img 
           src={londonSkyline} 
           alt="" 
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover brightness-[0.35]"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-charcoal/96 via-slate/94 to-navy/90" />
-        {/* Decorative elements */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[250px] sm:w-[400px] h-[150px] sm:h-[250px] bg-teal/8 rounded-full blur-[60px] sm:blur-[80px]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-charcoal/80 via-slate/75 to-navy/70" />
       </div>
       
       <div className="container-wide relative z-10 text-center">
-        <p className="text-teal font-bold tracking-[0.15em] uppercase text-xs sm:text-sm mb-2 sm:mb-3">
+        <p className="text-teal font-bold tracking-[0.15em] uppercase text-xs sm:text-sm mb-2 sm:mb-3 drop-shadow-lg">
           {eyebrow}
         </p>
-        <h2 className="text-white mb-3 sm:mb-4 text-balance text-2xl sm:text-3xl md:text-4xl">{title}</h2>
-        <p className="text-white/60 mb-5 sm:mb-6 max-w-lg mx-auto leading-relaxed text-sm md:text-base px-2">
+        <h2 className="text-white mb-3 sm:mb-4 text-balance text-2xl sm:text-3xl md:text-4xl drop-shadow-lg [text-shadow:_0_2px_12px_rgba(0,0,0,0.5)]">{title}</h2>
+        <p className="text-white/90 mb-5 sm:mb-6 max-w-lg mx-auto leading-relaxed text-sm md:text-base px-2 drop-shadow-md">
           {description}
         </p>
-        <Button variant="hero" size="lg" asChild className="group w-full sm:w-auto">
+        <Button variant="navy" size="lg" asChild className="group w-full sm:w-auto shadow-xl">
           <Link to={buttonLink}>
             {buttonText}
             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
