@@ -106,9 +106,9 @@ export default function About() {
           <img 
             src={plantRoom} 
             alt="" 
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover brightness-[0.5]"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-charcoal/90 via-slate/85 to-charcoal/90" />
+          <div className="absolute inset-0 bg-gradient-to-b from-charcoal/70 via-slate/60 to-charcoal/70" />
         </div>
         
         <div className="container-wide relative z-10">

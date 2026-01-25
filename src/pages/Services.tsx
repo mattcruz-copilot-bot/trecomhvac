@@ -150,9 +150,9 @@ export default function Services() {
           <img 
             src={plantRoom} 
             alt="" 
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover brightness-[0.5]"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-charcoal/96 via-slate/94 to-navy/92" />
+          <div className="absolute inset-0 bg-gradient-to-br from-charcoal/75 via-slate/65 to-navy/60" />
         </div>
         
         <div className="container-wide relative z-10">

@@ -124,9 +124,9 @@ export default function TechnicalAdvisory() {
           <img 
             src={pipeworkDetail} 
             alt="" 
-            className="w-full h-full object-cover brightness-[0.4]"
+            className="w-full h-full object-cover brightness-[0.5]"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-charcoal/85 via-slate/80 to-navy/75" />
+          <div className="absolute inset-0 bg-gradient-to-br from-charcoal/75 via-slate/65 to-navy/60" />
         </div>
         
         <div className="container-wide relative z-10">

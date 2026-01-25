@@ -25,9 +25,9 @@ export function CTASection({
         <img 
           src={londonSkyline} 
           alt="" 
-          className="w-full h-full object-cover brightness-[0.35]"
+          className="w-full h-full object-cover brightness-[0.55]"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-charcoal/80 via-slate/75 to-navy/70" />
+        <div className="absolute inset-0 bg-gradient-to-br from-charcoal/70 via-slate/60 to-navy/55" />
       </div>
       
       <div className="container-wide relative z-10 text-center">
