@@ -124,18 +124,18 @@ export default function TechnicalAdvisory() {
           <img 
             src={pipeworkDetail} 
             alt="" 
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover brightness-[0.4]"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-charcoal/96 via-slate/94 to-navy/92" />
+          <div className="absolute inset-0 bg-gradient-to-br from-charcoal/85 via-slate/80 to-navy/75" />
         </div>
         
         <div className="container-wide relative z-10">
           <div className="text-center mb-10">
-            <p className="text-teal font-bold tracking-[0.15em] uppercase text-sm mb-4">
+            <p className="text-teal font-bold tracking-[0.15em] uppercase text-sm mb-4 drop-shadow-lg">
               The Reality
             </p>
-            <h2 className="text-white mb-4">We understand where projects typically fail</h2>
-            <p className="text-white/60 max-w-2xl mx-auto">
+            <h2 className="text-white mb-4 drop-shadow-lg [text-shadow:_0_2px_12px_rgba(0,0,0,0.5)]">We understand where projects typically fail</h2>
+            <p className="text-white/90 max-w-2xl mx-auto drop-shadow-md">
               Many mechanical issues aren't caused by poor installation — they're caused by 
               problems that happen before work even begins.
             </p>
@@ -145,21 +145,21 @@ export default function TechnicalAdvisory() {
             {problemAreas.map((problem) => (
               <div 
                 key={problem.text} 
-                className="glass-card-dark p-5 group"
+                className="backdrop-blur-md bg-charcoal/60 border border-white/15 rounded-xl p-5 group shadow-xl"
               >
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-teal/20 to-navy/20 border border-teal/25 flex items-center justify-center flex-shrink-0 group-hover:from-teal/35 group-hover:to-navy/30 transition-all duration-300">
+                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-teal/30 to-navy/30 border border-teal/35 flex items-center justify-center flex-shrink-0 group-hover:from-teal/45 group-hover:to-navy/40 transition-all duration-300">
                     <problem.icon className="w-4 h-4 text-teal" />
                   </div>
-                  <span className="text-white/85 font-medium group-hover:text-white transition-colors">{problem.text}</span>
+                  <span className="text-white font-medium group-hover:text-teal transition-colors">{problem.text}</span>
                 </div>
               </div>
             ))}
           </div>
           
           <div className="mt-10 text-center">
-            <div className="inline-block glass-panel-dark rounded-xl px-8 py-5">
-              <p className="text-lg md:text-xl font-bold text-white">
+            <div className="inline-block backdrop-blur-lg bg-navy/70 border border-teal/30 rounded-xl px-8 py-5 shadow-xl">
+              <p className="text-lg md:text-xl font-bold text-white drop-shadow-md">
                 Our role is to identify these issues early and help resolve them practically.
               </p>
             </div>
