@@ -126,7 +126,7 @@ export default function TechnicalAdvisory() {
             alt="" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-charcoal/80 via-slate/70 to-navy/75" />
+          <div className="absolute inset-0 bg-gradient-to-br from-charcoal/70 via-slate/55 to-navy/50" />
         </div>
         
         <div className="container-wide relative z-10">
@@ -134,8 +134,8 @@ export default function TechnicalAdvisory() {
             <p className="text-teal font-bold tracking-[0.15em] uppercase text-sm mb-4">
               The Reality
             </p>
-            <h2 className="text-white mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">We understand where projects typically fail</h2>
-            <p className="text-white/90 max-w-2xl mx-auto drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]">
+            <h2 className="text-white mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.7)]">We understand where projects typically fail</h2>
+            <p className="text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)] max-w-2xl mx-auto">
               Many mechanical issues aren't caused by poor installation — they're caused by 
               problems that happen before work even begins.
             </p>
