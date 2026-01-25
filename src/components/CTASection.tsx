@@ -38,7 +38,7 @@ export function CTASection({
         <p className="text-white/90 mb-5 sm:mb-6 max-w-lg mx-auto leading-relaxed text-sm md:text-base px-2 drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]">
           {description}
         </p>
-        <Button variant="hero" size="lg" asChild className="group w-full sm:w-auto">
+        <Button variant="primary" size="lg" asChild className="group w-full sm:w-auto">
           <Link to={buttonLink}>
             {buttonText}
             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
