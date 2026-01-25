@@ -150,17 +150,17 @@ export default function Services() {
           <img 
             src={plantRoom} 
             alt="" 
-            className="w-full h-full object-cover brightness-[0.5]"
+            className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-charcoal/75 via-slate/65 to-navy/60" />
+          <div className="absolute inset-0 bg-gradient-to-br from-charcoal/80 via-slate/70 to-navy/75" />
         </div>
         
         <div className="container-wide relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-10">
               <p className="text-teal font-bold tracking-[0.15em] uppercase text-sm mb-3">Site Standards</p>
-              <h2 className="text-white mb-3">How We Operate on Site</h2>
-              <p className="text-white/60">We work with:</p>
+              <h2 className="text-white mb-3 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">How We Operate on Site</h2>
+              <p className="text-white/90 drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]">We work with:</p>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
               {howWeOperate.map((item) => (
