@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import trecomLogo from "@/assets/trecom-logo.jpg";
+import trecomLogo from "@/assets/trecom-logo-cropped.png";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -22,8 +22,16 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white/60 backdrop-blur-xl border-b border-white/40" style={{ boxShadow: '0 4px 30px rgba(0, 0, 0, 0.05)' }}>
       <nav className="container-wide flex items-center justify-between py-5">
-        <Link to="/" className="flex items-center group">
-          <img src={trecomLogo} alt="Trecom-Hvac & Mechanical" className="h-10 w-auto" />
+        <Link to="/" className="flex items-center gap-2.5 group">
+          <img src={trecomLogo} alt="Trecom-Hvac & Mechanical logo" className="h-9 w-auto" />
+          <div className="flex items-baseline gap-1.5">
+            <span className="text-[22px] font-extrabold text-navy tracking-[-0.02em] transition-all duration-300 group-hover:text-teal font-heading">
+              TrecomHvac
+            </span>
+            <span className="text-[13px] font-normal text-charcoal-muted tracking-[0.02em]">
+              & Mechanical
+            </span>
+          </div>
         </Link>
 
         {/* Desktop Navigation */}
