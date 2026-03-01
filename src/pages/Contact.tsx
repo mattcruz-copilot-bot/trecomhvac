@@ -17,12 +17,12 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+44 (0) 20 XXXX XXXX",
+    value: "+44 7389 711640",
   },
   {
     icon: Mail,
     label: "Email",
-    value: "info@trecomhvac.co.uk",
+    value: "info@trecomhvac.com",
   },
   {
     icon: Clock,
