@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin } from "lucide-react";
-import trecomLogo from "@/assets/trecom-logo-tight.png";
+import { TrecomLogo } from "@/components/TrecomLogo";
 
 const navigation = {
   company: [
@@ -27,7 +27,7 @@ export function Footer() {
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-16">
           {/* Brand */}
           <div className="col-span-2 sm:col-span-2 lg:col-span-1">
-            <img src={trecomLogo} alt="Trecom-Hvac & Mechanical" className="h-14 w-auto brightness-0 invert mb-4 sm:mb-6" />
+            <TrecomLogo variant="light" className="h-12 w-auto mb-4 sm:mb-6" />
             <p className="text-sm text-white/50 leading-relaxed max-w-xs">
               Professional mechanical contracting services for commercial and industrial clients across London and the UK.
             </p>
