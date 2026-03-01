@@ -87,13 +87,13 @@ export function Footer() {
                 <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
                   <Phone className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-teal" />
                 </div>
-                <span>+44 (0) 20 XXXX XXXX</span>
+                <span>+44 7389 711640</span>
               </li>
               <li className="flex items-center gap-3 sm:gap-4 text-sm text-white/50">
                 <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
                   <Mail className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-teal" />
                 </div>
-                <span className="break-all sm:break-normal">info@trecomhvac.co.uk</span>
+                <span className="break-all sm:break-normal">info@trecomhvac.com</span>
               </li>
             </ul>
           </div>
