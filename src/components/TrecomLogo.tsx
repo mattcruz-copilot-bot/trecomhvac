@@ -13,70 +13,74 @@ export function TrecomLogo({ className = "", variant = "dark" }: TrecomLogoProps
 
   return (
     <svg
-      viewBox="0 0 380 56"
+      viewBox="0 0 400 60"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
       role="img"
       aria-label="Trecom-Hvac & Mechanical"
     >
-      {/* === Fan / Propeller (3 bold blades) === */}
-      <g transform="translate(6, 4)">
-        {/* Top blade */}
-        <path
-          d="M22 20 C22 20, 14 4, 6 2 C-2 0, 0 10, 6 14 C12 18, 22 20, 22 20Z"
+      {/* === 3-blade propeller fan (wide rounded blades) === */}
+      <g transform="translate(26, 28)">
+        {/* Top-right blade */}
+        <ellipse
+          cx="0" cy="-14"
+          rx="7" ry="14"
+          transform="rotate(-30)"
           fill={lightBlue}
         />
         {/* Bottom-left blade */}
-        <path
-          d="M20 24 C20 24, 4 26, 0 34 C-4 42, 6 40, 12 36 C18 32, 20 24, 20 24Z"
+        <ellipse
+          cx="0" cy="-14"
+          rx="7" ry="14"
+          transform="rotate(90)"
           fill={mainBlue}
         />
         {/* Bottom-right blade */}
-        <path
-          d="M24 24 C24 24, 32 38, 40 38 C48 38, 44 28, 38 26 C32 24, 24 24, 24 24Z"
+        <ellipse
+          cx="0" cy="-14"
+          rx="7" ry="14"
+          transform="rotate(210)"
           fill={midBlue}
         />
         {/* Hub */}
-        <circle cx="22" cy="22" r="5" fill={mainBlue} />
-        <circle cx="22" cy="22" r="2.5" fill={lightBlue} />
+        <circle cx="0" cy="0" r="5" fill={mainBlue} />
+        <circle cx="0" cy="0" r="2.5" fill={lightBlue} />
       </g>
 
       {/* === Tap / Faucet === */}
-      <g transform="translate(46, 4)">
+      <g transform="translate(52, 6)">
         {/* Handle bar */}
-        <rect x="4" y="0" width="16" height="4.5" rx="2.2" fill={midBlue} />
+        <rect x="3" y="0" width="18" height="5" rx="2.5" fill={midBlue} />
         {/* Stem */}
-        <rect x="9" y="4" width="6" height="10" rx="1.5" fill={midBlue} />
+        <rect x="8.5" y="4.5" width="7" height="10" rx="1.5" fill={midBlue} />
         {/* Valve body */}
-        <rect x="2" y="13" width="20" height="13" rx="3" fill={midBlue} />
+        <rect x="1" y="13" width="22" height="14" rx="3" fill={midBlue} />
         {/* Left pipe */}
-        <rect x="-6" y="16" width="9" height="7" rx="2" fill={midBlue} />
+        <rect x="-7" y="16" width="9" height="8" rx="2" fill={midBlue} />
         {/* Right pipe */}
-        <rect x="21" y="16" width="9" height="7" rx="2" fill={midBlue} />
-        {/* Pipe ends (flanges) */}
-        <rect x="-8" y="15.5" width="3" height="8" rx="1" fill={mainBlue} />
-        <rect x="29" y="15.5" width="3" height="8" rx="1" fill={mainBlue} />
+        <rect x="22" y="16" width="9" height="8" rx="2" fill={midBlue} />
+        {/* Pipe flanges */}
+        <rect x="-9" y="15.5" width="3.5" height="9" rx="1.2" fill={mainBlue} />
+        <rect x="29.5" y="15.5" width="3.5" height="9" rx="1.2" fill={mainBlue} />
       </g>
 
       {/* === Water drops === */}
-      {/* Large drop */}
       <path
-        d="M52 36 C52 36, 47 44, 49 48 C50.5 51, 55.5 51, 57 48 C59 44, 54 36, 52 36Z"
+        d="M58 42 Q54 50, 56 53 Q58 56, 62 53 Q64 50, 60 42Z"
         fill={mainBlue}
       />
-      {/* Small drop */}
       <path
-        d="M66 34 C66 34, 62.5 40, 64 43 C65 45, 69 45, 70 43 C71.5 40, 68 34, 66 34Z"
+        d="M72 40 Q69 46, 70.5 48.5 Q72 51, 75 48.5 Q76.5 46, 74 40Z"
         fill={midBlue}
-        opacity="0.8"
+        opacity="0.75"
       />
 
       {/* === Brand text === */}
       <text
-        x="90"
-        y="22"
+        x="100"
+        y="24"
         fontFamily="'Plus Jakarta Sans', Arial, sans-serif"
-        fontSize="22"
+        fontSize="24"
         fontWeight="700"
         fill={titleFill}
         dominantBaseline="central"
@@ -85,14 +89,14 @@ export function TrecomLogo({ className = "", variant = "dark" }: TrecomLogoProps
         Trecom-Hvac
       </text>
       <text
-        x="90"
-        y="44"
+        x="100"
+        y="47"
         fontFamily="'Plus Jakarta Sans', Arial, sans-serif"
-        fontSize="14"
+        fontSize="18"
         fontWeight="600"
         fill={subtitleFill}
         dominantBaseline="central"
-        letterSpacing="0.8"
+        letterSpacing="0.3"
       >
         &amp; Mechanical
       </text>
