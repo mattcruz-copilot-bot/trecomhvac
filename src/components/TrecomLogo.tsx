@@ -10,23 +10,17 @@ export function TrecomLogo({ className = "", variant = "dark" }: TrecomLogoProps
 
   return (
     <div
-      className={`overflow-hidden ${className}`}
-      style={{ position: "relative" }}
-    >
-      <img
-        src={logoImage}
-        alt="Trecom-Hvac & Mechanical"
-        className="object-contain"
-        style={{
-          height: "250%",
-          width: "auto",
-          position: "relative",
-          top: "50%",
-          transform: "translateY(-50%)",
-          mixBlendMode: isDark ? "multiply" : "screen",
-          ...(variant === "light" ? { filter: "brightness(0) invert(1)" } : {}),
-        }}
-      />
-    </div>
+      className={`${className}`}
+      style={{
+        backgroundImage: `url(${logoImage})`,
+        backgroundSize: "180%",
+        backgroundPosition: "center 42%",
+        backgroundRepeat: "no-repeat",
+        mixBlendMode: isDark ? "multiply" : "screen",
+        ...(variant === "light" ? { filter: "brightness(0) invert(1)" } : {}),
+      }}
+      role="img"
+      aria-label="Trecom-Hvac & Mechanical"
+    />
   );
 }
