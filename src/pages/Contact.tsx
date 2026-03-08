@@ -136,14 +136,10 @@ export default function Contact() {
                     </div>
                     <h4 className="font-bold text-white text-base sm:text-lg">Emergency Callout</h4>
                   </div>
-                  <p className="text-sm text-white/90 leading-relaxed mb-4">
+                  <p className="text-sm text-white/90 leading-relaxed">
                     For existing maintenance contract clients requiring emergency 
                     callout, please use your dedicated contact number.
                   </p>
-                  <Button variant="glass" size="sm" className="bg-white/15 hover:bg-white/25 text-white border-white/30">
-                    <Phone className="w-4 h-4 mr-2" />
-                    Call Now
-                  </Button>
                 </div>
               </div>
             </div>
