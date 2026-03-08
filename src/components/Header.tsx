@@ -23,7 +23,7 @@ export function Header() {
     <header className="sticky top-0 z-50 bg-white/60 backdrop-blur-xl border-b border-white/40" style={{ boxShadow: '0 4px 30px rgba(0, 0, 0, 0.05)' }}>
       <nav className="container-wide flex items-center justify-between py-5">
         <Link to="/" className="flex items-center group">
-          <TrecomLogo variant="dark" className="h-14 w-auto max-w-[220px]" />
+          <TrecomLogo variant="dark" className="h-20 w-auto max-w-[280px] -my-4" />
         </Link>
 
         {/* Desktop Navigation */}
