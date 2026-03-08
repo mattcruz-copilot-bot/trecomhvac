@@ -1,4 +1,4 @@
-import logoImage from "@/assets/trecom-logo-main.jpg";
+import logoImage from "@/assets/trecom-logo-main.png";
 
 interface TrecomLogoProps {
   className?: string;
