@@ -19,77 +19,65 @@ export function TrecomLogo({ className = "", variant = "dark" }: TrecomLogoProps
       role="img"
       aria-label="Trecom-Hvac & Mechanical"
     >
-      {/* === 3-blade propeller fan === */}
-      <g transform="translate(4, 2)">
-        {/* Top-right blade - curved like a propeller */}
-        <path
-          d="M24 18 C26 14, 30 6, 34 2 C37 -1, 40 0, 39 4 C38 8, 32 14, 28 18 C26 20, 24 20, 24 18Z"
+      {/* === 3-blade propeller fan (wide rounded blades) === */}
+      <g transform="translate(26, 28)">
+        {/* Top-right blade */}
+        <ellipse
+          cx="0" cy="-14"
+          rx="7" ry="14"
+          transform="rotate(-30)"
           fill={lightBlue}
         />
-        <path
-          d="M24 18 C20 14, 14 8, 8 4 C4 2, 2 4, 4 7 C7 11, 16 16, 22 18 C24 19, 25 19, 24 18Z"
-          fill={lightBlue}
-          opacity="0.85"
-        />
-
         {/* Bottom-left blade */}
-        <path
-          d="M20 24 C16 26, 8 30, 2 34 C-1 36, -1 39, 3 38 C7 37, 16 32, 20 28 C22 26, 22 24, 20 24Z"
+        <ellipse
+          cx="0" cy="-14"
+          rx="7" ry="14"
+          transform="rotate(90)"
           fill={mainBlue}
         />
-        <path
-          d="M20 24 C16 28, 10 36, 8 42 C7 46, 9 47, 12 44 C15 41, 18 32, 20 26 C21 24, 21 23, 20 24Z"
-          fill={mainBlue}
-          opacity="0.85"
-        />
-
-        {/* Right blade */}
-        <path
-          d="M28 26 C32 28, 40 30, 46 30 C50 30, 50 27, 46 26 C42 25, 34 24, 28 24 C26 24, 26 25, 28 26Z"
+        {/* Bottom-right blade */}
+        <ellipse
+          cx="0" cy="-14"
+          rx="7" ry="14"
+          transform="rotate(210)"
           fill={midBlue}
         />
-        <path
-          d="M28 26 C30 30, 34 38, 38 44 C40 47, 42 46, 42 42 C41 38, 34 30, 30 26 C28 25, 27 25, 28 26Z"
-          fill={midBlue}
-          opacity="0.85"
-        />
-
         {/* Hub */}
-        <circle cx="24" cy="24" r="5.5" fill={mainBlue} />
-        <circle cx="24" cy="24" r="2.8" fill={lightBlue} />
+        <circle cx="0" cy="0" r="5" fill={mainBlue} />
+        <circle cx="0" cy="0" r="2.5" fill={lightBlue} />
       </g>
 
       {/* === Tap / Faucet === */}
-      <g transform="translate(50, 4)">
+      <g transform="translate(52, 6)">
         {/* Handle bar */}
         <rect x="3" y="0" width="18" height="5" rx="2.5" fill={midBlue} />
         {/* Stem */}
-        <rect x="8.5" y="4.5" width="7" height="11" rx="1.5" fill={midBlue} />
+        <rect x="8.5" y="4.5" width="7" height="10" rx="1.5" fill={midBlue} />
         {/* Valve body */}
-        <rect x="1" y="14" width="22" height="14" rx="3" fill={midBlue} />
+        <rect x="1" y="13" width="22" height="14" rx="3" fill={midBlue} />
         {/* Left pipe */}
-        <rect x="-7" y="17" width="9" height="8" rx="2" fill={midBlue} />
+        <rect x="-7" y="16" width="9" height="8" rx="2" fill={midBlue} />
         {/* Right pipe */}
-        <rect x="22" y="17" width="9" height="8" rx="2" fill={midBlue} />
+        <rect x="22" y="16" width="9" height="8" rx="2" fill={midBlue} />
         {/* Pipe flanges */}
-        <rect x="-9" y="16.5" width="3.5" height="9" rx="1.2" fill={mainBlue} />
-        <rect x="29.5" y="16.5" width="3.5" height="9" rx="1.2" fill={mainBlue} />
+        <rect x="-9" y="15.5" width="3.5" height="9" rx="1.2" fill={mainBlue} />
+        <rect x="29.5" y="15.5" width="3.5" height="9" rx="1.2" fill={mainBlue} />
       </g>
 
       {/* === Water drops === */}
       <path
-        d="M56 40 Q52 48, 54 52 Q56 55, 60 52 Q62 48, 58 40Z"
+        d="M58 42 Q54 50, 56 53 Q58 56, 62 53 Q64 50, 60 42Z"
         fill={mainBlue}
       />
       <path
-        d="M70 38 Q67 44, 68.5 47 Q70 49.5, 73 47 Q74.5 44, 72 38Z"
+        d="M72 40 Q69 46, 70.5 48.5 Q72 51, 75 48.5 Q76.5 46, 74 40Z"
         fill={midBlue}
         opacity="0.75"
       />
 
       {/* === Brand text === */}
       <text
-        x="98"
+        x="100"
         y="24"
         fontFamily="'Plus Jakarta Sans', Arial, sans-serif"
         fontSize="24"
@@ -101,8 +89,8 @@ export function TrecomLogo({ className = "", variant = "dark" }: TrecomLogoProps
         Trecom-Hvac
       </text>
       <text
-        x="98"
-        y="48"
+        x="100"
+        y="47"
         fontFamily="'Plus Jakarta Sans', Arial, sans-serif"
         fontSize="18"
         fontWeight="600"
