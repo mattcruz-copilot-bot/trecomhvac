@@ -269,9 +269,18 @@ export default function Contact() {
                     />
                   </div>
 
-                  <Button type="submit" variant="primary" size="lg" className="w-full sm:w-auto">
-                    Send Message
-                    <Send className="ml-2 h-4 w-4" />
+                  <Button type="submit" variant="primary" size="lg" className="w-full sm:w-auto" disabled={isSubmitting}>
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        Send Message
+                        <Send className="ml-2 h-4 w-4" />
+                      </>
+                    )}
                   </Button>
                 </form>
               </div>
