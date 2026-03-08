@@ -1,4 +1,4 @@
-import logoImage from "@/assets/trecom-logo-main.png";
+import logoImage from "@/assets/trecom-logo-tight.png";
 
 interface TrecomLogoProps {
   className?: string;
@@ -6,12 +6,17 @@ interface TrecomLogoProps {
 }
 
 export function TrecomLogo({ className = "", variant = "dark" }: TrecomLogoProps) {
+  const isDark = variant === "dark";
+
   return (
     <img
       src={logoImage}
       alt="Trecom-Hvac & Mechanical"
       className={`${className} object-contain`}
-      style={variant === "light" ? { filter: "brightness(0) invert(1)" } : undefined}
+      style={{
+        mixBlendMode: isDark ? "multiply" : "screen",
+        ...(variant === "light" ? { filter: "brightness(0) invert(1)" } : {}),
+      }}
     />
   );
 }
