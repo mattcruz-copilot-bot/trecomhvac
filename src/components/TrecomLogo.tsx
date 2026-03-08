@@ -4,6 +4,7 @@ interface TrecomLogoProps {
 }
 
 export function TrecomLogo({ className = "", variant = "dark" }: TrecomLogoProps) {
+  // Brand colors matching reference logo
   const textColor = variant === "dark" ? "#0a5a8a" : "#ffffff";
   const subtitleColor = variant === "dark" ? "#1a8fc4" : "rgba(255,255,255,0.75)";
   const accentDark = "#0a5a8a";
