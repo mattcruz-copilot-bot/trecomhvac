@@ -1,3 +1,4 @@
+// TrecomLogo v2 - updated brand colors and alignment
 interface TrecomLogoProps {
   className?: string;
   variant?: "dark" | "light";
