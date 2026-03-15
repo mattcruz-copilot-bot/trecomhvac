@@ -6,21 +6,16 @@ interface TrecomLogoProps {
 }
 
 export function TrecomLogo({ className = "", variant = "dark" }: TrecomLogoProps) {
-  const isDark = variant === "dark";
-
   return (
-    <div
-      className={`${className}`}
+    <img
+      src={logoImage}
+      alt="Trecom-Hvac & Mechanical"
+      className={className}
       style={{
-        backgroundImage: `url(${logoImage})`,
-        backgroundSize: "180%",
-        backgroundPosition: "center 42%",
-        backgroundRepeat: "no-repeat",
-        mixBlendMode: isDark ? "multiply" : "screen",
+        objectFit: "contain",
+        mixBlendMode: variant === "dark" ? "multiply" : "screen",
         ...(variant === "light" ? { filter: "brightness(0) invert(1)" } : {}),
       }}
-      role="img"
-      aria-label="Trecom-Hvac & Mechanical"
     />
   );
 }
