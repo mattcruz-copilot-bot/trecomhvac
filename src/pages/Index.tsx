@@ -89,8 +89,8 @@ export default function Index() {
           </div>
         </div>
 
-        {/* Bottom gradient fade — refined, longer & smoother */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 sm:h-40 md:h-48 bg-gradient-to-t from-background via-background/80 to-transparent z-[5] pointer-events-none" />
+        {/* Bottom edge — subtle hairline transition only, keeps floor visible */}
+        <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-background/90 to-transparent z-[5] pointer-events-none" />
       </section>
 
       {/* Credibility Intro Section - Tighter spacing */}
@@ -177,7 +177,7 @@ export default function Index() {
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 {reasons.map((reason) => (
-                  <div key={reason.title} className="p-4 sm:p-5 rounded-xl bg-white border border-border/50 hover:shadow-lg hover:border-teal/20 transition-all duration-300 group">
+                  <div key={reason.title} className="p-4 sm:p-5 rounded-xl bg-surface border border-border/50 hover:shadow-lg hover:border-teal/20 transition-all duration-300 group">
                     <div className="flex items-start gap-3 sm:gap-4">
                       <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-navy/10 to-teal/10 border border-navy/15 flex items-center justify-center flex-shrink-0 group-hover:from-navy group-hover:to-teal transition-all duration-300">
                         <reason.icon className="w-4 h-4 sm:w-5 sm:h-5 text-navy group-hover:text-white transition-colors" />

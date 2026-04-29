@@ -143,7 +143,7 @@ export default function Contact() {
                 
                 <div className="space-y-3">
                   {contactInfo.map((item) => (
-                    <div key={item.label} className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl bg-white border border-border/50 hover:shadow-lg hover:border-teal/20 transition-all group">
+                    <div key={item.label} className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl bg-surface border border-border/50 hover:shadow-lg hover:border-teal/20 transition-all group">
                       <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-gradient-to-br from-navy/10 to-teal/10 border border-navy/15 flex items-center justify-center flex-shrink-0 group-hover:from-navy group-hover:to-teal transition-all">
                         <item.icon className="h-4 w-4 sm:h-5 sm:w-5 text-navy group-hover:text-white transition-colors" />
                       </div>
