@@ -19,7 +19,7 @@ import {
   ChevronRight
 } from "lucide-react";
 import engineersBoardroom from "@/assets/engineers-boardroom.jpg";
-import engineersRooftop from "@/assets/engineers-rooftop.jpg";
+import engineersConsulting from "@/assets/engineers-consulting.jpg";
 import manifoldDetail from "@/assets/manifold-detail.jpg";
 
 const problemAreas = [
@@ -66,33 +66,23 @@ export default function TechnicalAdvisory() {
         </div>
         
         <div className="relative z-10 container-wide py-20 md:py-28">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="text-teal font-bold tracking-[0.15em] uppercase text-sm mb-5">
-                Technical Advisory
-              </p>
-              <h1 className="text-white mb-6">
-                Technical Advisory & Project Support
-              </h1>
-              <p className="text-xl text-white/70 leading-relaxed max-w-xl mb-8">
-                TrecomHvac & Mechanical provides technical advisory and project support 
-                services for clients who need experienced mechanical input beyond installation alone.
-              </p>
-              <Button variant="hero" size="lg" asChild className="group">
-                <Link to="/contact">
-                  Discuss Your Project
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Link>
-              </Button>
-            </div>
-            <div className="relative hidden lg:block">
-              <div className="absolute -inset-3 bg-gradient-to-br from-teal/10 to-transparent rounded-2xl blur-xl" />
-              <img 
-                src={engineersRooftop} 
-                alt="HVAC engineers on a London commercial rooftop" 
-                className="relative w-full h-auto rounded-2xl shadow-2xl border border-white/10"
-              />
-            </div>
+          <div className="max-w-3xl">
+            <p className="text-teal font-bold tracking-[0.15em] uppercase text-sm mb-5 drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
+              Technical Advisory
+            </p>
+            <h1 className="text-white mb-6 drop-shadow-[0_2px_6px_rgba(0,0,0,0.5)]">
+              Technical Advisory & Project Support
+            </h1>
+            <p className="text-xl text-white/80 leading-relaxed max-w-2xl mb-8 drop-shadow-[0_1px_3px_rgba(0,0,0,0.4)]">
+              TrecomHvac & Mechanical provides technical advisory and project support 
+              services for clients who need experienced mechanical input beyond installation alone.
+            </p>
+            <Button variant="hero" size="lg" asChild className="group">
+              <Link to="/contact">
+                Discuss Your Project
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </Button>
           </div>
         </div>
         
@@ -200,8 +190,8 @@ export default function TechnicalAdvisory() {
             <div className="relative order-2 lg:order-1">
               <div className="absolute -inset-4 bg-gradient-to-br from-navy/10 to-teal/10 rounded-2xl blur-xl" />
               <img 
-                src={engineersRooftop} 
-                alt="Engineering team on a commercial rooftop plant" 
+                src={engineersConsulting} 
+                alt="Two engineers reviewing architectural drawings together" 
                 className="relative w-full h-auto rounded-2xl shadow-elevated-lg"
               />
             </div>
