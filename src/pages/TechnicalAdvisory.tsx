@@ -184,7 +184,7 @@ export default function TechnicalAdvisory() {
       </section>
 
       {/* Valuable For Section — schematic-backed, centered */}
-      <section className="relative py-16 sm:py-20 md:py-32 overflow-hidden bg-charcoal">
+      <section className="relative pt-16 sm:pt-20 md:pt-32 pb-24 sm:pb-32 md:pb-44 overflow-hidden bg-charcoal">
         {/* CAD blueprint background */}
         <div className="absolute inset-0 z-0">
           <img
