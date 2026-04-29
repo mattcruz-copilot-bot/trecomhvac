@@ -7,7 +7,7 @@ import heroBuilding from "@/assets/hero-workers-site.jpg";
 import plantRoom from "@/assets/plant-room.jpg";
 import hvacDuctwork from "@/assets/hero-hvac-rooftop.jpg";
 import advisoryReview from "@/assets/technical-advisory-review.jpg";
-import cadSchematicBg from "@/assets/cad-schematic-bg.jpg";
+
 
 const services = [
   { icon: Wind, title: "HVAC & Ventilation", desc: "Complete climate control solutions" },
@@ -217,13 +217,6 @@ export default function Index() {
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-charcoal/70 via-navy/60 to-charcoal/75" />
-          {/* CAD schematic overlay for technical atmosphere */}
-          <img 
-            src={cadSchematicBg} 
-            alt="" 
-            className="absolute inset-0 w-full h-full object-cover opacity-50 mix-blend-screen pointer-events-none"
-          />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,hsl(var(--charcoal)/0.5)_100%)]" />
         </div>
         
         <div className="container-wide relative z-10">
