@@ -42,7 +42,7 @@ export default function Policies() {
   return (
     <Layout>
       {/* Hero with background */}
-      <section className="relative py-24 md:py-28 overflow-hidden">
+      <section className="relative section-y-hero overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src={pipeworkDetail} 
@@ -66,7 +66,7 @@ export default function Policies() {
       </section>
 
       {/* Health & Safety */}
-      <section className="py-20 md:py-28 bg-background">
+      <section className="section-y bg-background">
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -115,7 +115,7 @@ export default function Policies() {
       </section>
 
       {/* Competence & Training */}
-      <section className="py-20 md:py-28 section-surface">
+      <section className="section-y section-surface">
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1">
@@ -160,7 +160,7 @@ export default function Policies() {
       </section>
 
       {/* Environmental Responsibility */}
-      <section className="py-20 md:py-28 bg-background">
+      <section className="section-y bg-background">
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -208,7 +208,7 @@ export default function Policies() {
       </section>
 
       {/* Continuous Improvement - With background */}
-      <section className="relative py-20 md:py-28 overflow-hidden">
+      <section className="relative section-y overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src={hvacDuctwork} 
