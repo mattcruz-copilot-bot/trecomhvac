@@ -20,7 +20,7 @@ import {
 } from "lucide-react";
 import engineersBoardroom from "@/assets/engineers-boardroom.jpg";
 import engineersConsulting from "@/assets/engineers-consulting.jpg";
-import manifoldDetail from "@/assets/manifold-detail.jpg";
+import cadSchematicBg from "@/assets/cad-schematic-bg.jpg";
 
 const problemAreas = [
   { icon: Clock, text: "Poor sequencing" },
