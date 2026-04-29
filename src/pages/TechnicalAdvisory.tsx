@@ -18,9 +18,9 @@ import {
   Handshake,
   ChevronRight
 } from "lucide-react";
-import engineersConsulting from "@/assets/engineers-consulting.jpg";
-import londonSkyline from "@/assets/london-skyline.jpg";
-import pipeworkDetail from "@/assets/pipework-detail.jpg";
+import engineersBoardroom from "@/assets/engineers-boardroom.jpg";
+import engineersRooftop from "@/assets/engineers-rooftop.jpg";
+import manifoldDetail from "@/assets/manifold-detail.jpg";
 
 const problemAreas = [
   { icon: Clock, text: "Poor sequencing" },
@@ -57,8 +57,8 @@ export default function TechnicalAdvisory() {
       <section className="relative min-h-[70vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src={londonSkyline} 
-            alt="London commercial skyline" 
+            src={engineersBoardroom} 
+            alt="Engineers reviewing mechanical drawings in a London boardroom" 
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 hero-overlay" />
@@ -88,8 +88,8 @@ export default function TechnicalAdvisory() {
             <div className="relative hidden lg:block">
               <div className="absolute -inset-3 bg-gradient-to-br from-teal/10 to-transparent rounded-2xl blur-xl" />
               <img 
-                src={engineersConsulting} 
-                alt="Engineers reviewing technical drawings on-site" 
+                src={engineersRooftop} 
+                alt="HVAC engineers on a London commercial rooftop" 
                 className="relative w-full h-auto rounded-2xl shadow-2xl border border-white/10"
               />
             </div>
@@ -119,10 +119,10 @@ export default function TechnicalAdvisory() {
       </section>
 
       {/* Where Projects Fail - With background image */}
-      <section className="relative py-16 md:py-20 overflow-hidden">
+      <section className="relative py-12 sm:py-16 md:py-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src={pipeworkDetail} 
+            src={manifoldDetail} 
             alt="" 
             className="w-full h-full object-cover"
           />
@@ -200,8 +200,8 @@ export default function TechnicalAdvisory() {
             <div className="relative order-2 lg:order-1">
               <div className="absolute -inset-4 bg-gradient-to-br from-navy/10 to-teal/10 rounded-2xl blur-xl" />
               <img 
-                src={engineersConsulting} 
-                alt="Engineering consultation" 
+                src={engineersRooftop} 
+                alt="Engineering team on a commercial rooftop plant" 
                 className="relative w-full h-auto rounded-2xl shadow-elevated-lg"
               />
             </div>
