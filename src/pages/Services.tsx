@@ -50,7 +50,7 @@ export default function Services() {
   return (
     <Layout>
       {/* Hero with image */}
-      <section className="relative py-24 md:py-32 overflow-hidden">
+      <section className="relative section-y-hero overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src={hvacDuctwork} 
@@ -90,7 +90,7 @@ export default function Services() {
       </section>
 
       {/* Core Services - Two column layout */}
-      <section className="py-16 md:py-20 bg-background">
+      <section className="section-y bg-background">
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {/* Core Mechanical Services */}
@@ -145,7 +145,7 @@ export default function Services() {
       </section>
 
       {/* How We Operate - With background */}
-      <section className="relative py-16 md:py-20 overflow-hidden">
+      <section className="relative section-y overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src={plantRoom} 

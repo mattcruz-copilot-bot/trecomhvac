@@ -20,8 +20,10 @@ export function Header() {
   const isActive = (href: string) => location.pathname === href;
 
   return (
-    <header className="sticky top-0 z-50 bg-white/60 backdrop-blur-xl border-b border-white/40" style={{ boxShadow: '0 4px 30px rgba(0, 0, 0, 0.05)' }}>
-      <nav className="container-wide flex items-center justify-between py-5">
+    <header className="sticky top-0 z-50 bg-white/75 backdrop-blur-2xl border-b border-white/50 shadow-[0_4px_30px_rgba(0,0,0,0.06)]">
+      {/* Subtle gradient hairline accent at bottom */}
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-navy/30 to-transparent" />
+      <nav className="container-wide flex items-center justify-between py-5 relative">
         <Link to="/" className="flex items-center group">
           <TrecomLogo variant="dark" className="h-14 w-auto" />
         </Link>
