@@ -3,7 +3,7 @@ import { Layout } from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { CTASection } from "@/components/CTASection";
 import { ArrowRight, Wind, Wrench, Building2, Droplets, Gauge, Settings, Shield, Clock, MessageSquare, Award, Target, Zap } from "lucide-react";
-import heroBuilding from "@/assets/hero-hvac-rooftop.jpg";
+import heroBuilding from "@/assets/hvac-ductwork.jpg";
 import plantRoom from "@/assets/plant-room.jpg";
 import hvacDuctwork from "@/assets/hero-hvac-rooftop.jpg";
 import advisoryReview from "@/assets/technical-advisory-review.jpg";
