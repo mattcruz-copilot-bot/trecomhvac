@@ -7,7 +7,7 @@ import heroBuilding from "@/assets/hero-workers-site.jpg";
 import plantRoom from "@/assets/plant-room.jpg";
 import hvacDuctwork from "@/assets/hero-hvac-rooftop.jpg";
 import advisoryReview from "@/assets/technical-advisory-review.jpg";
-import cadSchematicBg from "@/assets/cad-schematic-bg.jpg";
+
 
 const services = [
   { icon: Wind, title: "HVAC & Ventilation", desc: "Complete climate control solutions" },
