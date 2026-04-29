@@ -87,7 +87,7 @@ export default function About() {
               <p className="eyebrow mb-5">That experience influences how we work:</p>
               <ul className="space-y-2 mb-8">
                 {howWeWork.map((item) => (
-                  <li key={item} className="flex items-center gap-3 p-3 rounded-lg bg-white/70 backdrop-blur-sm border border-white/60 hover:bg-white hover:shadow-md transition-all group">
+                  <li key={item} className="flex items-center gap-3 p-3 rounded-lg bg-surface backdrop-blur-sm border border-border/50 hover:shadow-md hover:border-teal/20 transition-all group">
                     <div className="w-7 h-7 rounded-md bg-gradient-to-br from-navy/10 to-teal/10 border border-navy/15 flex items-center justify-center flex-shrink-0 group-hover:from-navy group-hover:to-teal transition-all">
                       <ChevronRight className="w-3.5 h-3.5 text-navy group-hover:text-white transition-colors" />
                     </div>
