@@ -24,7 +24,7 @@ export default function About() {
   return (
     <Layout>
       {/* Hero with image */}
-      <section className="relative py-24 md:py-32 overflow-hidden">
+      <section className="relative section-y-hero overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src={engineersRooftop} 
@@ -50,7 +50,7 @@ export default function About() {
       </section>
 
       {/* Main Content */}
-      <section className="py-16 md:py-20 bg-background">
+      <section className="section-y bg-background">
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Content side */}
@@ -101,7 +101,7 @@ export default function About() {
       </section>
 
       {/* Our Experience - With background image */}
-      <section className="relative py-20 md:py-28 overflow-hidden">
+      <section className="relative section-y overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src={plantRoom} 
@@ -142,7 +142,7 @@ export default function About() {
       </section>
 
       {/* Our Approach */}
-      <section className="py-20 md:py-28 section-surface">
+      <section className="section-y section-surface">
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
