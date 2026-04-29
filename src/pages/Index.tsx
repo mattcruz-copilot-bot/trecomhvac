@@ -96,7 +96,7 @@ export default function Index() {
       </section>
 
       {/* Credibility Intro Section - Tighter spacing */}
-      <section className="py-12 sm:py-16 md:py-20 bg-background">
+      <section className="section-y-sm bg-background">
         <div className="container-wide">
           <div className="max-w-4xl mx-auto">
             <div className="glass-panel rounded-2xl p-6 sm:p-8 md:p-10">
@@ -128,7 +128,7 @@ export default function Index() {
       </section>
 
       {/* Services Grid - Visual cards with image background */}
-      <section className="relative py-12 sm:py-16 md:py-24 overflow-hidden">
+      <section className="relative section-y overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src={hvacDuctwork} 
@@ -169,7 +169,7 @@ export default function Index() {
       </section>
 
       {/* Why Trecom - Premium cards with image */}
-      <section className="py-12 sm:py-16 md:py-24 lg:py-28 bg-background">
+      <section className="section-y bg-background">
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-16 items-center">
             {/* Content side */}
@@ -209,7 +209,7 @@ export default function Index() {
       </section>
 
       {/* Technical Advisory Teaser - Dark section with background image */}
-      <section className="relative py-12 sm:py-16 md:py-20 overflow-hidden">
+      <section className="relative section-y-sm overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src={advisoryReview} 
@@ -241,7 +241,7 @@ export default function Index() {
       </section>
 
       {/* Process Section - Our Approach */}
-      <section className="py-12 sm:py-16 md:py-24 lg:py-28 section-warm">
+      <section className="section-y section-warm">
         <div className="container-wide">
           <div className="text-center mb-8 sm:mb-12 lg:mb-14">
             <p className="eyebrow mb-3 sm:mb-4">Our Approach</p>
