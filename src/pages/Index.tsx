@@ -3,7 +3,7 @@ import { Layout } from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { CTASection } from "@/components/CTASection";
 import { ArrowRight, Wind, Wrench, Building2, Droplets, Gauge, Settings, Shield, Clock, MessageSquare, Award, Target, Zap } from "lucide-react";
-import heroBuilding from "@/assets/hvac-ductwork.jpg";
+import heroBuilding from "@/assets/hero-workers-site.jpg";
 import plantRoom from "@/assets/plant-room.jpg";
 import hvacDuctwork from "@/assets/hero-hvac-rooftop.jpg";
 
@@ -214,7 +214,7 @@ export default function Index() {
             alt="" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-charcoal/55 via-slate/45 to-navy/40" />
+          <div className="absolute inset-0 bg-gradient-to-br from-charcoal/40 via-slate/30 to-navy/30" />
         </div>
         
         <div className="container-wide relative z-10">
