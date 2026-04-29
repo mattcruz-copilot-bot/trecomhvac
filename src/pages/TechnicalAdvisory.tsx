@@ -19,7 +19,7 @@ import {
   ChevronRight
 } from "lucide-react";
 import engineersBoardroom from "@/assets/engineers-boardroom.jpg";
-import engineersRooftop from "@/assets/engineers-rooftop.jpg";
+import engineersConsulting from "@/assets/engineers-consulting.jpg";
 import manifoldDetail from "@/assets/manifold-detail.jpg";
 
 const problemAreas = [
@@ -200,8 +200,8 @@ export default function TechnicalAdvisory() {
             <div className="relative order-2 lg:order-1">
               <div className="absolute -inset-4 bg-gradient-to-br from-navy/10 to-teal/10 rounded-2xl blur-xl" />
               <img 
-                src={engineersRooftop} 
-                alt="Engineering team on a commercial rooftop plant" 
+                src={engineersConsulting} 
+                alt="Two engineers reviewing architectural drawings together" 
                 className="relative w-full h-auto rounded-2xl shadow-elevated-lg"
               />
             </div>
