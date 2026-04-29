@@ -246,6 +246,7 @@ export default function TechnicalAdvisory() {
 
       {/* CTA Section */}
       <CTASection
+        className="mt-10 sm:mt-14 md:mt-20"
         eyebrow="Prevention Over Cure"
         title="This service exists to prevent costly mistakes."
         description="Many mechanical issues are not caused by poor installation — they are caused by poor coordination, poor sequencing, or decisions made too late."

@@ -9,6 +9,7 @@ interface CTASectionProps {
   description: string;
   buttonText: string;
   buttonLink?: string;
+  className?: string;
 }
 
 export function CTASection({ 
@@ -16,10 +17,11 @@ export function CTASection({
   title, 
   description, 
   buttonText, 
-  buttonLink = "/contact" 
+  buttonLink = "/contact",
+  className = ""
 }: CTASectionProps) {
   return (
-    <section className="relative py-10 sm:py-12 md:py-16 overflow-hidden">
+    <section className={`relative py-10 sm:py-12 md:py-16 overflow-hidden ${className}`}>
       {/* Background with image */}
       <div className="absolute inset-0 z-0">
         <img 
