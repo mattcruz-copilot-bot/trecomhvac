@@ -16,10 +16,8 @@ import {
   LifeBuoy,
   Briefcase,
   Handshake,
-  ChevronRight
 } from "lucide-react";
 import engineersBoardroom from "@/assets/engineers-boardroom.jpg";
-import engineersConsulting from "@/assets/engineers-consulting.jpg";
 import cadSchematicBg from "@/assets/cad-schematic-bg.jpg";
 
 const problemAreas = [
