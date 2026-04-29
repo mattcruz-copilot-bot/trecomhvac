@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { CTASection } from "@/components/CTASection";
 import { ArrowRight, Wind, Wrench, Droplets, Gauge, Settings, Building2, FileText, ClipboardCheck, Headphones, ChevronRight } from "lucide-react";
 import plantRoom from "@/assets/plant-room.jpg";
-import hvacDuctwork from "@/assets/hvac-ductwork.jpg";
+import hvacDuctwork from "@/assets/hero-hvac-rooftop.jpg";
 
 const operateAs = [
   "Mechanical contractor",
