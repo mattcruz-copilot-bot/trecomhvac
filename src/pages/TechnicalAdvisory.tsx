@@ -101,7 +101,7 @@ export default function TechnicalAdvisory() {
       </section>
 
       {/* Experience Introduction - Compact */}
-      <section className="py-12 md:py-16 bg-background">
+      <section className="py-12 sm:py-16 md:py-20 bg-background">
         <div className="container-wide">
           <div className="max-w-3xl mx-auto">
             <div className="glass-panel rounded-2xl p-8 text-center">
@@ -168,7 +168,7 @@ export default function TechnicalAdvisory() {
       </section>
 
       {/* How We Support - Card grid */}
-      <section className="py-16 md:py-20 section-surface">
+      <section className="py-12 sm:py-16 md:py-24 section-surface">
         <div className="container-wide">
           <div className="text-center mb-10">
             <p className="eyebrow mb-3">Our Services</p>
@@ -193,7 +193,7 @@ export default function TechnicalAdvisory() {
       </section>
 
       {/* Valuable For Section */}
-      <section className="py-16 md:py-20 bg-background">
+      <section className="py-12 sm:py-16 md:py-24 bg-background">
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Image side */}
