@@ -47,7 +47,7 @@ export default function Index() {
           />
           {/* Premium layered overlay */}
           <div className="absolute inset-0 hero-overlay" />
-          <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-charcoal/50" />
+          <div className="absolute inset-0 bg-gradient-to-t from-charcoal/95 via-charcoal/30 to-transparent" />
         </div>
 
         {/* Content */}
