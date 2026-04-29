@@ -3,7 +3,7 @@ import { Layout } from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { CTASection } from "@/components/CTASection";
 import { ArrowRight, Wind, Wrench, Building2, Droplets, Gauge, Settings, Shield, Clock, MessageSquare, Award, Target, Zap } from "lucide-react";
-import heroBuilding from "@/assets/hero-workers-site.jpg";
+import heroBuilding from "@/assets/hero-plant-room-ductwork.jpg";
 import plantRoom from "@/assets/plant-room.jpg";
 import hvacDuctwork from "@/assets/hero-hvac-rooftop.jpg";
 import advisoryReview from "@/assets/technical-advisory-review.jpg";
@@ -42,7 +42,7 @@ export default function Index() {
         <div className="absolute inset-0 z-0">
           <img 
             src={heroBuilding} 
-            alt="Modern London commercial building at dusk" 
+            alt="Industrial HVAC ductwork and mechanical plant room" 
             className="w-full h-full object-cover scale-105"
           />
           {/* Premium layered overlay */}
