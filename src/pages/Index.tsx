@@ -6,6 +6,7 @@ import { ArrowRight, Wind, Wrench, Building2, Droplets, Gauge, Settings, Shield,
 import heroBuilding from "@/assets/hero-workers-site.jpg";
 import plantRoom from "@/assets/plant-room.jpg";
 import hvacDuctwork from "@/assets/hero-hvac-rooftop.jpg";
+import advisoryReview from "@/assets/technical-advisory-review.jpg";
 
 const services = [
   { icon: Wind, title: "HVAC & Ventilation", desc: "Complete climate control solutions" },
@@ -210,11 +211,11 @@ export default function Index() {
       <section className="relative py-12 sm:py-16 md:py-20 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src={heroBuilding} 
-            alt="" 
+            src={advisoryReview} 
+            alt="HVAC engineers reviewing technical drawings on site" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-charcoal/40 via-slate/30 to-navy/30" />
+          <div className="absolute inset-0 bg-gradient-to-br from-charcoal/55 via-slate/45 to-navy/45" />
         </div>
         
         <div className="container-wide relative z-10">
