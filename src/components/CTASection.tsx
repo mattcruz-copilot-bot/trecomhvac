@@ -21,7 +21,7 @@ export function CTASection({
   className = ""
 }: CTASectionProps) {
   return (
-    <section className={`relative py-10 sm:py-12 md:py-16 overflow-hidden ${className}`}>
+    <section className={`relative section-y-sm overflow-hidden ${className}`}>
       {/* Background with image */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -29,7 +29,9 @@ export function CTASection({
           alt="" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-charcoal/70 via-slate/55 to-navy/50" />
+        {/* Richer, deeper overlay for stronger contrast */}
+        <div className="absolute inset-0 bg-gradient-to-br from-charcoal/85 via-navy/75 to-charcoal/90" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(var(--teal)/0.12)_0%,transparent_60%)]" />
       </div>
       
       <div className="container-wide relative z-10 text-center">

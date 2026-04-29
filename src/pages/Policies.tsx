@@ -259,7 +259,6 @@ export default function Policies() {
 
       {/* CTA */}
       <CTASection
-        className="mt-10 sm:mt-14 md:mt-20"
         eyebrow="Questions?"
         title="Want to learn more about our standards?"
         description="Contact us to discuss our approach to safety, quality and professional delivery."
