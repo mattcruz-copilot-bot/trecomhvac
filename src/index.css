@@ -47,14 +47,14 @@
     --slate: 220 25% 18%;
     --steel: 220 20% 24%;
     
-    /* Accent colors - sophisticated blue family */
-    --navy: 220 65% 28%;
-    --navy-light: 220 55% 40%;
-    --electric: 210 100% 50%;
+    /* Accent colors - sophisticated blue family, richer & more vivid */
+    --navy: 220 70% 26%;
+    --navy-light: 218 60% 42%;
+    --electric: 210 100% 52%;
     --electric-muted: 210 90% 58%;
     --electric-light: 210 85% 68%;
-    --teal: 185 72% 42%;
-    --teal-light: 185 65% 55%;
+    --teal: 184 80% 40%;
+    --teal-light: 184 72% 54%;
     
     /* Premium surfaces */
     --surface: 220 20% 95%;
@@ -154,13 +154,37 @@
 }
 
 @layer components {
-  /* Enhanced spacing system - mobile first */
+  /* ============================================
+     UNIFIED SPACING SYSTEM — use these everywhere
+     ============================================ */
+
+  /* Standard section — applies to ~90% of sections */
+  .section-y {
+    @apply py-16 sm:py-20 md:py-24 lg:py-28;
+  }
+
+  /* Compact section — intros, smaller content */
+  .section-y-sm {
+    @apply py-12 sm:py-16 md:py-20;
+  }
+
+  /* Generous section — hero-adjacent statements */
+  .section-y-lg {
+    @apply py-20 sm:py-24 md:py-32 lg:py-36;
+  }
+
+  /* Hero padding for sub-pages (with image bg) */
+  .section-y-hero {
+    @apply py-20 sm:py-24 md:py-32 lg:py-36;
+  }
+
+  /* Legacy alias - keep for safety */
   .section-padding {
-    @apply py-14 sm:py-18 md:py-24 lg:py-32;
+    @apply py-16 sm:py-20 md:py-24 lg:py-28;
   }
 
   .section-padding-sm {
-    @apply py-10 sm:py-14 md:py-18 lg:py-24;
+    @apply py-12 sm:py-16 md:py-20;
   }
 
   .container-narrow {
