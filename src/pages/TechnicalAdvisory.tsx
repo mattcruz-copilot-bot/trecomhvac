@@ -89,7 +89,7 @@ export default function TechnicalAdvisory() {
       </section>
 
       {/* Experience Introduction - Compact */}
-      <section className="py-12 sm:py-16 md:py-20 bg-background">
+      <section className="section-y-sm bg-background">
         <div className="container-wide">
           <div className="max-w-3xl mx-auto">
             <div className="glass-panel rounded-2xl p-8 text-center">
@@ -107,7 +107,7 @@ export default function TechnicalAdvisory() {
       </section>
 
       {/* Where Projects Fail - With background image */}
-      <section className="relative py-12 sm:py-16 md:py-24 overflow-hidden bg-charcoal">
+      <section className="relative section-y overflow-hidden bg-charcoal">
         {/* CAD blueprint background — schematic atmosphere */}
         <div className="absolute inset-0 z-0">
           <img 
@@ -159,7 +159,7 @@ export default function TechnicalAdvisory() {
       </section>
 
       {/* How We Support - Card grid */}
-      <section className="py-12 sm:py-16 md:py-24 section-surface">
+      <section className="section-y section-surface">
         <div className="container-wide">
           <div className="text-center mb-10">
             <p className="eyebrow mb-3">Our Services</p>
@@ -184,7 +184,7 @@ export default function TechnicalAdvisory() {
       </section>
 
       {/* Valuable For Section — schematic-backed, centered */}
-      <section className="relative pt-16 sm:pt-20 md:pt-32 pb-24 sm:pb-32 md:pb-44 overflow-hidden bg-charcoal">
+      <section className="relative section-y overflow-hidden bg-charcoal">
         {/* CAD blueprint background */}
         <div className="absolute inset-0 z-0">
           <img
