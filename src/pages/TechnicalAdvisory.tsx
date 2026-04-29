@@ -20,7 +20,7 @@ import {
 } from "lucide-react";
 import engineersBoardroom from "@/assets/engineers-boardroom.jpg";
 import engineersConsulting from "@/assets/engineers-consulting.jpg";
-import manifoldDetail from "@/assets/manifold-detail.jpg";
+import cadSchematicBg from "@/assets/cad-schematic-bg.jpg";
 
 const problemAreas = [
   { icon: Clock, text: "Poor sequencing" },
@@ -109,14 +109,17 @@ export default function TechnicalAdvisory() {
       </section>
 
       {/* Where Projects Fail - With background image */}
-      <section className="relative py-12 sm:py-16 md:py-24 overflow-hidden">
+      <section className="relative py-12 sm:py-16 md:py-24 overflow-hidden bg-charcoal">
+        {/* CAD blueprint background — schematic atmosphere */}
         <div className="absolute inset-0 z-0">
           <img 
-            src={manifoldDetail} 
+            src={cadSchematicBg} 
             alt="" 
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover opacity-40 mix-blend-screen"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-charcoal/70 via-slate/55 to-navy/50" />
+          {/* Vignette + brand tint to keep text legible */}
+          <div className="absolute inset-0 bg-gradient-to-br from-charcoal/85 via-charcoal/70 to-navy/80" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,hsl(var(--charcoal)/0.6)_100%)]" />
         </div>
         
         <div className="container-wide relative z-10">
