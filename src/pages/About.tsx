@@ -162,7 +162,7 @@ export default function About() {
               
               <ul className="space-y-3">
                 {approach.map((item) => (
-                  <li key={item} className="flex items-center gap-4 p-4 rounded-xl bg-white backdrop-blur-sm border border-border/50 hover:shadow-lg hover:border-teal/20 transition-all group">
+                  <li key={item} className="flex items-center gap-4 p-4 rounded-xl bg-surface backdrop-blur-sm border border-border/50 hover:shadow-lg hover:border-teal/20 transition-all group">
                     <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-navy/10 to-teal/10 border border-navy/15 flex items-center justify-center flex-shrink-0 group-hover:from-navy group-hover:to-teal transition-all">
                       <ChevronRight className="w-4 h-4 text-navy group-hover:text-white transition-colors" />
                     </div>

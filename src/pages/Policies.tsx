@@ -95,7 +95,7 @@ export default function Policies() {
               <p className="eyebrow mb-6 text-base">We implement:</p>
               <ul className="space-y-3 mb-6">
                 {healthSafety.map((item) => (
-                  <li key={item} className="flex items-center gap-4 p-4 rounded-xl bg-white backdrop-blur-sm border border-border/50 hover:shadow-lg hover:border-teal/20 transition-all group">
+                  <li key={item} className="flex items-center gap-4 p-4 rounded-xl bg-surface backdrop-blur-sm border border-border/50 hover:shadow-lg hover:border-teal/20 transition-all group">
                     <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-navy/10 to-teal/10 border border-navy/15 flex items-center justify-center flex-shrink-0 group-hover:from-navy group-hover:to-teal transition-all">
                       <ChevronRight className="w-4 h-4 text-navy group-hover:text-white transition-colors" />
                     </div>
@@ -121,7 +121,7 @@ export default function Policies() {
               <p className="eyebrow mb-6 text-base">This includes:</p>
               <ul className="space-y-3 mb-8">
                 {competence.map((item) => (
-                  <li key={item} className="flex items-center gap-4 p-4 rounded-xl bg-white backdrop-blur-sm border border-border/50 hover:shadow-lg hover:border-teal/20 transition-all group">
+                  <li key={item} className="flex items-center gap-4 p-4 rounded-xl bg-surface backdrop-blur-sm border border-border/50 hover:shadow-lg hover:border-teal/20 transition-all group">
                     <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-navy/10 to-teal/10 border border-navy/15 flex items-center justify-center flex-shrink-0 group-hover:from-navy group-hover:to-teal transition-all">
                       <ChevronRight className="w-4 h-4 text-navy group-hover:text-white transition-colors" />
                     </div>
@@ -188,7 +188,7 @@ export default function Policies() {
               <p className="eyebrow mb-6 text-base">We aim to:</p>
               <ul className="space-y-3 mb-6">
                 {environmental.map((item) => (
-                  <li key={item} className="flex items-center gap-4 p-4 rounded-xl bg-white backdrop-blur-sm border border-border/50 hover:shadow-lg hover:border-teal/20 transition-all group">
+                  <li key={item} className="flex items-center gap-4 p-4 rounded-xl bg-surface backdrop-blur-sm border border-border/50 hover:shadow-lg hover:border-teal/20 transition-all group">
                     <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-teal/15 to-navy/10 border border-teal/20 flex items-center justify-center flex-shrink-0 group-hover:from-teal group-hover:to-teal-light transition-all">
                       <ChevronRight className="w-4 h-4 text-teal group-hover:text-white transition-colors" />
                     </div>
