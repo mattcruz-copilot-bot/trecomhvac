@@ -52,9 +52,9 @@ export default function Index() {
         <div className="relative z-10 container-wide text-center">
           <div className="max-w-5xl mx-auto">
             {/* Eyebrow text */}
-            <p className="eyebrow mb-4 sm:mb-6 text-xs sm:text-sm animate-fade-up opacity-0" 
+            <p className="mb-4 sm:mb-6 animate-fade-up opacity-0" 
                style={{ animationDelay: '0.1s', animationFillMode: 'forwards' }}>
-              <span className="text-teal">Commercial HVAC Specialists</span>
+              <span className="text-teal font-bold tracking-[0.2em] uppercase text-sm sm:text-base drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">Commercial HVAC Specialists</span>
             </p>
             
             {/* Main Headline */}
@@ -89,8 +89,8 @@ export default function Index() {
           </div>
         </div>
 
-        {/* Bottom gradient fade */}
-        <div className="absolute bottom-0 left-0 right-0 h-16 sm:h-24 bg-gradient-to-t from-background to-transparent z-[5]" />
+        {/* Bottom gradient fade — refined, longer & smoother */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 sm:h-40 md:h-48 bg-gradient-to-t from-background via-background/80 to-transparent z-[5] pointer-events-none" />
       </section>
 
       {/* Credibility Intro Section - Tighter spacing */}
