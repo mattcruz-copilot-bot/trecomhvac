@@ -1,7 +1,7 @@
 import { Layout } from "@/components/Layout";
 import { CTASection } from "@/components/CTASection";
 import { Award, MessageSquare, Shield, ChevronRight, Building2 } from "lucide-react";
-import engineersConsulting from "@/assets/engineers-consulting.jpg";
+import engineersRooftop from "@/assets/engineers-rooftop.jpg";
 import plantRoom from "@/assets/plant-room.jpg";
 
 const howWeWork = [
@@ -27,8 +27,8 @@ export default function About() {
       <section className="relative py-24 md:py-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src={engineersConsulting} 
-            alt="Engineers consulting on site" 
+            src={engineersRooftop} 
+            alt="HVAC engineers on a London commercial rooftop" 
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 hero-overlay" />
