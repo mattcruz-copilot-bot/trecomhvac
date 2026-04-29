@@ -16,10 +16,8 @@ import {
   LifeBuoy,
   Briefcase,
   Handshake,
-  ChevronRight
 } from "lucide-react";
 import engineersBoardroom from "@/assets/engineers-boardroom.jpg";
-import engineersConsulting from "@/assets/engineers-consulting.jpg";
 import cadSchematicBg from "@/assets/cad-schematic-bg.jpg";
 
 const problemAreas = [
@@ -185,43 +183,62 @@ export default function TechnicalAdvisory() {
         </div>
       </section>
 
-      {/* Valuable For Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-background">
-        <div className="container-wide">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Image side */}
-            <div className="relative order-2 lg:order-1">
-              <div className="absolute -inset-4 bg-gradient-to-br from-navy/10 to-teal/10 rounded-2xl blur-xl" />
-              <img 
-                src={engineersConsulting} 
-                alt="Two engineers reviewing architectural drawings together" 
-                className="relative w-full h-auto rounded-2xl shadow-elevated-lg"
-              />
-            </div>
-            
-            {/* Content side */}
-            <div className="order-1 lg:order-2">
-              <p className="eyebrow mb-3">Who Benefits</p>
-              <h2 className="mb-6">This is particularly valuable for:</h2>
-              <ul className="space-y-2 mb-8">
-                {valuableFor.map((client) => (
-                  <li key={client} className="flex items-center gap-3 group">
-                    <div className="w-7 h-7 rounded-md bg-gradient-to-br from-navy/10 to-teal/10 border border-navy/10 flex items-center justify-center group-hover:from-navy group-hover:to-teal transition-all">
-                      <ChevronRight className="w-3.5 h-3.5 text-navy group-hover:text-white transition-colors" />
-                    </div>
-                    <span className="text-charcoal font-semibold group-hover:text-navy transition-colors">{client}</span>
-                  </li>
-                ))}
-              </ul>
+      {/* Valuable For Section — schematic-backed, centered */}
+      <section className="relative py-16 sm:py-20 md:py-32 overflow-hidden bg-charcoal">
+        {/* CAD blueprint background */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src={cadSchematicBg}
+            alt=""
+            className="w-full h-full object-cover opacity-80 mix-blend-screen"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-charcoal/70 via-navy/55 to-charcoal/80" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,hsl(var(--charcoal)/0.6)_100%)]" />
+        </div>
 
-              <div className="glass-panel rounded-xl p-6">
-                <h4 className="text-lg font-bold text-charcoal mb-3">Senior-Level Insight</h4>
-                <p className="text-charcoal-muted text-sm leading-relaxed">
-                  Clients who use this service gain access to senior-level mechanical insight 
-                  without employing a full-time technical manager. We provide the expertise 
-                  you need, when you need it.
-                </p>
+        <div className="container-wide relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-teal font-bold tracking-[0.15em] uppercase text-sm mb-5">
+              Who Benefits
+            </p>
+            <h2 className="text-white mb-6 drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
+              Built for the people responsible for the outcome.
+            </h2>
+            <p className="text-lg md:text-xl text-white/85 leading-relaxed max-w-3xl mx-auto mb-12 drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
+              Whether you are delivering a new development, managing an aging portfolio, or
+              accountable for the performance of a live building, our advisory service gives you
+              senior mechanical judgement on demand — without the cost of carrying a full-time
+              technical manager in-house.
+            </p>
+
+            {/* Benefit chips — centered grid */}
+            <div className="flex flex-wrap justify-center gap-3 mb-14 max-w-3xl mx-auto">
+              {valuableFor.map((client) => (
+                <div
+                  key={client}
+                  className="backdrop-blur-md bg-white/[0.06] border border-white/20 rounded-full px-6 py-3 shadow-lg hover:border-teal/60 hover:bg-teal/10 transition-all duration-300"
+                >
+                  <span className="text-white font-semibold tracking-wide drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
+                    {client}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            {/* Senior-Level Insight panel */}
+            <div className="backdrop-blur-md bg-navy/55 border border-teal/30 rounded-2xl p-8 md:p-10 shadow-elevated-lg max-w-3xl mx-auto">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-teal to-navy border border-teal/40 flex items-center justify-center mx-auto mb-5">
+                <Briefcase className="w-6 h-6 text-white" />
               </div>
+              <h4 className="text-xl md:text-2xl font-bold text-white mb-4 drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
+                Senior-Level Insight, On Demand
+              </h4>
+              <p className="text-white/85 leading-relaxed drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">
+                Clients who use this service gain direct access to senior mechanical expertise
+                across design review, sequencing, commissioning and project recovery. You get an
+                experienced second pair of eyes on the decisions that matter most — early enough
+                to change the outcome, and independent enough to give you the truth.
+              </p>
             </div>
           </div>
         </div>
