@@ -52,9 +52,9 @@ export default function Index() {
         <div className="relative z-10 container-wide text-center">
           <div className="max-w-5xl mx-auto">
             {/* Eyebrow text */}
-            <p className="eyebrow mb-4 sm:mb-6 text-xs sm:text-sm animate-fade-up opacity-0" 
+            <p className="mb-4 sm:mb-6 animate-fade-up opacity-0" 
                style={{ animationDelay: '0.1s', animationFillMode: 'forwards' }}>
-              <span className="text-teal">Commercial HVAC Specialists</span>
+              <span className="text-teal font-bold tracking-[0.2em] uppercase text-sm sm:text-base drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">Commercial HVAC Specialists</span>
             </p>
             
             {/* Main Headline */}
