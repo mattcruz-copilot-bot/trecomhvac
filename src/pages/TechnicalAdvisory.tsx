@@ -115,11 +115,11 @@ export default function TechnicalAdvisory() {
           <img 
             src={cadSchematicBg} 
             alt="" 
-            className="w-full h-full object-cover opacity-40 mix-blend-screen"
+            className="w-full h-full object-cover opacity-80 mix-blend-screen"
           />
-          {/* Vignette + brand tint to keep text legible */}
-          <div className="absolute inset-0 bg-gradient-to-br from-charcoal/85 via-charcoal/70 to-navy/80" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,hsl(var(--charcoal)/0.6)_100%)]" />
+          {/* Lighter tint so the schematic actually reads */}
+          <div className="absolute inset-0 bg-gradient-to-br from-charcoal/70 via-navy/50 to-charcoal/75" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,hsl(var(--charcoal)/0.55)_100%)]" />
         </div>
         
         <div className="container-wide relative z-10">

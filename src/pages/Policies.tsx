@@ -3,6 +3,7 @@ import { CTASection } from "@/components/CTASection";
 import { Shield, Award, Leaf, TrendingUp, ChevronRight } from "lucide-react";
 import pipeworkDetail from "@/assets/pipework-detail.jpg";
 import hvacDuctwork from "@/assets/hvac-ductwork.jpg";
+import cadSchematicBg from "@/assets/cad-schematic-bg.jpg";
 
 const healthSafety = [
   "Site-specific risk assessments",
@@ -214,7 +215,13 @@ export default function Policies() {
             alt="" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-charcoal/70 via-slate/55 to-charcoal/70" />
+          <div className="absolute inset-0 bg-gradient-to-b from-charcoal/75 via-navy/60 to-charcoal/80" />
+          <img 
+            src={cadSchematicBg} 
+            alt="" 
+            className="absolute inset-0 w-full h-full object-cover opacity-55 mix-blend-screen pointer-events-none"
+          />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,hsl(var(--charcoal)/0.5)_100%)]" />
         </div>
         
         <div className="container-wide relative z-10">
