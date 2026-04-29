@@ -89,8 +89,8 @@ export default function Index() {
           </div>
         </div>
 
-        {/* Bottom gradient fade */}
-        <div className="absolute bottom-0 left-0 right-0 h-16 sm:h-24 bg-gradient-to-t from-background to-transparent z-[5]" />
+        {/* Bottom gradient fade — refined, longer & smoother */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 sm:h-40 md:h-48 bg-gradient-to-t from-background via-background/80 to-transparent z-[5] pointer-events-none" />
       </section>
 
       {/* Credibility Intro Section - Tighter spacing */}
