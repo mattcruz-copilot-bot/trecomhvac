@@ -17,11 +17,13 @@ const navigation = {
 export function Footer() {
   return (
     <footer className="relative overflow-hidden">
-      {/* Background gradient - not just solid dark */}
+      {/* Top gradient accent line */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-teal/60 to-transparent z-20" />
+      {/* Background gradient - rich, layered */}
       <div className="absolute inset-0 bg-gradient-to-br from-charcoal via-slate to-charcoal" />
       {/* Subtle decorative elements */}
-      <div className="absolute top-0 right-0 w-80 h-80 bg-teal/5 rounded-full blur-[100px]" />
-      <div className="absolute bottom-0 left-1/4 w-60 h-60 bg-navy/10 rounded-full blur-[80px]" />
+      <div className="absolute top-0 right-0 w-80 h-80 bg-teal/8 rounded-full blur-[100px]" />
+      <div className="absolute bottom-0 left-1/4 w-60 h-60 bg-navy/15 rounded-full blur-[80px]" />
       
       <div className="container-wide py-10 sm:py-12 md:py-14 lg:py-16 relative z-10">
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-16">
